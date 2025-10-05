@@ -1,5 +1,9 @@
+
 # Ignore the glance binary
 glance
 
 # Don't ignore the config file
 !glance.yml
+
+# Ignore environment variables file
+.env
