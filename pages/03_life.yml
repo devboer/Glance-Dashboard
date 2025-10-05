@@ -1,0 +1,209 @@
+  - name: Life
+    columns:
+      - size: small
+        widgets:
+          - type: to-do
+            id: home
+          - type: calendar
+            first-day-of-week: monday
+
+          - type: bookmarks
+            groups:
+              - title: Newsy
+                links:
+                  - title: Proton
+                    url: https://mail.proton.me/
+                    icon: sh:proton-mail
+                  - title: Gmail
+                    url: https://gmail.com/
+                    icon: sh:gmail
+                  - title: Feeds
+                    url: https://rss.int.devboer.com
+                    icon: sh:freshrss
+              - title: Tools
+                links:
+                  - title: ChatGPT
+                    url: https://chat.com
+                    icon: sh:chatgpt
+                  - title: Venice AI (Privacy)
+                    url: https://venice.ai/
+                    icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/localai.png
+                  - title: FocusMate
+                    url: https://www.focusmate.com/
+                    icon: /assets/logo-focusmate.png
+                  - title: Barcode Buddy
+                    url: https://upc.int.devboer.com
+                    icon: sh:barcode-buddy
+              - title: Retailers
+                color: 4 20 100
+                hide-arrow: true
+                links:
+                  - title: Sam's Club
+                    url: https://samsclub.com
+                    icon: si:samsclub
+                  - title: Amazon
+                    url: https://amazon.com
+                    icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/amazon.png
+                  - title: Apple Account
+                    url: https://account.apple.com
+                    icon: sh:icloud
+
+              - title: Education
+                hide-arrow: true
+                links:
+                  - title: My Github
+                    url: https://github.com/devboer
+                  - title: FreeCodeCamp.org
+                    url: https://www.freecodecamp.org/
+                  - title: Dev Roadmap
+                    url: https://roadmap.sh
+                  - title: My Profile
+                    url: https://devboer.com
+                  - title: My Lab Blog
+                    url: https://docs.devboer.com
+      - size: full
+        widgets:
+        - type: search
+          placeholder: "!yt; !ph; !im; !tph"
+          autofocus: true
+          new-tab: true
+          search-engine: duckduckgo
+          bangs:
+          - title: YouTube
+            shortcut: "!yt"
+            url: https://www.youtube.com/results?search_query={QUERY}
+          - title: PornHub
+            shortcut: "!ph"
+            url: https://www.pornhub.com/video/search?search={QUERY}
+          - title: IMDb
+            shortcut: "!im"
+            url: https://www.imdb.com/find/?q={QUERY}
+          - title: The Pirate Bay
+            shortcut: "!tpb"
+            url: https://thepiratebay.org/search.php?q={QUERY}
+        - type: monitor
+          cache: 1m
+          title: Life Upkeep
+          sites:
+            - title: My LinkStack
+              url: https://links.int.devboer.com/@devboer#
+              icon: sh:linkstack
+            - title: A to Z
+              url: https://atoz-login.amazon.work/?source=ac
+              icon: si:amazon
+            - title: MySpeed
+              url: http://10.0.0.229:5216/
+              icon: si:speedtest
+            - title: Inventory
+              url: https://home.int.devboer.com # http://10.0.40.32
+              icon: di:grocy
+            - title: LubeLogger
+              url: https://car.int.devboer.com/
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/lubelogger.png
+            # - title: ListMonk
+            #   url: http://10.0.0.234:9000/
+              # icon: sh:listmonk
+            - title: Reactive Resume
+              url: https://cv.int.devboer.com # 10.0.40.34:3000
+              icon: sh:reactive-resume
+            - title: Home Assistant
+              url: https://hass.int.devboer.com
+              icon: di:home-assistant
+            - title: Garden
+              url: https://garden.int.devboer.com/
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/plant-it.png # sh:plant-it
+            - title: iCloud
+              url: https://icloud.com
+              icon: sh:icloud
+        - type: bookmarks
+          title: Mostly Bills
+          groups:
+            - title: Money
+              color: 126 100 40
+              hide-arrow: true
+              links:
+                - title: Bank
+                  url: https://www.wingscu.com/
+                  icon: mdi:bank
+                - title: Taxes
+                  url: https://myturbotax.intuit.com/
+                  icon: si:intuit
+                - title: Monetr
+                  url: https://my.monetr.app
+                  icon: sh:monetr
+                - title: Fidelity
+                  url: https://www.fidelity.com/
+                  icon: sh:fidelity
+                - title: Coinbase
+                  url: https://www.coinbase.com/
+                  icon: https://global-uploads.webflow.com/5b0c471ddb589cf22d4477a4/5cec15f8c0831c35aa6fe349_coinbase-app-icon.png
+                - title: Robinhood
+                  url: https://robinhood.com/us/en/
+                  icon: sh:robinhood
+
+            - title: Utilities
+              color: 2 78 48
+              hide-arrow: true
+              links:
+                - title: SPU | Water/Elec/Sewage
+                  url: https://shakopeeutilities.smarthub.coop/ui
+                  icon: mdi:meter-electric-outline
+                - title: CenterPoint | Gas/HSP
+                  url: https://login.centerpointenergy.com/cnpcwecafprod.onmicrosoft.com/b2c_1a_signuporsignin/oauth2/v2.0/authorize?client_id=a6386527-7544-45d9-94e0-f0e22e480d15&redirect_uri=https%3A%2F%2Fmyaccount.centerpointenergy.com%2Fmyaccounts%2FIndex&response_type=id_token&scope=openid&state=OpenIdConnect.AuthenticationProperties%3DbnmfJcjgkdRKBp1JPbqZiT_UCXbKc338kgW95p02L7E9z465N5HkWOIXGy46CqehXoZkSbRaDLdtqSgS89dFR01yUc6FFqfe5f5oSXdabGbck33iXgC35ncXHD-L1tABU_w5VJzN07-w9OZISuCWc_2D7NmhYhjtPArWucDDUrkTlZ6qAmKum7V1BhSU7dzEaYeidPVsN725CZYQqUr5-0XGSSSLtgmx2fbazxWQ-dwPh0SpkgMvKjPhfQhxkon4l7P_dAVSCzk-ASnslleyxsTgB0fdn2ltq5wb064aSNhKvFvSBcqnbcV0wXuFNQx_xMUmOuSLKU1WtoYgoQEVV78l1aNz0Yhwd-pL_LAY62A&response_mode=form_post&nonce=638844179512775554.M2VjMmU2NDQtNzc2OC00NDRkLWFlMjYtMmQwNDkwN2U0NDMzMWJiMTE2NWMtYjNlNi00MGU2LTk4MDItNTQ5ZWI1MGJhYWI3&x-client-SKU=ID_NET451&x-client-ver=5.3.0.0
+                  icon: mdi:gas-burner
+                - title: Xfinity | Internet
+                  url: https://login.xfinity.com/login?c_ds_na=c_ds_na%2Cc_ds_no%2Cc_ds_ts%2Cclient_id%2Ccontinue%2Cr%2CreqId%2Cs%2CselectAccount&c_ds_no=EBC20B7DBF81207751689E9825CBF2BB&c_ds_ts=1748821904&c_ds_val=9D045141A26006A03902D7289324CFB366305396A45EBEF5CE7ECF5337BB5D25&client_id=shoplearn-web&continue=https%3A%2F%2Foauth.xfinity.com%2F%2Foauth%2Fauthorize%3Fresponse_type%3Dcode%26prompt%3Dselect_billing_account%26redirect_uri%3Dhttps%253A%252F%252Fwww.xfinity.com%252Fsitecore%252Fapi%252Flearn%252Fneptune%252Fcustomer%252Fexisting%252Fpostauth%26client_id%3Dshoplearn-web%26state%3Dhttps%253A%252F%252Fwww.xfinity.com%252Fauth%26response%3D1%26reqId%3D9ccff459-055c-4bf7-b0a9-0703fcc1cd3f&r=comcast.net&reqId=9ccff459-055c-4bf7-b0a9-0703fcc1cd3f&s=oauth&selectAccount=1
+                  icon: mdi:ip-outline
+                - title: DSI | Trash
+                  url: https://myaccount.wcicustomer.com/district/3460
+                  icon: mdi:trash-can-outline
+
+            - title: Loans
+              color: 2 58 36
+              hide-arrow: true
+              links:
+                - title: Edu | NelNet
+                  url: https://nelnet.studentaid.gov/welcome
+                  icon: mdi:account-school
+                - title: Edu | FirstMark
+                  url: https://secure.firstmarkservices.com/Account/Login
+                  icon: mdi:account-school
+                - title: Car | Veridian
+                  url: https://www.veridiancu.org/
+                  icon: si:honda
+                - title: Windows | PowerPay
+                  url: https://mypowerpayaccount.com/login
+                  icon: mdi:window-closed
+                - title: Synchrony
+                  url: https://customercare.syf.com/
+                  icon: mdi:water-boiler
+
+            - title: Credit Cards
+              color: 135 52 30
+              hide-arrow: true
+              links:
+                - title: Chase
+                  url: https://www.chase.com/personal/credit-cards/amazon
+                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/chase.png
+                - title: Wings
+                  url: https://www.wingscu.com/
+                  icon: mdi:credit-card                  
+                - title: Sam's Club
+                  url: https://samsclub.syf.com/accounts/login/
+                  icon: si:samsclub
+            - title: Health
+              color: 0 100 40
+              hide-arrow: true
+              links:
+                - title: Meds | Lorenz
+                  url: https://16506-1.portal.athenahealth.com/?section=welcome&CSRFPROTECT=2edcf10758d1d56be8e803eb0065fee95506e0b497704bb338cb066b19bb6048
+                  icon: sh:medassist.png
+                - title: Therapy | BHSI
+                  url: https://bhsiclinics.com/
+                  icon: mdi:account-credit-card-outline
+                - title: Telehealth | BHSI Andy
+                  url: https://bhsi.doxy.me/ascarbrough
+                  icon: mdi:brain
+                - title: Benefit | Premera
+                  url: https://authn.premera.com/u/login/identifier?state=hKFo2SBJeWY0cE1aM1RqbXFvalhwUmVGZ3BxZEtWeTVydmRORqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIEVacFNsUmVRU1BfRXFNbTM0TEJNYzR2VzBXTjhZSVVho2NpZNkgWUNNa0tCOGJlMmR3QkRRMWRubmh0MXQxaG04ZlhnbXA
+                  icon: mdi:shield-cross

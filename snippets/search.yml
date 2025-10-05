@@ -1,0 +1,21 @@
+        - type: search
+          placeholder: "yt; ph; im; tph"
+          autofocus: true
+          new-tab: true
+          search-engine: duckduckgo
+          bangs:
+          - title: YouTube
+            shortcut: "yt"
+            url: https://www.youtube.com/results?search_query={QUERY}
+          - title: PornHub
+            shortcut: "ph"
+            url: https://www.pornhub.com/video/search?search={QUERY}
+          - title: IMDb
+            shortcut: "im"
+            url: https://www.imdb.com/find/?q={QUERY}
+          - title: The Pirate Bay
+            shortcut: "tpb"
+            url: https://thepiratebay.org/search.php?q={QUERY}
+          - title: Simple Icons
+            shortcut: "si"
+            url: https://simpleicons.org/?q={QUERY}

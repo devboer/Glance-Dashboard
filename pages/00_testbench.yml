@@ -1,0 +1,128 @@
+  - name: Demo
+    # width: slim
+    center-vertically: true
+    columns:
+    - size: small
+      widgets:
+        - type: monitor
+          cache: 1m
+          title: Tools
+          sites:
+            - title: Dockge
+              url: https://docker.int.devboer.com
+              icon: sh:dockge
+            - title: Alpine IT Tools
+              url: http://10.0.50.115/
+              icon: di:alpine-linux
+            - title: Cockpit
+              url: https://10.0.50.125:9090/
+              icon: di:cockpit
+              allow-insecure: true
+            - title: Wazuh
+              url: https://10.0.50.131/app/login?
+              icon: di:wazuh
+              allow-insecure: true
+            - title: APT-cacher
+              url: http://10.0.50.134:3142/
+              icon: sh:debian
+              allow-insecure: true
+            - title: ZeroTier-One
+              url: http://10.0.50.136:9993/
+              icon: di:zerotier
+            - title: Zammad Helpdesk
+              url: http://10.0.0.205
+              icon: di:zammad
+            # - title: Headscale
+            #   url: 10.0.50.135
+            #   icon: di:headscale
+            # - title: Rustdesk
+            #   url: 10.0.50.110
+            #   icon: di:rustdesk
+        - type: monitor
+          title: Media
+          sites:
+            - title: Ghost
+              url: http://10.0.50.105:2368/
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/ghost.png
+            - title: AudioBookShelf
+              url: http://10.0.50.111:13378/audiobookshelf/login
+              icon: di:audiobookshelf
+    - size: full
+      widgets:
+        - type: search
+          autofocus: true
+          new-tab: true
+          search-engine: http://10.0.50.112:8888/search?q={QUERY}
+          bangs:
+            - title: Reddit
+              shortcut: r/ 
+              url: https://www.reddit.com/search?q={QUERY}
+              # url: https://store.steampowered.com/search/?term={QUERY}
+              # url: https://www.amazon.com/s?k={QUERY}
+        - type: monitor
+          cache: 1m
+          title: Productivity
+          sites:
+            - title: SearXNG
+              url: http://10.0.50.112:8888/
+              icon: di:searxng
+            # - title: Checkmk
+            #   url: 10.0.50.114:80
+            #   icon: di:checkmk
+            - title: Monica CRM
+              url: http://10.0.50.117/
+              icon: di:monica
+            - title: Habitica
+              url: http://10.0.50.121:8080/static/home
+              icon: di:habitica
+            - title: DocMost
+              url: http://10.0.50.122:3000
+              icon: sh:docmost
+            - title: Grist
+              url: http://10.0.50.124:8484
+              icon: di:grist
+            # - title: Seafile
+            #   url: 10.0.50.127 # requires further config with domain.sh & external_storage.sh
+            #   icon: di:seafile
+            - title: Mattermost
+              url: http://10.0.0.210:8065
+              icon: di:mattermost
+            - title: Kimai
+              url: http://10.0.0.211
+              icon: di:kimai
+
+    - size: small
+      widgets:
+        - type: monitor
+          cache: 1m
+          title: Other
+          sites:
+            - title: Cosmos Cloud
+              url: https://10.0.50.119/cosmos-ui/login?redirect=/cosmos-ui/
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/cosmos-server.png
+              allow-insecure: true
+            - title: CasaOS
+              url: http://10.0.0.208
+              icon: di:casaos
+              allow-insecure: true
+            - title: Shinobi
+              url: http://10.0.50.118:8080/
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/shinobi.png
+            - title: Excalidraw
+              url: http://10.0.50.123:3000/
+              icon: di:excalidraw
+            # - title: Element Matrix
+            #   url: http://10.0.50.128:8008
+            #   icon: di:element
+            - title: GoMFT
+              url: http://10.0.50.129:8080/
+              icon: di:gomft
+            - title: FileFlows
+              url: http://10.0.50.132:19200/
+              icon: di:fileflows
+            - title: listmonk
+              url: http://10.0.50.133:9000/
+              icon: di:listmonk
+            - title: PuterOS
+              url: http://10.0.50.2:4100/
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/puter.png

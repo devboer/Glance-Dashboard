@@ -1,0 +1,231 @@
+  - name: DevOps
+    # width: wide
+    center-vertically: true
+    columns:
+    - size: small
+      widgets:
+        - type: bookmarks
+          groups:
+            - title: Directories
+              hide-arrow: true
+              links:
+                - title: Awesome Self-Host List
+                  url: https://github.com/awesome-selfhosted/awesome-selfhosted
+                  icon: sh:github
+                - title: SelfH.st Apps
+                  url: https://selfh.st/apps/
+                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/selfh-st.png
+                - title: Smart Home Index
+                  url: https://smarthomeindex.com/
+                  icon: sh:home-assistant
+
+            - title: Network Tools
+              hide-arrow: true
+              links:
+                - title: Cloudflare
+                  url: https://dash.cloudflare.com/login
+                  icon: sh:cloudflare # https://cdn.jsdelivr.net/gh/selfhst/icons/png/cloudflare.png
+                - title: Duck DNS
+                  url: https://duckdns.com
+                  icon: sh:duckdns # https://cdn.jsdelivr.net/gh/selfhst/icons/png/duckdns.png
+                - title: Tailscale
+                  url: https://login.tailscale.com/admin/machines
+                  icon: sh:tailscale # https://cdn.jsdelivr.net/gh/selfhst/icons/png/tailscale.png
+
+            - title: Dev Tools
+              hide-arrow: true
+              links:  
+               - title: Color Picker (HSL)
+                 url: https://colorpicker.dev
+                 icon: mdi:eyedropper-variant
+               - title: OmniTools
+                 url: https://omnitools.app
+                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/omnitools.png
+               - title: IT Tools
+                 url: https://it-tools.tech
+                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/it-tools.png
+               - title: SelfH.st (sh:X)
+                 url: https://selfh.st/icons/
+                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/selfh-st.png
+               - title: Simple (si:X)
+                 url: https://simpleicons.org/
+                 icon: si:simpleicons
+               - title: Material Design Icons (mdi:X)
+                 url: https://pictogrammers.com/library/mdi/
+                 icon: si:materialdesignicons
+               - title: Unsplash
+                 url: https://unsplash.com/t/wallpapers 
+                 icon: si:unsplash
+
+            - title: AI Tools
+              hide-arrow: true
+              links:
+               - title: DeepSeek AI
+                 url: https://chat.deepseek.com/
+               - title: ChatGPT AI
+                 url: https://chat.openai.com/
+               - title: Claude AI
+                 url: https://claude.ai/
+               - title: Venice AI (Privacy)
+                 url: https://venice.ai/
+
+            - title: API
+              hide-arrow: true
+              color: 26 98 48
+              links:
+                - title: ShipStation
+                  url: https://www.shipengine.com/
+                - title: Open Subtitles
+                  url: https://www.opensubtitles.com/en/users/sign_in
+                - title: OMDb
+                  url: https://www.omdbapi.com/
+                - title: MusicBrainz
+                  url: https://listenbrainz.org/
+                - title: The Movie Database (TMDB)
+                  url: https://www.themoviedb.org/
+                - title: ComicVine
+                  url: https://comicvine.gamespot.com/
+
+    - size: full
+      widgets:
+        - type: search
+          placeholder: "!yt; !ph; !im; !tph"
+          autofocus: true
+          new-tab: true
+          search-engine: duckduckgo
+          bangs:
+          - title: YouTube
+            shortcut: "!yt"
+            url: https://www.youtube.com/results?search_query={QUERY}
+          - title: PornHub
+            shortcut: "!ph"
+            url: https://www.pornhub.com/video/search?search={QUERY}
+          - title: IMDb
+            shortcut: "!im"
+            url: https://www.imdb.com/find/?q={QUERY}
+          - title: The Pirate Bay
+            shortcut: "!tpb"
+            url: https://thepiratebay.org/search.php?q={QUERY}
+        - type: monitor
+          show-failing-only: false
+          cache: 1m
+          title: Network
+          sites:
+            - title: Firewall/Router
+              url: https://10.0.0.1:8443 # WIP: https://opn.int.devboer.com
+              icon: di:opnsense
+              allow-insecure: true
+            - title: WiFi Controller
+              url: https://wifi.int.devboer.com # https://10.0.0.3:8043/
+              icon: di:omada
+              allow-insecure: true
+            - title: POE+ Switch
+              url: https://switch.int.devboer.com # http://10.0.0.2
+              icon: di:tp-link 
+            - title: Pi-Hole
+              url: http://10.0.0.201/admin/
+              icon: di:pi-hole
+            - title: Printer
+              url: https://10.0.10.3
+              icon: di:hp
+              check-url: http://10.0.10.3
+            - title: Travel Router
+              url: https://192.168.8.1
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/openwrt.png
+
+        - type: monitor
+          cache: 1m
+          title: Servers
+          sites:
+            - title: PVE-Prod
+              url: https://pve-main.int.devboer.com # https://10.0.0.7:8006
+              icon: di:proxmox
+              allow-insecure: true
+            - title: PVE-Dev
+              url: https://pve-dev.int.devboer.com # https://10.0.0.9:8006 || https://pve-dev.int.devboer.com
+              icon: si:devdotto
+              allow-insecure: true            
+            - title: iLO (PVE-Dev)
+              url: https://pve-dev-ilo.int.devboer.com # https://10.0.0.10
+              icon: di:hp
+              allow-insecure: true
+            - title: PVE-Hass
+              url: https://pve-hass.int.devboer.com # https://10.0.0.8:8006
+              icon: sh:google-home
+              allow-insecure: true
+            - title: Dockge
+              url: https://docker.int.devboer.com # http://10.0.50.2:5001/
+              icon: di:dockge
+            - title: CalDAV/CardDAV
+              url: https://ccdav.int.devboer.com # http://10.0.40.38/admin/
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/baikal.png     
+        - type: monitor
+          cache: 1m
+          title: Resources
+          sites:  
+            - title: App Releases
+              url: https://argus.int.devboer.com/
+              icon: sh:argus
+            - title: Helper Scripts
+              url: https://helper-scripts.com
+              icon: sh:proxmox-helper-scripts
+            - title: Documentation
+              url: https://wiki.int.devboer.com/
+              icon: sh:bookstack
+            - title: Apache Guacamole
+              url: http://10.0.0.217:8080/ # https://guac.int.devboer.com [ currently here is a Tomcat page ]
+              icon: sh:apache-guacamole
+            - title: Code Editor
+              url: https://code.int.devboer.com # http://10.0.40.54:8680
+              icon: sh:visual-studio-code  
+            - title: devBoer Labs
+              url: https://docs.devboer.com
+              icon: sh:hugo
+            - title: Quadro P2200 Driver
+              url: https://www.nvidia.com/Download/driverResults.aspx/205464/en-us/
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/nvidia.png
+            - title: Adblock Lists
+              url: https://github.com/blocklistproject/Lists
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/adguard-home.png
+        - type: bookmarks
+          title: Documentation
+          groups:
+            - title: Multimedia
+              hide-arrow: true
+              links:
+                - title: Argus
+                  url: https://release-argus.io/docs/overview/
+                  icon: sh:argus
+                - title: Barcode Buddy
+                  url: https://barcodebuddy-documentation.readthedocs.io/en/latest/index.html 
+                  icon: sh:barcode-buddy 
+                - title: Glance
+                  url: https://github.com/glanceapp/glance/blob/main/docs/configuration.md
+                  icon: sh:glance
+                - title: LinkStack
+                  url: https://docs.linkstack.org/
+                  icon: sh:linkstack
+                - title: LubeLogger
+                  url: https://docs.lubelogger.com/
+                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/lubelogger.png
+                - title: OPNsense
+                  url: https://docs.opnsense.org/intro.html
+                  icon: sh:opnsense
+                - title: Plant-It
+                  url: https://docs.plant-it.org/0.9.0/
+                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/plant-it.png
+                - title: Minarca
+                  url: https://nexus.ikus-soft.com/repository/archive/minarca/6.1.2/doc/index.html
+                  icon: 
+                - title: MDN
+                  url: https://developer.mozilla.org/en-US/
+                  icon: 
+            - title: Multimedia
+              hide-arrow: true
+              links:
+                - title: Tdarr
+                  url: https://docs.tdarr.io/docs/installation/getting-started
+                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/tdarr.png
+                - title: Navidrome
+                  url: https://www.navidrome.org/docs/overview/
+                  icon: sh:navidrome

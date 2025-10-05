@@ -1,0 +1,211 @@
+  - name: News
+    columns:
+      - size: small
+        widgets:
+          - type: clock
+            hour-format: 24h
+          - type: weather
+            location: Shakopee, Minnesota, United States
+            units: imperial # alternatively "imperial"
+            hour-format: 24h # alternatively "24h"
+            # Optionally hide the location from being displayed in the widget
+            hide-location: true
+          - type: twitch-channels
+            channels:
+              - davidpakman
+              - christitustech
+              - dailytechnewsshow
+              - stewie2k
+              - eslcs
+          - type: twitch-top-games
+            limit: 20
+            collapse-after: 5
+            exclude:
+              - just-chatting
+              - pools-hot-tubs-and-beaches
+              - music
+              - art
+              - asmr
+              - irl
+
+          - type: bookmarks
+            groups:
+            - title: Gaming
+              links:
+                - title: ProtonDB
+                  url: https://www.protondb.com
+                - title: 3k Mud Files
+                  url: http://10.0.40.40:1086
+          - type: group
+            title: Local News
+            widgets:
+              - type: reddit
+                subreddit: minnesota
+                show-thumbnails: true
+              - type: reddit
+                subreddit: twincities
+                show-thumbnails: true
+
+      - size: full
+        widgets:
+          - type: group
+            title: Tech News
+            widgets:
+              - type: hacker-news
+              - type: reddit
+                subreddit: shortcuts
+                show-thumbnails: true
+              - type: reddit
+                subreddit: selfhosted
+                show-thumbnails: true
+              - type: reddit
+                subreddit: Proxmox
+                show-thumbnails: true
+              - type: reddit
+                subreddit: technology
+                show-thumbnails: true
+                
+          - type: group
+            title: Gaming News
+            widgets:
+              - type: reddit
+                show-thumbnails: true
+                subreddit: pcgaming
+              - type: reddit
+                show-thumbnails: true
+                subreddit: iosgaming
+              - type: reddit
+                show-thumbnails: true
+                subreddit: linux_gaming
+              - type: reddit
+                show-thumbnails: true
+                subreddit: gamingnews
+
+          - type: group
+            title: Coding
+            widgets:
+              - type: reddit
+                subreddit: ADHD_Programmers
+                show-thumbnails: true
+              - type: reddit
+                subreddit: javascript
+                show-thumbnails: true
+              - type: reddit
+                subreddit: webdev
+                show-thumbnails: true
+              - type: reddit
+                subreddit: web_design
+                show-thumbnails: true
+
+          - type: videos
+            title: DIY Tech
+            channels:
+              - UCR-DXc1voovS8nhAvccRZhg # Jeff Geerling
+              - UCjSEJkpGbcZhvo0lr-44X_w # TechHut
+              - UCw-kw9V9aE0c6y1fJm6e2IA # Nerd on a Budget
+              - UCgdTVe88YVSrOZ9qKumhULQ # Hardware Haven
+
+          - type: videos
+            title: Coding
+            channels:
+              - UCwHwDuNd9lCdA7chyyquDXw # Bread on Penguins
+              - UCMN0a7GHQnC6H74SmCGSmdw # You Suck at Programming
+
+          - type: videos
+            title: Gaming
+            channels:
+              - UCNvzD7Z-g64bPXxGzaQaa4g # gameranx
+              - UCZ7AeeVbyslLM_8-nVy2B8Q # Skill Up
+              - UCHDxYLv8iovIbhrfl16CNyg # GameLinked
+              - UC9PBzalIcEQCsiIkq36PyUA # Digital Foundry
+              - UCVXA3FX3fCv-YEuBlxpeFVg # fl0m
+              - UCKMgYyhm-_zuuGx0KQX-a1A # TimeIsButaWindow
+              - UCpFcHE36IoySjYj1Rytxyog # TheWarOwl
+          - type: videos
+            title: Politics
+            channels:
+              - UCvixJtaXuNdMPUGdOPcY8Ag # David Pakman
+
+          - type: videos
+            title: Life
+            channels:
+              - UCkJEpR7JmS36tajD34Gp4VA # Psych2Go
+              - UC-nPM1_kSZf91ZGkcgy_95Q # How to ADHD
+              - UCnorhjQR4zJkT7AVNhu395Q # HomeRenoVision DIY
+
+      - size: small
+        widgets:
+          - type: markets
+            markets:
+              - symbol: SPY
+                name: S&P 500
+              - symbol: BTC-USD
+                name: Bitcoin
+              - symbol: NVDA
+                name: NVIDIA
+              - symbol: AAPL
+                name: Apple
+              - symbol: MSFT
+                name: Microsoft
+
+          - type: releases
+            cache: 1d
+            # Without authentication the Github API allows for up to 60 requests per hour. You can create a
+            # read-only token from your Github account settings and use it here to increase the limit.
+            token: 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 # indefinite key *WARNING*
+            show-source-icon: true
+            repositories:
+              - glanceapp/glance                    # Glance Dashboard
+              - immich-app/immich                   # Photos Backup and Management
+              - opnsense/core                       # Firewall and Router Software
+              - home-assistant/core                 # Home Automation and Dashboard
+              - paperless-ngx/paperless-ngx         # Paperwork/Records Organization & Auto Ingest
+           #   - winblues/blue95
+              - scandum/tintin                      # MUD Client and Coding Language
+              - monetr/monetr                       # Budget Money App that I am paying $4/mo
+              - gohugoio/hugo                       # Static Website Generator, using for docs and blog
+           #   - morph027/pve-lxc-scripts
+              - community-scripts/ProxmoxVE         # Scripts by tteck for PVE continued by community
+              - bookstackapp/bookstack              # Internal Documentation Service
+              - release-argus/argus                 # Functionally the same as this widget but >Github
+              - louislam/dockge                     # Docker Compose stack manager
+              - coder/code-server                   # VS Code in the browser
+              - cryptpad/cryptpad                   # Browser based Office 365
+              - sabre-io/baikal                     # Backend CalDAV and CarDAV for Calendar and Contacts
+              - freshrss/freshrss                   # RSS News Agregator
+              - jellyfin/jellyfin                   # Movie/TV Streaming    :: SERVARR
+              - fallenbagel/jellyseerr              # Request new media     :: SERVARR
+              - lidarr/lidarr                       # Music Management      :: SERVARR
+              - sonarr/sonarr                       # TV Series Management  :: SERVARR
+              - radarr/radarr                       # Movies Management     :: SERVARR
+              - cleanuparr/cleanuparr               # Clean up              :: SERVARR
+              - prowlarr/prowlarr                   # Index Management      :: SERVARR
+              - morpheus65535/bazarr                # Subtitles Downloader  :: SERVARR
+              - nzbgetcom/nzbget                    # Usenet NZB Downloader :: SERVARR
+              - HaveAGitGat/Tdarr                   # Automated Transcoder  :: SERVARR
+              - sbondCo/Watcharr                    # Watchlist             :: SERVARR
+              - Whisparr/Whisparr                   # Porn Management       :: SERVARR
+              - mylar3/mylar3                       # Comics Management     :: SERVARR
+              - Kareadita/Kavita                    # Books Library
+              - alexta69/metube                     # Grab any public vid   :: SERVARR
+              - navidrome/navidrome                 # Music Streaming
+              - chrisbenincasa/tunarr               # Create TV Stations    :: SERVARR
+              - plexguide/Huntarr.io                # Seeks to upgrade lib  :: SERVARR
+
+          - type: custom-api
+            title: Steam Specials
+            cache: 12h
+            url: https://store.steampowered.com/api/featuredcategories?cc=us
+            template: |
+              <ul class="list list-gap-10 collapsible-container" data-collapse-after="5">
+              {{ range .JSON.Array "specials.items" }}
+              <li>
+                <a class="size-h4 color-highlight block text-truncate" href="https://store.steampowered.com/app/{{ .Int "id" }}/">{{ .String "name" }}</a>
+              <ul class="list-horizontal-text">
+              <li>{{ div (.Int "final_price" | toFloat) 100 | printf "$%.2f" }}</li>
+              {{ $discount := .Int "discount_percent" }}
+              <li>{{ if ge $discount 40 }} class="color-positive"{{ end }}>{{ $discount }}% off</li>
+              </ul>
+              </li>
+              {{ end }}
+              </ul>

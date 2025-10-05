@@ -1,0 +1,168 @@
+  - name: Media
+    # width: slim
+    center-vertically: true
+    columns:
+    - size: small
+      widgets:
+        - type: bookmarks
+          title: _ _ _
+          groups:
+            - links:
+              - title: Filebrowser Q
+                url: http://10.0.0.7:8282/files/mnt
+              - title: Servarr Wiki
+                url: https://wiki.servarr.com/
+
+            - title: Sources
+              hide-arrow: true
+              links:
+                - title: The Pirate Bay
+                  url: https://thepiratebay.org/
+                - title: ytsMx Movies
+                  url: https://yts.mx/browse-movies/film/all/all/0/latest/0/all
+                - title: EzTv
+                  url: https://eztvx.to/home
+                - title: IP-TV
+                  url: https://github.com/iptv-org/iptv/blob/master/PLAYLISTS.md     
+                - title: Bandcamp
+                  url: https://bandcamp.com
+                - title: Usenet Indexer
+                  url: https://nzbgeek.info
+                - title: Usenet Provider
+                  url: https://www.supernews.com/usenet/
+                - title: MusicBrainz
+                  url: https://musicbrainz.org/search
+        - type: custom-api
+          title: "Jellyfin Stats"
+          base-url: http://10.0.40.20:8096
+          options:
+            url: http://10.0.40.20:8096
+            key: ed1472a3abf14fe68d93b81b5acb7611
+
+          template: |
+            {{ $url := .Options.StringOr "url" "" }}
+            {{ $key := .Options.StringOr "key" "" }}
+
+            {{- if or (eq $url "") (eq $key "") -}}
+    
+              <p>Error: The URL or API Key was not configured in the widget options.</p>
+      
+            {{- else -}}
+
+              {{- $requestUrl := printf "%s/emby/Items/Counts?api_key=%s" $url $key -}}
+              {{- $jellyfinData := newRequest $requestUrl | getResponse -}}
+
+              {{- if eq $jellyfinData.Response.StatusCode 200 -}}
+                <div class="flex flex-column gap-5">
+                  <div class="flex justify-between text-center">
+            
+                  <div>
+                    <div class="color-highlight size-h3">{{ $jellyfinData.JSON.Int "MovieCount" | formatNumber }}</div>
+                    <div class="size-h5 uppercase">Movies</div>
+                  </div>
+
+                  <div>
+                    <div class="color-highlight size-h3">{{ $jellyfinData.JSON.Int "SeriesCount" | formatNumber }}</div>
+                    <div class="size-h5 uppercase">TV Shows</div>
+                  </div>
+
+                  <div>
+                    <div class="color-highlight size-h3">{{ $jellyfinData.JSON.Int "EpisodeCount" | formatNumber }}</div>
+                    <div class="size-h5 uppercase">Episodes</div>
+                  </div>
+
+                  <div>
+                    <div class="color-highlight size-h3">{{ $jellyfinData.JSON.Int "SongCount" | formatNumber }}</div>
+                    <div class="size-h5 uppercase">Songs</div>
+                  </div>
+
+                  </div>
+                </div>
+                {{- else -}}
+              <p>Failed: {{ $jellyfinData.Response.Status }}</p>
+                {{- end -}}
+              {{- end -}}         
+
+    - size: full
+      widgets:
+        - type: search
+          placeholder: "!yt; !ph; !im; !tph"
+          autofocus: true
+          new-tab: true
+          search-engine: duckduckgo
+          bangs:
+          - title: YouTube
+            shortcut: "!yt"
+            url: https://www.youtube.com/results?search_query={QUERY}
+          - title: PornHub
+            shortcut: "!ph"
+            url: https://www.pornhub.com/video/search?search={QUERY}
+          - title: IMDb
+            shortcut: "!im"
+            url: https://www.imdb.com/find/?q={QUERY}
+          - title: The Pirate Bay
+            shortcut: "!tpb"
+            url: https://thepiratebay.org/search.php?q={QUERY}
+            
+        - type: monitor
+          cache: 1m
+          title: Entertainment
+          sites:
+            - title: devBoer's Jellyfin
+              url: https://jellyfin.int.devboer.com
+              icon: di:jellyfin
+            - title: Navidrome
+              url: https://music.int.devboer.com 
+              icon: sh:navidrome
+            - title: Scribble.rs
+              url: https://scribble.devboer.com # http://10.0.50.2:6969/
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/nyt-crossword.svg
+            - title: Karvec's Jellyfin
+              url: https://jellyfin.maybeits.us
+              icon: sh:jellyfin
+
+    - size: small
+      widgets:
+        - type: monitor
+          cache: 1m
+          title: Browse New Media
+          sites:
+            - title: Watchlist (Watcharr)
+              url: https://list.arr.devboer.com # http://10.0.40.19:3080/
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/watcharr.png # sh:watcharr
+            - title: Request (devBoer)
+              url: https://new.arr.devboer.com # http://10.0.40.22:5055
+              icon: sh:jellyseerr
+            - title: Request (Karvec)
+              url: https://jellyseerr.maybeits.us/
+              icon: sh:jellyseerr
+
+        - type: monitor
+          cache: 1m
+          title: Media Automation
+          sites:
+            - title: Music (Lidarr)
+              url: https://music.arr.devboer.com # http://10.0.40.26:8686
+              icon: sh:lidarr
+            - title: Movies (Radarr)
+              url: https://movies.arr.devboer.com # http://10.0.40.23:7878
+              icon: sh:radarr-light-hybrid
+            - title: TV Series (Sonarr)
+              url: https://tv.arr.devboer.com # http://10.0.40.28:8989
+              icon: sh:sonarr
+            - title: Comics (Mylar3)
+              url: https://comic.arr.devboer.com # http://10.0.40.41:8090
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/mylar3.png
+            - title: Whisparr
+              url: https://pron.arr.devboer.com # http://10.0.40.18:6969
+              icon: sh:whisparr
+            - title: Transcode (Tdarr)
+              url: https://trans.arr.devboer.com/#/ # http://10.0.40.27:8265
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/tdarr.png # sh:tdarr
+            - title: Usenet Downloader (NZBget)
+              url: https://nzb.arr.devboer.com # http://10.0.40.29:6789
+              icon: sh:nzbget
+            - title: YouTube Downloader (MeTube)
+              url: https://yt.arr.devboer.com # http://10.0.40.21:8081
+              icon: sh:metube
+

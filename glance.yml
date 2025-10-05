@@ -1,0 +1,30 @@
+theme:
+  background-color: 50 1 6
+  primary-color: 24 97 58
+  negative-color: 209 88 54
+  # disable-picker: true
+server:
+  # base-url: /glance
+  port: 8080
+  assets-path: /opt/glance/assets
+  proxied: true
+branding:
+  # Raw edit url: http://10.0.0.4:8680
+  custom-footer: |
+    <h3>Managed by <a href="https://docs.devboer.com" target="_blank" style="color: #781ce2">devBoer Labs</a></h3><br/>
+    <p><a href="http://10.0.0.4:8680" target="_blank" style="color: #e2781c">Edit</a> this website</p>
+  logo-url: ./assets/logo-devboer.png
+  favicon-url: ./assets/logo-devboer.png
+  app-name: devboer labs
+  app-icon-url: "/assets/logo-devboer.png"
+
+pages:
+  - $include: ./pages/01_home.yml
+  - $include: ./pages/02_news.yml
+  - $include: ./pages/03_life.yml
+  - $include: ./pages/04_media.yml
+  - $include: ./pages/05_office.yml
+  - $include: ./pages/06_devops.yml
+  # combine dev with infra
+  # combine some elements of dev with life
+  # move demo page to demo server and link to it in devops
