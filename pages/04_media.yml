@@ -1,4 +1,4 @@
-  - name: Media
+  - name: Servarr
     # width: slim
     center-vertically: true
     columns:
@@ -8,7 +8,7 @@
           title: _ _ _
           groups:
             - links:
-              - title: Filebrowser Q
+              - title: File Browser
                 url: http://10.0.0.7:8282/files/mnt
               - title: Servarr Wiki
                 url: https://wiki.servarr.com/
@@ -127,8 +127,8 @@
           cache: 1m
           title: Browse New Media
           sites:
-            - title: Watchlist (Watcharr)
-              url: https://list.arr.devboer.com # http://10.0.40.19:3080/
+            - title: Watchlist
+              url: https://watch.arr.devboer.com # http://10.0.40.19:3080/
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/watcharr.png # sh:watcharr
             - title: Request (devBoer)
               url: https://new.arr.devboer.com # http://10.0.40.22:5055
@@ -139,30 +139,30 @@
 
         - type: monitor
           cache: 1m
-          title: Media Automation
+          title: Manage Libraries
           sites:
-            - title: Music (Lidarr)
-              url: https://music.arr.devboer.com # http://10.0.40.26:8686
+            - title: Music
+              url: https://lid.arr.devboer.com # http://10.0.40.26:8686
               icon: sh:lidarr
-            - title: Movies (Radarr)
-              url: https://movies.arr.devboer.com # http://10.0.40.23:7878
+            - title: Movies
+              url: https://rad.arr.devboer.com # http://10.0.40.23:7878
               icon: sh:radarr-light-hybrid
-            - title: TV Series (Sonarr)
-              url: https://tv.arr.devboer.com # http://10.0.40.28:8989
+            - title: Series
+              url: https://son.arr.devboer.com # http://10.0.40.28:8989
               icon: sh:sonarr
-            - title: Comics (Mylar3)
-              url: https://comic.arr.devboer.com # http://10.0.40.41:8090
+            - title: Comics
+              url: https://myl.arr.devboer.com # http://10.0.40.41:8090
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/mylar3.png
-            - title: Whisparr
-              url: https://pron.arr.devboer.com # http://10.0.40.18:6969
+            - title: XXX
+              url: https://whisp.arr.devboer.com # http://10.0.40.18:6969
               icon: sh:whisparr
-            - title: Transcode (Tdarr)
-              url: https://trans.arr.devboer.com/#/ # http://10.0.40.27:8265
+            - title: Transcode
+              url: https://td.arr.devboer.com/#/ # http://10.0.40.27:8265
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/tdarr.png # sh:tdarr
-            - title: Usenet Downloader (NZBget)
+            - title: NZBget
               url: https://nzb.arr.devboer.com # http://10.0.40.29:6789
               icon: sh:nzbget
-            - title: YouTube Downloader (MeTube)
-              url: https://yt.arr.devboer.com # http://10.0.40.21:8081
-              icon: sh:metube
+            - title: Manage YouTube (Youtarr)
+              url: https://yout.arr.devboer.com # http://10.0.40.21:8081
+              icon: sh:youtarr
 

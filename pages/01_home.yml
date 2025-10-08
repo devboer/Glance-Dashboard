@@ -49,7 +49,23 @@
           style: compact
           title: Status
           sites:
-            - title: Jellyfin(100)        # Media Library
+            - title: PVE-Dev [0.9]
+              url: https://10.0.0.9:8006
+            - title: PVE-Hass [0.8]
+              url: https://10.0.0.8:8006
+            - title: PVE-Prod [0.7]
+              url: https://10.0.0.7:8006
+            - title: PVE-Prod [Files]
+              url: http://10.0.0.7:8000   
+            - title: Glance [100, 0.4]
+              url: http://10.0.0.4:8080
+            - title: Glance [Code]
+              url: http://10.0.0.4:8680 
+            - title: Bookstack [101, 40.52]
+              url: http://10.0.40.52
+            - title: Argus [102, 40.50]
+              url: http://10.0.40.50:8080
+            - title: Jellyfin(700)        # Media Library
               url: http://10.0.40.20:8096
             # - title: samba(101)
             #   check-url: 10.0.0.5
@@ -89,8 +105,8 @@
               url: http://10.0.0.201/admin
             - title: baikal(108)          # CalDAV & CardDAV server
               url: https://ccdav.int.devboer.com
-            - title: metube(124)          # Download Youtube Vids (and Pornhub)
-              url: http://10.0.40.21:8081 # https://ytdlp.int.devboer.com
+            - title: youtarr(714)          # Download Youtube Automatically
+              url: http://10.0.40.21:8081 # https://yout.arr.devboer.com
             - title: navidrome(125)       # Music Streaming Service using my Music Collection
               url: http://10.0.40.25:4533 # https://music.int.devboer.com
             - title: navidrome(filebrowser)
@@ -110,8 +126,6 @@
               url: https://argus.int.devboer.com
             - title: pulse(132)             # ???
               url: http://10.0.0.231:7655
-            - title: Manage My Damn Life (133)  # Calendar, Tasks, Connects to Baikal
-              url: https://mmdl.int.devboer.com
             - title: Lidarr(134)            # Music Library Management
               url: http://10.0.40.26:8686           
             - title: listmonk(135)          # Email Subs and Mailing lists
@@ -129,6 +143,7 @@
               allow-insecure: true
             - title: iventoy(405)           # ISO network install / Database
               url: http://10.0.0.11:26000
+# needs reorganization, new IDs, new containers, new URLs
     - size: full
       widgets:
         - type: search
