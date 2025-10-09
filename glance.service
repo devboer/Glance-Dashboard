@@ -1,0 +1,15 @@
+[Unit]
+Description=Glance Daemon
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/glance
+EnvironmentFile=/opt/glance/.env
+ExecStart=/opt/glance/glance --config /opt/glance/glance.yml
+TimeoutStopSec=20
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
