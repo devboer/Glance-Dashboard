@@ -55,146 +55,229 @@
               url: https://10.0.0.8:8006
             - title: PVE-Prod [0.7]
               url: https://10.0.0.7:8006
-            - title: PVE-Prod [Files]
-              url: http://10.0.0.7:8000   
-            - title: Glance [100, 0.4]
+            - title: PVE-Prod-Files
+              url: http://10.0.0.7:8000
+
+            - title: glance [100|0.4:8080]
               url: http://10.0.0.4:8080
-            - title: Glance [Code]
-              url: http://10.0.0.4:8680 
-            - title: Bookstack [101, 40.52]
-              url: http://10.0.40.52
-            - title: Argus [102, 40.50]
+            - title: glance [100|0.4:8680]
+              url: http://10.0.0.4:8680
+
+            - title: bookstack [101|40.52:80]
+              url: http://10.0.40.52:80
+
+            - title: argus [102|40.50:8080]
               url: http://10.0.40.50:8080
-            - title: Jellyfin(700)        # Media Library
-              url: http://10.0.40.20:8096
-            # - title: samba(101)
-            #   check-url: 10.0.0.5
-            - title: paperless(103)       # Document Manager
-              url: http://10.0.40.30:8000
-            - title: immich(104)          # Photos Collection
-              url: http://10.0.40.24:2283
-            # - title: mud3k(105)
-            #   check-url: 10.0.40.40
-            - title: kavita(106)          # Books Collection
-              url: http://10.0.40.11:5000
-            - title: Grocy(107)           # House Inventory & Chores
-              url: http://10.0.40.32
-            - title: freshrss(110)        # News Reader
-              url: http://10.0.40.10
-            - title: searxng(112)         # Web Search Engine
-              url: http://10.0.0.215:8888
-              alt-status-codes:
-                - 429
-            - title: stirling-pdf(113)    # PDF Editor
-              url: http://10.0.40.31:8080
-            - title: jellyseerr(114)      # Request Media for Jellyfin, ingests into -Arr Apps
-              url: http://10.0.40.22:5055
-            - title: ghost(115)           # Blog, Content Management
-              url: http://10.0.40.108
-            - title: ConvertX (116)       # Convert any files
-              url: http://10.0.40.36:3000/ # https://convertx.int.devboer.com
-            - title: reactive-resume(118) # Create your Resume
-              url: http://10.0.40.34:3000 # https://cv.int.devboer.com
-            - title: dockge(119)          # Docker Compose management
+
+            - title: dockge [103|50.2:5001]
               url: http://10.0.50.2:5001
-            - title: bookstack(138)       # Homelab Documentation
-              url: https://wiki.int.devboer.com
-            - title: barcode-buddy(121)   # Companion App to Grocy
-              url: http://10.0.40.33      # https://upc.int.devboer.com
-            - title: pihole(122)          # DNS Black Hole for Networkwide Application
-              url: http://10.0.0.201/admin
-            - title: baikal(108)          # CalDAV & CardDAV server
-              url: https://ccdav.int.devboer.com
-            - title: youtarr(714)          # Download Youtube Automatically
-              url: http://10.0.40.21:8081 # https://yout.arr.devboer.com
-            - title: navidrome(125)       # Music Streaming Service using my Music Collection
-              url: http://10.0.40.25:4533 # https://music.int.devboer.com
-            - title: navidrome(filebrowser)
-              url: http://10.0.40.25:8080
-            - title: apache-guacamole(126) # TeamViewer Alternative? 
-              url: http://10.0.0.217:8080
-            - title: nextcloudpi(127)      # Cloud Apps Suite
-              url: https://10.0.0.12
-              allow-insecure: true
-            - title: gatus(128)             # ???
-              url: http://10.0.0.227:8080
-            - title: Karakeep(129)          # Archive websites, Keep bookmarks centrally
-              url: http://10.0.40.35:3000   # https://keep.int.devboer.com
-            - title: myspeed(130)           # Tests Internet Speeds  
-              url: http://10.0.0.229:5216
-            - title: argus(131)             # Checks for NEW Software Releases
-              url: https://argus.int.devboer.com
-            - title: pulse(132)             # ???
+            - title: dockge [103|50.2:2283]
+              url: http://10.0.50.2:2283
+
+            - title: pulse [104|0.231:7655]
               url: http://10.0.0.231:7655
-            - title: Lidarr(134)            # Music Library Management
-              url: http://10.0.40.26:8686           
-            - title: listmonk(135)          # Email Subs and Mailing lists
+
+            - title: gatus [105|0.227:8080]
+              url: http://10.0.0.227:8080
+
+            - title: code-server [106|40.54:8680]
+              url: http://10.0.40.54:8680
+
+            - title: public-app-dash [107|40.112:7990]
+              url: http://10.0.40.112:7990
+
+            - title: myspeed [200|40.114:5216]
+              url: http://10.0.40.114:5216
+
+            - title: pihole [201|0.201:80]
+              url: http://10.0.0.201:80
+            - title: pihole [201|0.201:443]
+              url: http://10.0.0.201:443
+
+            - title: goaway-dns [202|0.122:8080]
+              url: http://10.0.0.122:8080
+            - title: goaway-dns [202|0.122:53]
+              url: http://10.0.0.122:53
+
+            - title: pi.alert [205|50.108:80]
+              url: http://10.0.50.108:80
+
+            - title: iventoy [206|0.11:offline]
+              url: http://10.0.0.11
+
+            - title: apache-guacamole [207|0.217:8080]
+              url: http://10.0.0.217:8080
+
+            - title: authelia [210|40.55:9091]
+              url: http://10.0.40.55:9091
+
+            - title: omada [220|0.3:8843]
+              url: http://10.0.0.3:8843
+            - title: omada [220|0.3:8043]
+              url: http://10.0.0.3:8043
+            - title: omada [220|0.3:8088]
+              url: http://10.0.0.3:8088
+
+#            - title: samba [300|0.5:offline]
+#              url: offline
+# needs a pingable url
+            - title: nextcloudpi [301|40.53:80]
+              url: http://10.0.40.53:80
+            - title: nextcloudpi [301|40.53:443]
+              url: http://10.0.40.53:443
+            - title: nextcloudpi [301|40.53:7867]
+              url: http://10.0.40.53:7867
+            - title: nextcloudpi [301|40.53:4443]
+              url: http://10.0.40.53:4443
+
+            - title: cryptpad [302|40.51:3000]
+              url: http://10.0.40.51:3000
+            - title: cryptpad [302|40.51:3003]
+              url: http://10.0.40.51:3003
+
+            - title: paperless [303|40.30:80]
+              url: http://10.0.40.30:80
+            - title: paperless [303|40.30:8000]
+              url: http://10.0.40.30:8000
+
+            - title: baikal [304|40.38:80]
+              url: http://10.0.40.38:80
+
+            - title: freshrss [305|40.10:80]
+              url: http://10.0.40.10:80
+
+            - title: stirling-pdf [306|40.31:8080]
+              url: http://10.0.40.31:8080
+
+            - title: convertx [307|40.36:3000]
+              url: http://10.0.40.36:3000
+
+            - title: karakeep [308|40.35:offline]
+              url: offline
+
+            - title: searxng [309|0.215:8888]
+              url: http://10.0.0.215:8888
+
+            - title: palmr [310|0.141:3333]
+              url: http://10.0.0.141:3333
+            - title: palmr [310|0.141:3000]
+              url: http://10.0.0.141:3000
+ 
+            - title: grocy [400|40.32:80]
+              url: http://10.0.40.32:80
+
+            - title: barcode-buddy [401|40.33:80]
+              url: http://10.0.40.33:80
+
+            - title: plant-it [402|40.37:3000]
+              url: http://10.0.40.37:3000
+            - title: plant-it [402|40.37:8080]
+              url: http://10.0.40.37:8080
+
+            - title: lubelogger [403|40.12:5000]
+              url: http://10.0.40.12:5000
+
+            - title: tududi [404|40.14:3002]
+              url: http://10.0.40.14:3002
+
+            - title: mud3k [500|40.40:22]
+              url: http://10.0.40.40:22
+            - title: mud3k-copyparty [500|40.40:1086]
+              url: http://10.0.40.40:1086
+
+            - title: alpine-redlib [501|0.123:5252]
+              url: http://10.0.0.123:5252
+
+            - title: ghost [600|40.56:80]
+              url: http://10.0.40.56:80
+
+            - title: linkstack [601|40.13:80]
+              url: http://10.0.40.13:80
+
+            - title: listmonk [602|0.234:9000]
               url: http://10.0.0.234:9000
-            - title: Radarr(136)            # Movies Library Management
+
+            - title: reactive-resume [603|40.34:3000]
+              url: http://10.0.40.34:3000
+            - title: reactive-resume [603|40.34:9000]
+              url: http://10.0.40.34:9000
+
+            - title: jellyfin [700|40.20:8096]
+              url: http://10.0.40.20:8096
+
+            - title: jellyseerr [701|40.22:5055]
+              url: http://10.0.40.22:5055
+
+            - title: tdarr [702|40.27:8265]
+              url: http://10.0.40.27:8265
+            - title: tdarr [702|40.27:8266]
+              url: http://10.0.40.27:8266
+
+            - title: watcharr [703|40.19:3000]
+              url: http://10.0.40.19:3000
+            - title: watcharr [703|40.19:3080]
+              url: http://10.0.40.19:3080
+
+            - title: nzbget [704|40.29:6789]
+              url: http://10.0.40.29:6789
+
+            - title: prowlarr [705|40.16:9696]
+              url: http://10.0.40.16:9696
+
+            - title: radarr [706|40.23:7878]
               url: http://10.0.40.23:7878
-            - title: Watcharr(137)          # Movies Watchlist
-              url: http://10.0.40.19:3080/
-            - title: LinkStack (139)        # LinkTree alt
-              url: https://links.int.devboer.com
-            - title: pi.alert(205)          # Network alerts?  
-              url: http://10.0.50.108
-            - title: omada(220)             # WiFi or EAP (Enterprise Access Point) Controller (one stop for both EAPS)
-              url: https://10.0.0.3:8043
-              allow-insecure: true
-            - title: iventoy(405)           # ISO network install / Database
-              url: http://10.0.0.11:26000
-# needs reorganization, new IDs, new containers, new URLs
-    - size: full
-      widgets:
-        - type: search
-          placeholder: "!yt; !ph; !im; !tph"
-          autofocus: true
-          new-tab: true
-          search-engine: duckduckgo
-          bangs:
-          - title: YouTube
-            shortcut: "!yt"
-            url: https://www.youtube.com/results?search_query={QUERY}
-          - title: PornHub
-            shortcut: "!ph"
-            url: https://www.pornhub.com/video/search?search={QUERY}
-          - title: IMDb
-            shortcut: "!im"
-            url: https://www.imdb.com/find/?q={QUERY}
-          - title: The Pirate Bay
-            shortcut: "!tpb"
-            url: https://thepiratebay.org/search.php?q={QUERY}
-            
-        - type: monitor
-          show-failing-only: false
-          cache: 1m
-          title: Popular Apps
-          sites:
-            - title: Media
-              url: https://jellyfin.int.devboer.com # http://10.0.40.20:8096
-              icon: di:jellyfin
-            - title: Photos
-              url: https://photos.int.devboer.com # http://10.0.40.24:2283/
-              icon: di:immich
-            - title: Music
-              url: https://music.int.devboer.com
-              icon: di:navidrome
-            - title: Home Assistant
-              url: https://hass.int.devboer.com # http://10.0.0.70:8123
-              icon: di:home-assistant
-            - title: Files
-              url: https://10.0.0.12 # cloud.int.devboer.com
-              icon: di:nextcloud
-              allow-insecure: true
-            - title: RSS
-              url: https://rss.int.devboer.com
-              icon: di:freshrss
-            - title: Garden
-              url: https://garden.int.devboer.com/
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/plant-it.png # sh:plant-it
-            - title: Todos
-              url: https://todo.int.devboer.com
-              icon: sh:tududi
+
+            - title: sonarr [707|40.28:8989]
+              url: http://10.0.40.28:8989
+
+            - title: lidarr [708|40.26:8686]
+              url: http://10.0.40.26:8686
+
+            - title: whisparr [709|40.18:6969]
+              url: http://10.0.40.18:6969
+
+            - title: bazarr [710|40.15:6767]
+              url: http://10.0.40.15:6767
+
+            - title: cleanuparr [711|40.17:11011]
+              url: http://10.0.40.17:11011
+
+            - title: mylar3 [712|40.41:8090]
+              url: http://10.0.40.41:8090
+
+            - title: books [713|40.11:5000]
+              url: http://10.0.40.11:5000
+
+            - title: youtarr [714|50.149:3321]
+              url: http://10.0.50.149:3321
+            - title: youtarr [714|50.149:3087]
+              url: http://10.0.50.149:3087
+
+            - title: navidrome [715|40.25:4533]
+              url: http://10.0.40.25:4533
+            - title: navidrome-files [715|40.25:8080]
+              url: http://10.0.40.25:8080
+
+            - title: immich [716|40.24:2283]
+              url: http://10.0.40.24:2283
+            - title: immich-code [716|40.24:8680]
+              url: http://10.0.40.24:8680
+
+            - title: tunarr [717|40.109:8000]
+              url: http://10.0.40.109:8000
+
+            - title: jackett [718|40.110:9117]
+              url: http://10.0.40.110:9117
+
+            - title: mediamanager [719|40.111:8000]
+              url: http://10.0.40.111:8000
+
+            - title: huntarr [720|40.42:9705]
+              url: http://10.0.40.42:9705
+
+            - title: sabnzbd [721|40.113:7777]
+              url: http://10.0.40.113:7777  
+           
         - type: custom-api
           title: Random Fact
           cache: 3h

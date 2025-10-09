@@ -22,7 +22,7 @@ pages:
   - $include: ./pages/01_home.yml
   - $include: ./pages/02_news.yml
   - $include: ./pages/03_life.yml
-  - $include: ./pages/04_media.yml
+  - $include: ./pages/04_servarr.yml
   - $include: ./pages/05_office.yml
   - $include: ./pages/06_devops.yml
   # combine dev with infra
