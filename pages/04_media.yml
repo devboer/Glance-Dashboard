@@ -162,7 +162,7 @@
             - title: NZBget
               url: https://nzb.arr.devboer.com # http://10.0.40.29:6789
               icon: sh:nzbget
-            - title: Manage YouTube (Youtarr)
+            - title: YouTube
               url: https://yout.arr.devboer.com # http://10.0.40.21:8081
-              icon: sh:youtarr
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/youtarr.png
 
