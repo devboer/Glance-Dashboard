@@ -13,10 +13,10 @@ branding:
   custom-footer: |
     <h3>Managed by <a href="https://docs.devboer.com" target="_blank" style="color: #781ce2">devBoer Labs</a></h3><br/>
     <p><a href="http://10.0.0.4:8680" target="_blank" style="color: #e2781c">Edit</a> this website</p>
-  logo-url: ./assets/logo-devboer.png
-  favicon-url: ./assets/logo-devboer.png
+  logo-url: ./assets/branding/logo-devboer.png
+  favicon-url: ./assets/branding/logo-devboer.png
   app-name: devboer labs
-  app-icon-url: "/assets/logo-devboer.png"
+  app-icon-url: "./assets/branding/logo-devboer.png"
 
 pages:
   - $include: ./pages/01_home.yml
@@ -25,6 +25,4 @@ pages:
   - $include: ./pages/04_servarr.yml
   - $include: ./pages/05_office.yml
   - $include: ./pages/06_devops.yml
-  # combine dev with infra
-  # combine some elements of dev with life
   # move demo page to demo server and link to it in devops

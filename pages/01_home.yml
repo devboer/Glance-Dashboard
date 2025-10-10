@@ -13,61 +13,74 @@
               links:
                 - title: Gmail
                   url: https://gmail.com
-                  icon: di:gmail
+                  icon: ../assets/bookmark-icons/gmail.png
                 - title: Yahoo
                   url: https://mail.yahoo.com
-                  icon: di:yahoo
+                  icon: ../assets/bookmark-icons/yahoo.png
                 - title: Proton
                   url: https://mail.proton.me
-                  icon: di:proton-mail
+                  icon: ../assets/bookmark-icons/proton-mail.png
             - title: Entertainment
               color: 10 70 50
               hide-arrow: true
               links:
                 - title: YouTube
                   url: https://youtube.com
-                  icon: di:youtube
+                  icon: ../assets/bookmark-icons/youtube.png
                 - title: Netflix
                   url: https://netflix.com
-                  icon: di:netflix
+                  icon: ../assets/bookmark-icons/netflix.png
                 - title: Peacock
                   url: https://peacock.com
-                  icon: di:peacock
+                  icon: ../assets/bookmark-icons/peacock.png
                 - title: Podcasts
                   url: https://pocketcasts.com/
-                  icon: di:pocket-casts
+                  icon: ../assets/bookmark-icons/pocket-casts.png
             - title: IoT
               color: 40 50 60
               hide-arrow: true
               links:
                 - title: Doorbell
                   url: https://10.0.10.20
-                  icon: sh:reolink
+                  icon: ../assets/app-icons/reolink.png
         - type: monitor
           cache: 1m
           show-failing-only: true
           style: compact
           title: Status
           sites:
+          #
+          #   Proxmox Websites
+          #
             - title: PVE-Dev [0.9]
               url: https://10.0.0.9:8006
+              icon: ../assets/bookmark-icons/hewlett-packard-enterprise.png
             - title: PVE-Hass [0.8]
               url: https://10.0.0.8:8006
+              icon: ../assets/app-icons/home-assistant-light.png
             - title: PVE-Prod [0.7]
               url: https://10.0.0.7:8006
+              icon: ../assets/app-icons/proxmox.png
             - title: PVE-Prod-Files
               url: http://10.0.0.7:8000
-
+              icon: ../assets/app-icons/filebrowser-quantum.png
+          #
+          #   LXC Containerized Services
+          #
             - title: glance [100|0.4:8080]
               url: http://10.0.0.4:8080
+              icon: ../assets/app-icons/glance.png
             - title: glance [100|0.4:8680]
               url: http://10.0.0.4:8680
+              icon: ../assets/app-icons/filebrowser-quantum.png
 
             - title: bookstack [101|40.52:80]
               url: http://10.0.40.52:80
+              icon: ../assets/app-icons/bookstack.png
 
             - title: argus [102|40.50:8080]
               url: http://10.0.40.50:8080
+              icon: ../assets/app-icons/argus.png
 
             - title: dockge [103|50.2:5001]
               url: http://10.0.50.2:5001
@@ -277,6 +290,58 @@
 
             - title: sabnzbd [721|40.113:7777]
               url: http://10.0.40.113:7777  
+
+    - size: full
+      widgets:
+        - type: search
+          placeholder: "!yt; !ph; !im; !tph"
+          autofocus: true
+          new-tab: true
+          search-engine: duckduckgo
+          bangs:
+          - title: YouTube
+            shortcut: "!yt"
+            url: https://www.youtube.com/results?search_query={QUERY}
+          - title: PornHub
+            shortcut: "!ph"
+            url: https://www.pornhub.com/video/search?search={QUERY}
+          - title: IMDb
+            shortcut: "!im"
+            url: https://www.imdb.com/find/?q={QUERY}
+          - title: The Pirate Bay
+            shortcut: "!tpb"
+            url: https://thepiratebay.org/search.php?q={QUERY}
+            
+        - type: monitor
+          show-failing-only: false
+          cache: 1m
+          title: Popular Apps
+          sites:
+            - title: Media
+              url: https://jellyfin.int.devboer.com # http://10.0.40.20:8096
+              icon: di:jellyfin
+            - title: Photos
+              url: https://photos.int.devboer.com # http://10.0.40.24:2283/
+              icon: di:immich
+            - title: Music
+              url: https://music.int.devboer.com
+              icon: di:navidrome
+            - title: Home Assistant
+              url: https://hass.int.devboer.com # http://10.0.0.70:8123
+              icon: di:home-assistant
+            - title: Files
+              url: https://10.0.0.12 # cloud.int.devboer.com
+              icon: di:nextcloud
+              allow-insecure: true
+            - title: RSS
+              url: https://rss.int.devboer.com
+              icon: di:freshrss
+            - title: Garden
+              url: https://garden.int.devboer.com/
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/plant-it.png # sh:plant-it
+            - title: Todos
+              url: https://todo.int.devboer.com
+              icon: sh:tududi
            
         - type: custom-api
           title: Random Fact
