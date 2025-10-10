@@ -55,7 +55,7 @@
                  icon: si:materialdesignicons
                - title: Unsplash
                  url: https://unsplash.com/t/wallpapers 
-                 icon: si:unsplash
+                 icon: si:unsplash 
 
             - title: AI Tools
               hide-arrow: true
@@ -85,6 +85,8 @@
                   url: https://www.themoviedb.org/
                 - title: ComicVine
                   url: https://comicvine.gamespot.com/
+                - title: OpenRouter
+                  url: https://openrouter.ai
 
     - size: full
       widgets:

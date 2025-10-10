@@ -156,6 +156,10 @@
             - title: XXX
               url: https://whisp.arr.devboer.com # http://10.0.40.18:6969
               icon: sh:whisparr
+        - type: monitor
+          cache: 1m
+          title: Process Media
+          sites:
             - title: Transcode
               url: https://td.arr.devboer.com/#/ # http://10.0.40.27:8265
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/tdarr.png # sh:tdarr
