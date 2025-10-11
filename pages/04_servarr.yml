@@ -10,28 +10,38 @@
             - links:
               - title: File Browser
                 url: http://10.0.0.7:8282/files/mnt
+                icon: ../assets/icons/file-explorer.png
               - title: Servarr Wiki
                 url: https://wiki.servarr.com/
+                icon: ../assets/icons/servarr.png
 
             - title: Sources
               hide-arrow: true
               links:
                 - title: The Pirate Bay
                   url: https://thepiratebay.org/
+                  icon: ../assets/icons/utorrent.png
                 - title: ytsMx Movies
                   url: https://yts.mx/browse-movies/film/all/all/0/latest/0/all
+                  icon: ../assets/icons/utorrent.png
                 - title: EzTv
                   url: https://eztvx.to/home
+                  icon: ../assets/icons/utorrent.png
                 - title: IP-TV
-                  url: https://github.com/iptv-org/iptv/blob/master/PLAYLISTS.md     
+                  url: https://github.com/iptv-org/iptv/blob/master/PLAYLISTS.md
+                  icon: ../assets/icons/utorrent.png     
                 - title: Bandcamp
                   url: https://bandcamp.com
+                  icon: ../assets/icons/music-service.png
                 - title: Usenet Indexer
                   url: https://nzbgeek.info
+                  icon: ../assets/icons/nzb-dav.png
                 - title: Usenet Provider
                   url: https://www.supernews.com/usenet/
+                  icon: ../assets/icons/nzb-dav.png
                 - title: MusicBrainz
                   url: https://musicbrainz.org/search
+                  icon: ../assets/icons/music-service.png
         - type: custom-api
           title: "Jellyfin Stats"
           base-url: http://10.0.40.20:8096
@@ -106,36 +116,20 @@
             
         - type: monitor
           cache: 1m
-          title: Entertainment
+          title: Frontend Services
           sites:
             - title: devBoer's Jellyfin
               url: https://jellyfin.int.devboer.com
-              icon: di:jellyfin
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin.png # ../assets/icons/jellyfin-light.png
             - title: Navidrome
               url: https://music.int.devboer.com 
-              icon: sh:navidrome
-            - title: Scribble.rs
-              url: https://scribble.devboer.com # http://10.0.50.2:6969/
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/svg/nyt-crossword.svg
-            - title: Karvec's Jellyfin
-              url: https://jellyfin.maybeits.us
-              icon: sh:jellyfin
-
-    - size: small
-      widgets:
-        - type: monitor
-          cache: 1m
-          title: Browse New Media
-          sites:
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/navidrome.png # ../assets/icons/navidrome.png
             - title: Watchlist
               url: https://watch.arr.devboer.com # http://10.0.40.19:3080/
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/watcharr.png # sh:watcharr
+              icon: ../assets/icons/watcharr.png # sh:watcharr
             - title: Request (devBoer)
               url: https://new.arr.devboer.com # http://10.0.40.22:5055
-              icon: sh:jellyseerr
-            - title: Request (Karvec)
-              url: https://jellyseerr.maybeits.us/
-              icon: sh:jellyseerr
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyseerr.png # ../assets/icons/jellyseerr-light.png
 
         - type: monitor
           cache: 1m
@@ -143,30 +137,30 @@
           sites:
             - title: Music
               url: https://lid.arr.devboer.com # http://10.0.40.26:8686
-              icon: sh:lidarr
+              icon: ../assets/icons/lidarr-radarr.png
             - title: Movies
               url: https://rad.arr.devboer.com # http://10.0.40.23:7878
-              icon: sh:radarr-light-hybrid
+              icon: ../assets/icons/radarr.png
             - title: Series
               url: https://son.arr.devboer.com # http://10.0.40.28:8989
-              icon: sh:sonarr
+              icon: ../assets/icons/sonarr-radarr.png
             - title: Comics
               url: https://myl.arr.devboer.com # http://10.0.40.41:8090
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/mylar3.png
+              icon: ../assets/icons/mylar3.png
             - title: XXX
               url: https://whisp.arr.devboer.com # http://10.0.40.18:6969
-              icon: sh:whisparr
+              icon: ../assets/icons/whisparr.png
         - type: monitor
           cache: 1m
           title: Process Media
           sites:
             - title: Transcode
               url: https://td.arr.devboer.com/#/ # http://10.0.40.27:8265
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/tdarr.png # sh:tdarr
+              icon: ../assets/icons/tdarr.png
             - title: NZBget
               url: https://nzb.arr.devboer.com # http://10.0.40.29:6789
-              icon: sh:nzbget
+              icon: ../assets/icons/nzbget.png
             - title: YouTube
               url: https://yout.arr.devboer.com # http://10.0.40.21:8081
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/youtarr.png
+              icon: ../assets/icons/youtarr.png
 

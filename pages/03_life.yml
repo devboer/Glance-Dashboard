@@ -10,30 +10,34 @@
           - type: bookmarks
             groups:
               - title: Newsy
+                hide-arrow: true
+                color: 125 35 66
                 links:
                   - title: Proton
                     url: https://mail.proton.me/
-                    icon: sh:proton-mail
+                    icon: ../assets/icons/proton-mail.png
                   - title: Gmail
                     url: https://gmail.com/
-                    icon: sh:gmail
+                    icon: ../assets/icons/gmail.png
                   - title: Feeds
                     url: https://rss.int.devboer.com
-                    icon: sh:freshrss
+                    icon: ../assets/icons/freshrss.png
               - title: Tools
+                hide-arrow: true
+                color: 69 69 69
                 links:
                   - title: ChatGPT
                     url: https://chat.com
-                    icon: sh:chatgpt
+                    icon: ../assets/icons/chatgpt.png
                   - title: Venice AI (Privacy)
                     url: https://venice.ai/
-                    icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/localai.png
+                    icon: ../assets/icons/localai.png
                   - title: FocusMate
                     url: https://www.focusmate.com/
-                    icon: /assets/logo-focusmate.png
+                    icon: ../assets/icons/focusmate.png
                   - title: Barcode Buddy
                     url: https://upc.int.devboer.com
-                    icon: sh:barcode-buddy
+                    icon: ../assets/icons/barcode-buddy.png
               - title: Retailers
                 color: 4 20 100
                 hide-arrow: true
@@ -43,24 +47,29 @@
                     icon: si:samsclub
                   - title: Amazon
                     url: https://amazon.com
-                    icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/amazon.png
+                    icon: ../assets/icons/amazon.png
                   - title: Apple Account
                     url: https://account.apple.com
-                    icon: sh:icloud
+                    icon: ../assets/icons/icloud.png
 
               - title: Education
                 hide-arrow: true
                 links:
                   - title: My Github
                     url: https://github.com/devboer
+                    icon: ../assets/icons/github-light.png
                   - title: FreeCodeCamp.org
                     url: https://www.freecodecamp.org/
+                    icon: ../assets/icons/github-light.png
                   - title: Dev Roadmap
                     url: https://roadmap.sh
+                    icon: ../assets/icons/github-light.png
                   - title: My Profile
                     url: https://devboer.com
+                    icon: ../assets/icons/github-light.png
                   - title: My Lab Blog
                     url: https://docs.devboer.com
+                    icon: ../assets/icons/coder-light.png
       - size: full
         widgets:
         - type: search
@@ -87,34 +96,34 @@
           sites:
             - title: My LinkStack
               url: https://links.int.devboer.com/@devboer#
-              icon: sh:linkstack
+              icon: ../assets/icons/linkstack.png
             - title: A to Z
               url: https://atoz-login.amazon.work/?source=ac
-              icon: si:amazon
+              icon: ../assets/icons/amazon.png
             - title: MySpeed
               url: http://10.0.0.229:5216/
-              icon: si:speedtest
+              icon: ../assets/icons/myspeed.png
             - title: Inventory
               url: https://home.int.devboer.com # http://10.0.40.32
-              icon: di:grocy
+              icon: ../assets/icons/grocy.png
             - title: LubeLogger
               url: https://car.int.devboer.com/
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/lubelogger.png
+              icon: ../assets/icons/lubelogger.png
             # - title: ListMonk
             #   url: http://10.0.0.234:9000/
-              # icon: sh:listmonk
+              # icon: ../assets/icons/listmonk
             - title: Reactive Resume
               url: https://cv.int.devboer.com # 10.0.40.34:3000
-              icon: sh:reactive-resume
+              icon: ../assets/icons/reactive-resume-light.png
             - title: Home Assistant
               url: https://hass.int.devboer.com
-              icon: di:home-assistant
+              icon: ../assets/icons/home-assistant.png
             - title: Garden
               url: https://garden.int.devboer.com/
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/plant-it.png # sh:plant-it
+              icon: ../assets/icons/plant-it.png
             - title: iCloud
               url: https://icloud.com
-              icon: sh:icloud
+              icon: ../assets/icons/icloud.png
         - type: bookmarks
           title: Mostly Bills
           groups:
@@ -130,16 +139,16 @@
                   icon: si:intuit
                 - title: Monetr
                   url: https://my.monetr.app
-                  icon: sh:monetr
+                  icon: ../assets/icons/monetr.png
                 - title: Fidelity
                   url: https://www.fidelity.com/
-                  icon: sh:fidelity
+                  icon: ../assets/icons/fidelity.png
                 - title: Coinbase
                   url: https://www.coinbase.com/
                   icon: https://global-uploads.webflow.com/5b0c471ddb589cf22d4477a4/5cec15f8c0831c35aa6fe349_coinbase-app-icon.png
                 - title: Robinhood
                   url: https://robinhood.com/us/en/
-                  icon: sh:robinhood
+                  icon: ../assets/icons/robinhood.png
 
             - title: Utilities
               color: 2 78 48
@@ -184,7 +193,7 @@
               links:
                 - title: Chase
                   url: https://www.chase.com/personal/credit-cards/amazon
-                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/chase.png
+                  icon: ../assets/icons/chase.png
                 - title: Wings
                   url: https://www.wingscu.com/
                   icon: mdi:credit-card                  
@@ -197,13 +206,13 @@
               links:
                 - title: Meds | Lorenz
                   url: https://16506-1.portal.athenahealth.com/?section=welcome&CSRFPROTECT=2edcf10758d1d56be8e803eb0065fee95506e0b497704bb338cb066b19bb6048
-                  icon: sh:medassist.png
+                  icon: ../assets/icons/medassist-light.png
                 - title: Therapy | BHSI
                   url: https://bhsiclinics.com/
-                  icon: mdi:account-credit-card-outline
+                  icon: ../assets/icons/medassist-light.png
                 - title: Telehealth | BHSI Andy
                   url: https://bhsi.doxy.me/ascarbrough
-                  icon: mdi:brain
+                  icon: ../assets/icons/medassist-light.png
                 - title: Benefit | Premera
                   url: https://authn.premera.com/u/login/identifier?state=hKFo2SBJeWY0cE1aM1RqbXFvalhwUmVGZ3BxZEtWeTVydmRORqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIEVacFNsUmVRU1BfRXFNbTM0TEJNYzR2VzBXTjhZSVVho2NpZNkgWUNNa0tCOGJlMmR3QkRRMWRubmh0MXQxaG04ZlhnbXA
-                  icon: mdi:shield-cross
+                  icon: ../assets/icons/medassist-light.png

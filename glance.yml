@@ -23,6 +23,5 @@ pages:
   - $include: ./pages/02_news.yml
   - $include: ./pages/03_life.yml
   - $include: ./pages/04_servarr.yml
-  - $include: ./pages/05_office.yml
-  - $include: ./pages/06_devops.yml
+  - $include: ./pages/05_devops.yml
   # move demo page to demo server and link to it in devops
