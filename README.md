@@ -2,7 +2,7 @@
 ### For main dashboard
 
 - assets (for images)
-- - icons
+  - icons
   - branding
 - pages (to expand)
 glance.yml - parent config
