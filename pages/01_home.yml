@@ -24,9 +24,6 @@
               hide-arrow: true
               color: 100 25 75
               links:
-                - title: Google Docs
-                  url: https://docs.google.com
-                  icon: ../assets/icons/google-docs.png
                 - title: Google Drive
                   url: https://drive.google.com
                   icon: ../assets/icons/google-drive.png
@@ -148,6 +145,9 @@
             - title: Reactive Resume
               url: https://cv.int.devboer.com
               icon: ../assets/icons/reactive-resume-light.png
+            - title: Gitea
+              url: https://git.int.devboer.com # http://10.0.40.29:3000
+              icon: ../assets/icons/gitea.png
            
         - type: custom-api
           title: Random Fact

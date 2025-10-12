@@ -206,6 +206,9 @@
             - title: Adblock Lists
               url: https://github.com/blocklistproject/Lists
               icon: ../assets/icons/adguard-home.png
+            - title: Gitea
+              url: https://git.int.devboer.com
+              icon: ../assets/icons/gitea-light.png
 
         - type: monitor
           cache: 1m
