@@ -62,7 +62,7 @@
     - size: full
       widgets:
         - type: search
-          placeholder: "!yt; !ph; !im; !tph"
+          placeholder: "!yt; !im; !tph"
           autofocus: true
           new-tab: true
           search-engine: duckduckgo
@@ -70,9 +70,6 @@
           - title: YouTube
             shortcut: "!yt"
             url: https://www.youtube.com/results?search_query={QUERY}
-          - title: PornHub
-            shortcut: "!ph"
-            url: https://www.pornhub.com/video/search?search={QUERY}
           - title: IMDb
             shortcut: "!im"
             url: https://www.imdb.com/find/?q={QUERY}
@@ -97,9 +94,6 @@
             - title: News Reader
               url: https://rss.int.devboer.com
               icon: ../assets/icons/freshrss.png
-            - title: Watchlist
-              url: https://watch.arr.devboer.com # http://10.0.40.19:3080/
-              icon: ../assets/icons/watcharr.png # sh:watcharr
             - title: Browse New Media
               url: https://new.arr.devboer.com # http://10.0.40.22:5055
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyseerr-light.png # ../assets/icons/jellyseerr-light.png

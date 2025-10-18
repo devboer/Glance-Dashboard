@@ -389,11 +389,6 @@
             - title: tdarr [702|40.27:8266]
               url: http://10.0.40.27:8266
 
-            - title: watcharr [703|40.19:3000]
-              url: http://10.0.40.19:3000
-            - title: watcharr [703|40.19:3080]
-              url: http://10.0.40.19:3080
-
             - title: nzbget [704|40.29:6789]
               url: http://10.0.40.29:6789
               basic-auth:
@@ -423,9 +418,6 @@
 
             - title: mylar3 [712|40.41:8090]
               url: http://10.0.40.41:8090
-
-            - title: books [713|40.11:5000]
-              url: http://10.0.40.11:5000
 
             - title: youtarr [714|50.149:3087]
               url: http://10.0.40.21:3087
