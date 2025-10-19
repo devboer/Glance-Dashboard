@@ -94,7 +94,7 @@
             - title: News Reader
               url: https://rss.int.devboer.com
               icon: ../assets/icons/freshrss.png
-            - title: Browse New Media
+            - title: Discover New Media
               url: https://new.arr.devboer.com # http://10.0.40.22:5055
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyseerr-light.png # ../assets/icons/jellyseerr-light.png
 
@@ -116,18 +116,18 @@
               url: https://todo.int.devboer.com
               icon: ../assets/icons/tududi.png
             - title: Files
-              url: https://10.0.0.12 # cloud.int.devboer.com
-              icon: ../assets/icons/nextcloud.png
+              url: https://cloud.int.devboer.com
+              icon: ../assets/icons/opencloud.png
               allow-insecure: true
         - type: monitor
           show-failing-only: false
           cache: 1m
           title: Office
           sites:
-            - title: Stirling-PDF
+            - title: Edit PDFs
               url: https://pdf.int.devboer.com # http://10.0.40.31:8080/
               icon: ../assets/icons/stirling-pdf.png
-            - title: KaraKeep
+            - title: Hoard Websites
               url: https://keep.int.devboer.com # http://10.0.40.35:3000
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/karakeep-light.png # ../assets/icons/karakeep-light.png
             - title: Convert Files
@@ -136,10 +136,10 @@
             - title: LinkStack
               url: https://links.int.devboer.com/
               icon: ../assets/icons/linkstack.png
-            - title: Reactive Resume
+            - title: Build Resume
               url: https://cv.int.devboer.com
               icon: ../assets/icons/reactive-resume-light.png
-            - title: Gitea
+            - title: Git Repository
               url: https://git.int.devboer.com # http://10.0.40.29:3000
               icon: ../assets/icons/gitea.png
            
