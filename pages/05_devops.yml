@@ -248,8 +248,8 @@
 
             - title: dockge [103|50.2:5001]
               url: http://10.0.50.2:5001
-            - title: dockge [103|50.2:2283]
-              url: http://10.0.50.2:2283
+            - title: scribble [103|50.2:2283]
+              url: http://10.0.50.2:6969
 
             - title: pulse [104|0.231:7655]
               url: http://10.0.0.231:7655
@@ -295,11 +295,9 @@
 #            - title: samba [300|0.5:offline]
 #              url: offline
 # needs a pingable url
-            - title: nextcloudpi [301|40.53:80]
-              url: http://10.0.40.53:80
-            - title: nextcloudpi [301|40.53:443]
-              url: https://10.0.40.53:443
-            - title: nextcloudpi [301:cloud.int]
+            - title: opencloud [301:40.57]
+              url: http://10.0.40.57
+            - title: opencloud [301:cloud.int]
               url: https://cloud.int.devboer.com
 
             - title: cryptpad [302|40.51:3000]
@@ -329,9 +327,6 @@
               url: http://10.0.0.215:8888
               alt-status-codes:
                 - 429
-
-            - title: palmr [310|0.141:3000]
-              url: http://10.0.0.141:3000
           #
           #     Household Management
           #
