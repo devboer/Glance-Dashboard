@@ -124,6 +124,10 @@
             - title: iCloud
               url: https://icloud.com
               icon: ../assets/icons/icloud.png
+            - title: Subscriptions
+              url: https://wallos.int.devboer.com # http://10.0.40.59
+              icon: ../assets/icons/wallos.png
+
         - type: bookmarks
           title: Mostly Bills
           groups:
