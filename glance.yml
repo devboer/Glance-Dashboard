@@ -12,7 +12,7 @@ branding:
   # Raw edit url: http://10.0.0.4:8680
   custom-footer: |
     <h3>Managed by <a href="https://docs.devboer.com" target="_blank" style="color: #781ce2">devBoer Labs</a></h3><br/>
-    <p><a href="https://code.int.devboer.com" target="_blank" style="color: #e2781c">Edit Pages</a> | <a href="https://files.int.devboer.com" target="_blank" style="color: #048bf6">Filebrowser</a></p>
+    <p><a href="https://code.int.devboer.com" target="_blank" style="color: #e2781c">Source Code</a> | <a href="https://files.int.devboer.com" target="_blank" style="color: #048bf6">Filebrowser</a></p>
   logo-url: ./assets/branding/logo-devboer.png
   favicon-url: ./assets/branding/logo-devboer.png
   app-name: devboer labs
