@@ -13,6 +13,7 @@
               links:
                 - title: Gmail
                   url: https://gmail.com
+                  description: testing property
                   icon: ../assets/icons/gmail.png
                 - title: Yahoo
                   url: https://mail.yahoo.com
