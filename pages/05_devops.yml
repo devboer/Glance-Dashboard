@@ -55,16 +55,16 @@
             - title: AI Tools
               hide-arrow: true
               links:
-               - title: DeepSeek AI
+               - title: DeepSeek
                  url: https://chat.deepseek.com/
                  icon: ../assets/icons/deepseek.png
-               - title: ChatGPT AI
+               - title: ChatGPT
                  url: https://chat.openai.com/
                  icon: ../assets/icons/openai.png
-               - title: Claude AI
+               - title: Claude
                  url: https://claude.ai/
                  icon: ../assets/icons/claude.png
-               - title: Venice AI (Privacy)
+               - title: Venice (Privacy)
                  url: https://venice.ai/
                  icon: ../assets/icons/localai.png
 
@@ -101,14 +101,14 @@
                 - title: ComicVine
                   url: https://comicvine.gamespot.com/
                   icon: ../assets/icons/getcomics.png
-                - title: OpenRouter
+                - title: OpenRouter AI
                   url: https://openrouter.ai
                   icon: ../assets/icons/openrouter-light.png
 
     - size: full
       widgets:
         - type: search
-          placeholder: "!yt; !ph; !im; !tph"
+          placeholder: "!yt"
           autofocus: true
           new-tab: true
           search-engine: duckduckgo
@@ -116,15 +116,7 @@
           - title: YouTube
             shortcut: "!yt"
             url: https://www.youtube.com/results?search_query={QUERY}
-          - title: PornHub
-            shortcut: "!ph"
-            url: https://www.pornhub.com/video/search?search={QUERY}
-          - title: IMDb
-            shortcut: "!im"
-            url: https://www.imdb.com/find/?q={QUERY}
-          - title: The Pirate Bay
-            shortcut: "!tpb"
-            url: https://thepiratebay.org/search.php?q={QUERY}
+
         - type: monitor
           show-failing-only: false
           cache: 1m
@@ -236,7 +228,7 @@
           #
             - title: glance [100|0.4:8080]
               url: http://10.0.0.4:8080
-              icon: ../assets/app-icons/glance.png
+
             - title: glance [100|0.4:8680]
               url: http://10.0.0.4:8680
 
