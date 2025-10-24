@@ -1,14 +1,7 @@
   - name: News
     head-widgets:
-      - type: clock
-        hour-format: 24h
-      - type: weather
-        location: Shakopee, Minnesota, United States
-        units: imperial # alternatively "imperial"
-        hour-format: 24h # alternatively "24h"
-        # Optionally hide the location from being displayed in the widget
-        hide-location: true
       - type: markets
+        hide-header: true
         markets:
           - symbol: BTC-USD
             name: Bitcoin
@@ -21,6 +14,14 @@
     columns:
       - size: small
         widgets:
+          - type: clock
+            hour-format: 24h
+          - type: weather
+            location: Shakopee, Minnesota, United States
+            units: imperial # alternatively "imperial"
+            hour-format: 24h # alternatively "24h"
+            # Optionally hide the location from being displayed in the widget
+            hide-location: true
           - type: twitch-channels
             channels:
               - davidpakman

@@ -1,4 +1,21 @@
   - name: Home
+    head-widgets:
+      - type: search
+        hide-header: true
+        placeholder: "!yt; !im; !tph"
+        autofocus: true
+        new-tab: true
+        search-engine: duckduckgo
+        bangs:
+        - title: YouTube
+          shortcut: "!yt"
+          url: https://www.youtube.com/results?search_query={QUERY}
+        - title: IMDb
+          shortcut: "!im"
+          url: https://www.imdb.com/find/?q={QUERY}
+        - title: The Pirate Bay
+          shortcut: "!tpb"
+          url: https://thepiratebay.org/search.php?q={QUERY}
     # width: slim
     center-vertically: true
     columns:
@@ -61,23 +78,7 @@
                   icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyseerr.png # ../assets/icons/jellyseerr.png
 
     - size: full
-      widgets:
-        - type: search
-          placeholder: "!yt; !im; !tph"
-          autofocus: true
-          new-tab: true
-          search-engine: duckduckgo
-          bangs:
-          - title: YouTube
-            shortcut: "!yt"
-            url: https://www.youtube.com/results?search_query={QUERY}
-          - title: IMDb
-            shortcut: "!im"
-            url: https://www.imdb.com/find/?q={QUERY}
-          - title: The Pirate Bay
-            shortcut: "!tpb"
-            url: https://thepiratebay.org/search.php?q={QUERY}
-            
+      widgets:          
         - type: monitor
           show-failing-only: false
           cache: 1m
