@@ -1,15 +1,26 @@
   - name: News
+    head-widgets:
+      - type: clock
+        hour-format: 24h
+      - type: weather
+        location: Shakopee, Minnesota, United States
+        units: imperial # alternatively "imperial"
+        hour-format: 24h # alternatively "24h"
+        # Optionally hide the location from being displayed in the widget
+        hide-location: true
+      - type: markets
+        markets:
+          - symbol: BTC-USD
+            name: Bitcoin
+          - symbol: NVDA
+            name: NVIDIA
+          - symbol: AAPL
+            name: Apple
+          - symbol: MSFT
+            name: Microsoft
     columns:
       - size: small
         widgets:
-          - type: clock
-            hour-format: 24h
-          - type: weather
-            location: Shakopee, Minnesota, United States
-            units: imperial # alternatively "imperial"
-            hour-format: 24h # alternatively "24h"
-            # Optionally hide the location from being displayed in the widget
-            hide-location: true
           - type: twitch-channels
             channels:
               - davidpakman
@@ -64,22 +75,6 @@
               - type: reddit
                 subreddit: technology
                 show-thumbnails: true
-                
-          - type: group
-            title: Gaming News
-            widgets:
-              - type: reddit
-                show-thumbnails: true
-                subreddit: pcgaming
-              - type: reddit
-                show-thumbnails: true
-                subreddit: iosgaming
-              - type: reddit
-                show-thumbnails: true
-                subreddit: linux_gaming
-              - type: reddit
-                show-thumbnails: true
-                subreddit: gamingnews
 
           - type: group
             title: Coding
@@ -135,19 +130,21 @@
 
       - size: small
         widgets:
-          - type: markets
-            markets:
-              - symbol: SPY
-                name: S&P 500
-              - symbol: BTC-USD
-                name: Bitcoin
-              - symbol: NVDA
-                name: NVIDIA
-              - symbol: AAPL
-                name: Apple
-              - symbol: MSFT
-                name: Microsoft
-
+          - type: group
+            title: Gaming News
+            widgets:
+              - type: reddit
+                show-thumbnails: true
+                subreddit: pcgaming
+              - type: reddit
+                show-thumbnails: true
+                subreddit: iosgaming
+              - type: reddit
+                show-thumbnails: true
+                subreddit: linux_gaming
+              - type: reddit
+                show-thumbnails: true
+                subreddit: gamingnews
           - type: releases
             cache: 1d
             # Without authentication the Github API allows for up to 60 requests per hour. You can create a
