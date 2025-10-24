@@ -78,6 +78,9 @@
                - title: IT Tools
                  url: https://it-tools.tech
                  icon: ../assets/icons/it-tools.png
+               - title: Python4Everyone
+                 url: https://www.py4e.com/
+                 icon: ../assets/icons/python.png
 
             - title: API
               hide-arrow: true
@@ -138,11 +141,11 @@
               icon: ../assets/icons/pi-hole.png
             - title: Printer
               url: https://10.0.10.3
-              icon: ../assets/icons/openprinting-cups.png
+              icon: ../assets/icons/printer.png
               check-url: http://10.0.10.3
             - title: Travel Router
               url: https://192.168.8.1
-              icon: ../assets/icons/openwrt.png
+              icon: ../assets/icons/glinet.png
 
         - type: monitor
           cache: 1m
@@ -167,7 +170,7 @@
             - title: Dockge
               url: https://docker.int.devboer.com # http://10.0.50.2:5001/
               icon: ../assets/icons/dockge.png
-            - title: CalDAV/CardDAV
+            - title: Cal/Contacts Sync
               url: https://ccdav.int.devboer.com # http://10.0.40.38/admin/
               icon: ../assets/icons/baikal.png    
         - type: monitor
@@ -203,6 +206,9 @@
               icon: ../assets/icons/gitea-light.png
 
         - type: monitor
+          # The servers needing pingable address:
+          # - 3K Mud TT++
+          # - Samba
           cache: 1m
           show-failing-only: true
           style: compact
@@ -213,6 +219,7 @@
           #
             - title: PVE-Dev [0.9]
               url: https://10.0.0.9:8006
+              error-url: https://pve-dev-ilo.int.devboer.com
               allow-insecure: true
             - title: PVE-Hass [0.8]
               url: https://10.0.0.8:8006
@@ -242,6 +249,7 @@
               url: http://10.0.50.2:5001
             - title: scribble [103|50.2:2283]
               url: http://10.0.50.2:6969
+              error-url: https://docker.int.devboer.com/
 
             - title: pulse [104|0.231:7655]
               url: http://10.0.0.231:7655
@@ -284,9 +292,7 @@
           #
           #     Cloud Suite
           #
-#            - title: samba [300|0.5:offline]
-#              url: offline
-# needs a pingable url
+
             - title: opencloud [301:40.57]
               url: http://10.0.40.57
             - title: opencloud [301:cloud.int]
@@ -339,9 +345,7 @@
           #
           #     Fun & Games
           #
-#            - title: mud3k [500|40.40:22]
-#              url: http://10.0.40.40:22
-# needs pingable action
+
             - title: mud3k-copyparty [500|40.40:1086]
               url: http://10.0.40.40:1086
 
@@ -439,6 +443,8 @@
               url: http://10.0.40.113:7777  
 
         - type: bookmarks
+          # Should this block be its own page?
+          # I'll see when it has all links listed
           title: Apps' Documentation
           groups:
             - title: Any
@@ -479,4 +485,10 @@
                   icon: ../assets/icons/tdarr.png
                 - title: Navidrome
                   url: https://www.navidrome.org/docs/overview/
-                  icon: ../assets/icons/navidrome.png
+                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/navidrome.png
+            - title: Productivity
+              hide-arrow: true
+              links:
+                - title: Open Archiver
+                  url: https://docs.openarchiver.com/
+                  icon: ../assets/icons/open-archiver.png

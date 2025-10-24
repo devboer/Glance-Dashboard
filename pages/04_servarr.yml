@@ -5,12 +5,14 @@
     - size: small
       widgets:
         - type: bookmarks
-          title: _ _ _
+          hide-header: true
           groups:
-            - links:
-              - title: File Browser
-                url: http://10.0.0.7:8282/files/mnt
-                icon: ../assets/icons/file-explorer.png
+            - title: Resources
+              hide-arrow: true
+              links:
+              - title: Dictionarry
+                url: https://dictionarry.dev
+                icon: ../assets/icons/servarr.png
               - title: Servarr Wiki
                 url: https://wiki.servarr.com/
                 icon: ../assets/icons/servarr.png
@@ -18,30 +20,30 @@
             - title: Sources
               hide-arrow: true
               links:
-                - title: The Pirate Bay
+                - title: All
                   url: https://thepiratebay.org/
-                  icon: ../assets/icons/utorrent.png
-                - title: ytsMx Movies
+                  icon: ../assets/icons/the-pirate-bay.png
+                - title: Movies
                   url: https://yts.mx/browse-movies/film/all/all/0/latest/0/all
-                  icon: ../assets/icons/utorrent.png
+                  icon: ../assets/icons/yts.png
                 - title: EzTv
                   url: https://eztvx.to/home
-                  icon: ../assets/icons/utorrent.png
+                  icon: ../assets/icons/eztvit.png
                 - title: IP-TV
                   url: https://github.com/iptv-org/iptv/blob/master/PLAYLISTS.md
                   icon: ../assets/icons/utorrent.png     
                 - title: Bandcamp
                   url: https://bandcamp.com
-                  icon: ../assets/icons/music-service.png
-                - title: Usenet Indexer
+                  icon: ../assets/icons/bandcamp.png
+                - title: nzbgeek
                   url: https://nzbgeek.info
-                  icon: ../assets/icons/nzb-dav.png
-                - title: Usenet Provider
-                  url: https://www.supernews.com/usenet/
+                  icon: ../assets/icons/nzbgeek.png
+                - title: giganews
+                  url: https://www.giganews.com/
                   icon: ../assets/icons/nzb-dav.png
                 - title: MusicBrainz
                   url: https://musicbrainz.org/search
-                  icon: ../assets/icons/music-service.png   
+                  icon: ../assets/icons/musicbrainz.png   
 
         - type: custom-api
           title: Movie Releases
