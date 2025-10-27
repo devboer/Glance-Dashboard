@@ -53,8 +53,8 @@
         #
         #     Network & Internet
         #
-          - title: myspeed [200|40.114:5216]
-            url: http://10.0.40.114:5216
+          - title: myspeed [200|40.53:5216]
+            url: http://10.0.40.53:5216
           - title: pihole [201|0.201:80]
             url: http://10.0.0.201/admin
           - title: goaway-dns [202|0.122:8080]
@@ -63,8 +63,6 @@
             url: http://10.0.50.108:80
           - title: iventoy [206|0.11:offline]
             url: http://10.0.0.11
-          - title: apache-guacamole [207|0.217:8080]
-            url: http://10.0.0.217:8080
           - title: authelia [210|40.55:9091]
             url: http://10.0.40.55:9091
           - title: omada [220|0.3:8043]
@@ -92,7 +90,7 @@
           - title: convertx [307|40.36:3000]
             url: http://10.0.40.36:3000
           - title: karakeep [308|40.35:offline]
-            url: offline
+            url: http://10.0.40.35
           - title: searxng [309|0.215:8888]
             url: http://10.0.0.215:8888
             alt-status-codes:
@@ -135,10 +133,6 @@
             url: http://10.0.40.20:8096
           - title: jellyseerr [701|40.22:5055]
             url: http://10.0.40.22:5055
-          - title: tdarr [702|40.27:8265]
-            url: http://10.0.40.27:8265
-          - title: tdarr [702|40.27:8266]
-            url: http://10.0.40.27:8266
           - title: nzbget [704|40.29:6789]
             url: http://10.0.40.29:6789
             basic-auth:
@@ -170,8 +164,8 @@
             url: http://10.0.40.24:2283
           - title: immich-code [716|40.24:8680]
             url: http://10.0.40.24:8680
-          - title: tunarr [717|40.109:8000]
-            url: http://10.0.40.109:8000
+          - title: tunarr [717|40.43:8000]
+            url: http://10.0.40.43:8000
           - title: jackett [718|40.110:9117]
             url: http://10.0.40.110:9117
             alt-status-codes:
