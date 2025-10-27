@@ -1488,8 +1488,8 @@
           title: Process Media
           sites:
             - title: Transcode
-              url: https://td.arr.devboer.com/#/ # http://10.0.40.27:8265
-              icon: ../assets/icons/tdarr.png
+              url: https://fileflows.arr.devboer.com/#/ # http://10.0.40.19:19200
+              icon: ../assets/icons/fileflows.png
             - title: NZBget
               url: https://nzb.arr.devboer.com # http://10.0.40.29:6789
               icon: ../assets/icons/nzbget.png
