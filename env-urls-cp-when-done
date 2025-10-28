@@ -1,0 +1,326 @@
+# API_SERVICE=apiKey
+# URL_SERVICE=reverseProxyFQDN
+# IP_SERVICE=http(s)://ip:port/
+# KVM_URL_SERVICE=if service has KVM,iLO,OOB
+# KVM_IP_SERVICE=if service has KVM,iLO,OOB
+# FB=filebrowser ip and port
+# CS=code server ip and port
+
+INT=int.devboer.com
+ARR=arr.devboer.com
+
+# Proxmox Nodes
+PVEDEV_API=
+PVEDEV_URL=https://pve-dev.$INT
+PVEDEV_IP=https://10.0.0.9:8006          
+PVEDEV_URL_KVM=https://pve-dev-ilo.$INT
+PVEDEV_IP_KVM=https://10.0.0.10
+
+API_PVE_HASS=
+URL_PVE_HASS=https://pve-hass.$INT
+IP_PVE_HASS=https://10.0.0.8:8006
+
+API_PVE_PROD=
+URL_PVE_PROD=https://pve-main.$INT
+IP_PVE_PROD=https://10.0.0.7:8006
+FB_URL_PVE_PROD=pve1-fb.$INT
+FB_IP_PVE_PROD=http://10.0.0.7:8282
+
+URL_GLANCE=https://go.$INT
+IP_GLANCE=http://10.0.0.4:8080
+CS_URL_GLANCE=100-cs.$INT
+CS_IP_GLANCE=http://10.0.0.4:8680
+
+URL_BOOKSTACK=https://wiki.$INT
+IP_BOOKSTACK=http://10.0.40.52
+
+          - title: argus [102|40.50:8080]
+            url: http://10.0.40.50:8080
+          - title: dockge [103|50.2:5001]
+            url: http://10.0.50.2:5001
+          - title: scribble [103|50.2:2283]
+            url: http://10.0.50.2:6969
+            error-url: https://docker.int.devboer.com/
+          - title: pulse [104|0.231:7655]
+            url: http://10.0.0.231:7655
+          - title: gatus [105|0.227:8080]
+            url: http://10.0.0.227:8080
+          - title: code-server [106|40.54:8680]
+            url: http://10.0.40.54:8680
+          - title: public-app-dash [107|40.112:7990]
+            url: http://10.0.40.112:7990
+        #
+        #     Network & Internet
+        #
+          - title: myspeed [200|40.53:5216]
+            url: http://10.0.40.53:5216
+          - title: pihole [201|0.201:80]
+            url: http://10.0.0.201/admin
+          - title: goaway-dns [202|0.122:8080]
+            url: http://10.0.0.122:8080
+          - title: pi.alert [205|50.108:80]
+            url: http://10.0.50.108:80
+          - title: iventoy [206|0.11:offline]
+            url: http://10.0.0.11
+          - title: authelia [210|40.55:9091]
+            url: http://10.0.40.55:9091
+          - title: omada [220|0.3:8043]
+            url: https://10.0.0.3:8043
+            allow-insecure: true
+        #
+        #     Cloud Suite
+        #
+          - title: opencloud [301:40.57]
+            url: http://10.0.40.57
+          - title: opencloud [301:cloud.int]
+            url: https://cloud.int.devboer.com
+          - title: cryptpad [302|40.51:3000]
+            url: http://10.0.40.51:3000
+          - title: paperless [303|40.30:80]
+            url: http://10.0.40.30:80
+          - title: paperless [303|40.30:8000]
+            url: http://10.0.40.30:8000
+          - title: baikal [304|40.38:80]
+            url: http://10.0.40.38:80
+          - title: freshrss [305|40.10:80]
+            url: http://10.0.40.10:80
+          - title: stirling-pdf [306|40.31:8080]
+            url: http://10.0.40.31:8080
+          - title: convertx [307|40.36:3000]
+            url: http://10.0.40.36:3000
+          - title: karakeep [308|40.35:offline]
+            url: http://10.0.40.35
+          - title: searxng [309|0.215:8888]
+            url: http://10.0.0.215:8888
+            alt-status-codes:
+              - 429
+        #
+        #     Household Management
+        #
+          - title: grocy [400|40.32:80]
+            url: http://10.0.40.32:80
+          - title: barcode-buddy [401|40.33:80]
+            url: http://10.0.40.33:80
+          - title: plant-it [402|40.37:3000]
+            url: http://10.0.40.37:3000
+          - title: lubelogger [403|40.12:5000]
+            url: http://10.0.40.12:5000
+          - title: tududi [404|40.14:3002]
+            url: http://10.0.40.14:3002
+        #
+        #     Fun & Games
+        #
+          - title: mud3k-copyparty [500|40.40:1086]
+            url: http://10.0.40.40:1086
+          - title: alpine-redlib [501|0.123:5252]
+            url: http://10.0.0.123:5252
+        #
+        #     Business & Career Growth
+        #
+          - title: ghost [600|40.56:80]
+            url: http://10.0.40.56:80
+          - title: linkstack [601|40.13:80]
+            url: http://10.0.40.13:80
+          - title: listmonk [602|0.234:9000]
+            url: http://10.0.0.234:9000
+          - title: reactive-resume [603|40.34:3000]
+            url: http://10.0.40.34:3000
+        #
+        #     Media Servarr Apps
+        #
+          - title: jellyfin [700|40.20:8096]
+            url: http://10.0.40.20:8096
+          - title: jellyseerr [701|40.22:5055]
+            url: http://10.0.40.22:5055
+          - title: nzbget [704|40.29:6789]
+            url: http://10.0.40.29:6789
+            basic-auth:
+              username: nzbget
+              password: ${NZB_PASS}
+          - title: prowlarr [705|40.16:9696]
+            url: http://10.0.40.16:9696
+          - title: radarr [706|40.23:7878]
+            url: http://10.0.40.23:7878
+          - title: sonarr [707|40.28:8989]
+            url: http://10.0.40.28:8989
+          - title: lidarr [708|40.26:8686]
+            url: http://10.0.40.26:8686
+          - title: whisparr [709|40.18:6969]
+            url: http://10.0.40.18:6969
+          - title: bazarr [710|40.15:6767]
+            url: http://10.0.40.15:6767
+          - title: cleanuparr [711|40.17:11011]
+            url: http://10.0.40.17:11011
+          - title: mylar3 [712|40.41:8090]
+            url: http://10.0.40.41:8090
+          - title: youtarr [714|50.149:3087]
+            url: http://10.0.40.21:3087
+          - title: navidrome [715|40.25:4533]
+            url: http://10.0.40.25:4533
+          - title: navidrome-files [715|40.25:8080]
+            url: http://10.0.40.25:8080
+          - title: immich [716|40.24:2283]
+            url: http://10.0.40.24:2283
+          - title: immich-code [716|40.24:8680]
+            url: http://10.0.40.24:8680
+          - title: tunarr [717|40.43:8000]
+            url: http://10.0.40.43:8000
+          - title: jackett [718|40.110:9117]
+            url: http://10.0.40.110:9117
+            alt-status-codes:
+              - 400
+          - title: mediamanager [719|40.111:8000]
+            url: http://10.0.40.111:8000
+            alt-status-codes:
+              - 404
+          - title: huntarr [720|40.42:9705]
+            url: http://10.0.40.42:9705
+          - title: sabnzbd [721|40.113:7777]
+            url: http://10.0.40.113:7777  
+    # width: wide
+    center-vertically: true
+    columns:
+    - size: small
+      widgets:
+        - type: bookmarks
+          title: Resources
+          groups:
+            - title: Directory
+              hide-arrow: true
+              links:
+                - title: Awesome Self-Host List
+                  url: https://github.com/awesome-selfhosted/awesome-selfhosted
+                  icon: ../assets/icons/github-light.png
+                - title: SelfH.st Apps
+                  url: https://selfh.st/apps/
+                  icon: ../assets/icons/selfh-st.png
+                - title: Smart Home Index
+                  url: https://smarthomeindex.com/
+                  icon: ../assets/icons/home-assistant-light.png
+
+            - title: Network
+              hide-arrow: true
+              links:
+                - title: Cloudflare
+                  url: https://dash.cloudflare.com/login
+                  icon: ../assets/icons/cloudflare.png
+                - title: Duck DNS
+                  url: https://duckdns.com
+                  icon: ../assets/icons/duckdns.png
+                - title: Tailscale
+                  url: https://login.tailscale.com/admin/machines
+                  icon: ../assets/icons/tailscale-light.png
+
+            - title: Frontend
+              hide-arrow: true
+              links:  
+               - title: Color Picker (HSL)
+                 url: https://colorpicker.dev
+                 icon: ../assets/icons/google-photos.png
+               - title: SelfH.st (sh:X)
+                 url: https://selfh.st/icons/
+                 icon: ../assets/icons/selfh-st.png
+               - title: Simple (si:X)
+                 url: https://simpleicons.org/
+                 icon: si:simpleicons
+               - title: Material Design Icons (mdi:X)
+                 url: https://pictogrammers.com/library/mdi/
+                 icon: si:materialdesignicons
+               - title: Unsplash
+                 url: https://unsplash.com/t/wallpapers 
+                 icon: si:unsplash 
+
+            - title: AI Tools
+              hide-arrow: true
+              links:
+               - title: DeepSeek
+                 url: https://chat.deepseek.com/
+                 icon: ../assets/icons/deepseek.png
+               - title: ChatGPT
+                 url: https://chat.openai.com/
+                 icon: ../assets/icons/openai.png
+               - title: Claude
+                 url: https://claude.ai/
+                 icon: ../assets/icons/claude.png
+               - title: Venice (Privacy)
+                 url: https://venice.ai/
+                 icon: ../assets/icons/localai.png
+
+            - title: Support
+              hide-arrow: true
+              color: 26 98 48
+              links:
+               - title: OmniTools
+                 url: https://omnitools.app
+                 icon: ../assets/icons/omnitools.png
+               - title: IT Tools
+                 url: https://it-tools.tech
+                 icon: ../assets/icons/it-tools.png
+               - title: Python4Everyone
+                 url: https://www.py4e.com/
+                 icon: ../assets/icons/python.png
+
+            - title: API
+              hide-arrow: true
+              color: 26 98 48
+              links:
+                - title: ShipStation
+                  url: https://www.shipengine.com/
+                  icon: ../assets/icons/mail-station.png
+                - title: Open Subtitles
+                  url: https://www.opensubtitles.com/en/users/sign_in
+                  icon: ../assets/icons/bazarr.png
+                - title: OMDb
+                  url: https://www.omdbapi.com/
+                  icon: ../assets/icons/imdb.png
+                - title: MusicBrainz
+                  url: https://listenbrainz.org/
+                  icon: ../assets/icons/music-service.png
+                - title: The Movie Database (TMDB)
+                  url: https://www.themoviedb.org/
+                  icon: ../assets/icons/tmdb.png
+                - title: ComicVine
+                  url: https://comicvine.gamespot.com/
+                  icon: ../assets/icons/getcomics.png
+                - title: OpenRouter AI
+                  url: https://openrouter.ai
+                  icon: ../assets/icons/openrouter-light.png
+
+    - size: full
+      widgets:
+        - type: search
+          placeholder: "!yt"
+          autofocus: true
+          new-tab: true
+          search-engine: duckduckgo
+          bangs:
+          - title: YouTube
+            shortcut: "!yt"
+            url: https://www.youtube.com/results?search_query={QUERY}
+
+        - type: monitor
+          show-failing-only: false
+          cache: 1m
+          title: Network
+          sites:
+            - title: Firewall/Router
+              url: https://10.0.0.1:8443 # WIP: https://opn.int.devboer.com
+              icon: ../assets/icons/opnsense-v1.png
+              allow-insecure: true
+            - title: WiFi Controller
+              url: https://wifi.int.devboer.com # https://10.0.0.3:8043/
+              icon: ../assets/icons/omada.png
+              allow-insecure: true
+            - title: POE+ Switch
+              url: https://switch.int.devboer.com # http://10.0.0.2
+              icon: ../assets/icons/tp-link-light.png 
+            - title: Pi-Hole
+              url: http://10.0.0.201/admin/
+              icon: ../assets/icons/pi-hole.png
+            - title: Printer
+              url: https://10.0.10.3
+              icon: ../assets/icons/printer.png
+              check-url: http://10.0.10.3
+            - title: Travel Router
+              url: https://192.168.8.1
+              icon: ../assets/icons/glinet.png
