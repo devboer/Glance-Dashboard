@@ -16,54 +16,63 @@ PVEDEV_IP=https://10.0.0.9:8006
 PVEDEV_URL_KVM=https://pve-dev-ilo.$INT
 PVEDEV_IP_KVM=https://10.0.0.10
 
-API_PVE_HASS=
-URL_PVE_HASS=https://pve-hass.$INT
-IP_PVE_HASS=https://10.0.0.8:8006
+PVEHASS_API=
+PVEHASS_URL=https://pve-hass.$INT
+PVEHASS_IP=https://10.0.0.8:8006
 
-API_PVE_PROD=
-URL_PVE_PROD=https://pve-main.$INT
-IP_PVE_PROD=https://10.0.0.7:8006
-FB_URL_PVE_PROD=pve1-fb.$INT
-FB_IP_PVE_PROD=http://10.0.0.7:8282
+PVEPROD_API=
+PVEPROD_URL=https://pve-main.$INT
+PVEPROD_IP=https://10.0.0.7:8006
+PVEPROD_URL_FILES=pve1-fb.$INT
+PVEPROD_IP_FILES=http://10.0.0.7:8282
 
-URL_GLANCE=https://go.$INT
-IP_GLANCE=http://10.0.0.4:8080
-CS_URL_GLANCE=100-cs.$INT
-CS_IP_GLANCE=http://10.0.0.4:8680
+GLANCE_URL=https://go.$INT
+GLANCE_IP=http://10.0.0.4:8080
+GLANCE_CODE_URL=100-cs.$INT
+GLANCE_CODE_IP=http://10.0.0.4:8680
 
-URL_BOOKSTACK=https://wiki.$INT
-IP_BOOKSTACK=http://10.0.40.52
+BOOKSTACK_URL=https://wiki.$INT
+BOOKSTACK_IP=http://10.0.40.52
 
-          - title: argus [102|40.50:8080]
-            url: http://10.0.40.50:8080
-          - title: dockge [103|50.2:5001]
-            url: http://10.0.50.2:5001
-          - title: scribble [103|50.2:2283]
-            url: http://10.0.50.2:6969
-            error-url: https://docker.int.devboer.com/
-          - title: pulse [104|0.231:7655]
-            url: http://10.0.0.231:7655
-          - title: gatus [105|0.227:8080]
-            url: http://10.0.0.227:8080
-          - title: code-server [106|40.54:8680]
-            url: http://10.0.40.54:8680
-          - title: public-app-dash [107|40.112:7990]
-            url: http://10.0.40.112:7990
-        #
-        #     Network & Internet
-        #
-          - title: myspeed [200|40.53:5216]
-            url: http://10.0.40.53:5216
-          - title: pihole [201|0.201:80]
-            url: http://10.0.0.201/admin
-          - title: goaway-dns [202|0.122:8080]
-            url: http://10.0.0.122:8080
-          - title: pi.alert [205|50.108:80]
-            url: http://10.0.50.108:80
-          - title: iventoy [206|0.11:offline]
-            url: http://10.0.0.11
-          - title: authelia [210|40.55:9091]
-            url: http://10.0.40.55:9091
+ARGUS_URL=https://argus.$INT
+ARGUS_IP=http://10.0.40.50:8080
+
+DOCKGE_URL=https://docker.$INT
+DOCKGE_IP=http://10.0.50.2:5001
+
+SCRIBBLE_URL=https://scribble.devboer.com
+SCRIBBLE_IP=http://10.0.50.2:6969
+
+PULSE_URL=https://pulse.$INT
+PULSE_IP=http://10.0.40.66:7655
+
+GATUS_URL=https://gatus.$INT
+GATUS_IP=http://10.0.40.67:8080
+
+CODER_URL=https://code.$INT
+CODER_IP=http://10.0.40.54:8680
+
+PUBLICDASH_URL=https://pub.devboer.com
+PUBLICDASH_IP=http://10.0.40.112:7990
+
+MYSPEED_URL=https://myspeed.$INT
+MYSPEED_IP=http://10.0.40.53:5216
+
+PIHOLE1_URL=https://dns1.$INT
+PIHOLE1_IP=http://10.0.0.201/admin
+
+GOAWAY1_URL=https://dns2.$INT
+GOAWAY1_IP=http://10.0.0.122:8080
+
+PIALERT_URL=https://pialert.$INT
+PIALERT_IP=http://10.0.50.108:80
+
+IVENTOY_URL=https://netboot.$INT
+IVENTOY_IP=http://10.0.0.11
+
+AUTHELIA_URL=https://auth.$INT
+AUTHELIA_IP=http://10.0.40.55:9091
+
           - title: omada [220|0.3:8043]
             url: https://10.0.0.3:8043
             allow-insecure: true
