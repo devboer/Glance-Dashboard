@@ -5,7 +5,7 @@
         base-url: http://10.0.40.20:8096
         options:
           url: http://10.0.40.20:8096
-          key: ed1472a3abf14fe68d93b81b5acb7611
+          key: ${JELLYFIN_API}
 
         template: |
           {{ $url := .Options.StringOr "url" "" }}
@@ -1455,7 +1455,7 @@
           title: Frontend Services
           sites:
             - title: devBoer's Jellyfin
-              url: https://jellyfin.int.devboer.com
+              url: ${JELLYFIN_URL}.${INT}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin.png # ../assets/icons/jellyfin-light.png
             - title: Navidrome
               url: https://music.int.devboer.com 
