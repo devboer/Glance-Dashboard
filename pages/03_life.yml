@@ -37,7 +37,7 @@
                     url: https://www.focusmate.com/
                     icon: ../assets/icons/focusmate.png
                   - title: Barcode Buddy
-                    url: https://upc.int.devboer.com
+                    url: https://${BARCODE_HOST}.${INT}
                     icon: ../assets/icons/barcode-buddy.png
               - title: Retailers
                 color: 4 20 100

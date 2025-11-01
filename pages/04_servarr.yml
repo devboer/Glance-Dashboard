@@ -1455,14 +1455,14 @@
           title: Frontend Services
           sites:
             - title: devBoer's Jellyfin
-              url: ${JELLYFIN_HOST}.${INT}
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin.png # ../assets/icons/jellyfin-light.png
+              url: https://${JELLYFIN_HOST}.${INT}
+              icon: sh:jellyfin # ../assets/icons/jellyfin.png
             - title: Navidrome
               url: https://${NAVIDROME_HOST}.${INT}
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/navidrome.png # ../assets/icons/navidrome.png
+              icon: sh:navidrome # ../assets/icons/navidrome-light.png
             - title: Request (devBoer)
               url: https://${SEERR_HOST}.${ARR}
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyseerr.png # ../assets/icons/jellyseerr-light.png
+              icon: sh:jellyseerr # ../assets/icons/jellyseerr.png
 
         - type: monitor
           cache: 1m
@@ -1471,12 +1471,16 @@
             - title: Music
               url: https://${LIDARR_HOST}.${ARR}
               icon: ../assets/icons/lidarr-radarr.png
+              description: Lidarr
             - title: Movies
               url: https://${RADARR_HOST}.${ARR}
               icon: ../assets/icons/radarr.png
             - title: Series
               url: https://${SONARR_HOST}.${ARR}
               icon: ../assets/icons/sonarr-radarr.png
+            - title: IPTV
+              url: https://${DISPATCHARR_HOST}.${ARR}
+              icon: ../assets/icons/dispatcharr.png
             - title: Comics
               url: https://${MYLAR3_HOST}.${ARR}
               icon: ../assets/icons/mylar3.png
@@ -1487,7 +1491,7 @@
           cache: 1m
           title: Process Media
           sites:
-            - title: Transcode
+            - title: FileFlows
               url: https://${FILEFLOWS_HOST}.${ARR}
               icon: ../assets/icons/fileflows.png
             - title: NZBget
@@ -1496,10 +1500,10 @@
               basic-auth:
                 username: nzbget
                 password: ${NZBGET_PASS}              
-            - title: YouTube
-              url: https://{YOUTARR_HOST}.${ARR}
+            - title: Youtarr
+              url: https://${YOUTARR_HOST}.${ARR}
               icon: ../assets/icons/youtarr.png
-            - title: CleanupArr
+            - title: Cleanuparr
               url: https://${CLEANUPARR_HOST}.${ARR}
               icon: ../assets/icons/cleanuparr.png
 

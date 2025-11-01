@@ -176,6 +176,8 @@
             url: ${HUNTARR_IP}
           - title: sabnzbd [721|40.113:7777]
             url: ${SABNZBD_IP} 
+          - title: dispatcharr [702|40.70:80]
+            url: ${DISPATCHARR_IP}
     # width: wide
     center-vertically: true
     columns:
@@ -358,7 +360,7 @@
               url: https://${ARGUS_HOST}.${INT}
               icon: ../assets/icons/argus.png
             - title: Documentation
-              url: https:/${BOOKSTACK_HOST}.${INT}
+              url: https://${BOOKSTACK_HOST}.${INT}
               icon: ../assets/icons/bookstack-light.png
             - title: Code Editor
               url: https://${CODER_HOST}.${INT}
