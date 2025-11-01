@@ -2,9 +2,9 @@
     head-widgets:
       - type: custom-api
         title: "Jellyfin Stats"
-        base-url: http://10.0.40.20:8096
+        base-url: ${JELLYFIN_IP}
         options:
-          url: http://10.0.40.20:8096
+          url: ${JELLYFIN_IP}
           key: ${JELLYFIN_API}
 
         template: |
@@ -1455,13 +1455,13 @@
           title: Frontend Services
           sites:
             - title: devBoer's Jellyfin
-              url: ${JELLYFIN_URL}.${INT}
+              url: ${JELLYFIN_HOST}.${INT}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin.png # ../assets/icons/jellyfin-light.png
             - title: Navidrome
-              url: https://music.int.devboer.com 
+              url: https://${NAVIDROME_HOST}.${INT}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/navidrome.png # ../assets/icons/navidrome.png
             - title: Request (devBoer)
-              url: https://new.arr.devboer.com # http://10.0.40.22:5055
+              url: https://${SEERR_HOST}.${ARR}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyseerr.png # ../assets/icons/jellyseerr-light.png
 
         - type: monitor
@@ -1469,37 +1469,37 @@
           title: Manage Libraries
           sites:
             - title: Music
-              url: https://lid.arr.devboer.com # http://10.0.40.26:8686
+              url: https://${LIDARR_HOST}.${ARR}
               icon: ../assets/icons/lidarr-radarr.png
             - title: Movies
-              url: https://rad.arr.devboer.com # http://10.0.40.23:7878
+              url: https://${RADARR_HOST}.${ARR}
               icon: ../assets/icons/radarr.png
             - title: Series
-              url: https://son.arr.devboer.com # http://10.0.40.28:8989
+              url: https://${SONARR_HOST}.${ARR}
               icon: ../assets/icons/sonarr-radarr.png
             - title: Comics
-              url: https://myl.arr.devboer.com # http://10.0.40.41:8090
+              url: https://${MYLAR3_HOST}.${ARR}
               icon: ../assets/icons/mylar3.png
             - title: XXX
-              url: https://whisp.arr.devboer.com # http://10.0.40.18:6969
+              url: https://${WHISPARR_HOST}.${ARR}
               icon: ../assets/icons/whisparr.png
         - type: monitor
           cache: 1m
           title: Process Media
           sites:
             - title: Transcode
-              url: https://fileflows.arr.devboer.com/#/ # http://10.0.40.19:19200
+              url: https://${FILEFLOWS_HOST}.${ARR}
               icon: ../assets/icons/fileflows.png
             - title: NZBget
-              url: https://nzb.arr.devboer.com # http://10.0.40.29:6789
+              url: https://${NZBGET_HOST}.${ARR}
               icon: ../assets/icons/nzbget.png
               basic-auth:
                 username: nzbget
-                password: ${NZB_PASS}              
+                password: ${NZBGET_PASS}              
             - title: YouTube
-              url: https://yout.arr.devboer.com # http://10.0.40.21:8081
+              url: https://{YOUTARR_HOST}.${ARR}
               icon: ../assets/icons/youtarr.png
             - title: CleanupArr
-              url: https://cleanup.arr.devboer.com # http://10.0.40.17:11011
+              url: https://${CLEANUPARR_HOST}.${ARR}
               icon: ../assets/icons/cleanuparr.png
 

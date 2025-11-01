@@ -8,6 +8,7 @@
             first-day-of-week: monday
 
           - type: bookmarks
+            hide-header: true
             groups:
               - title: Newsy
                 hide-arrow: true
@@ -20,7 +21,7 @@
                     url: https://gmail.com/
                     icon: ../assets/icons/gmail.png
                   - title: Feeds
-                    url: https://rss.int.devboer.com
+                    url: https://${FRESHRSS_HOST}.${INT}
                     icon: ../assets/icons/freshrss.png
               - title: Tools
                 hide-arrow: true
@@ -95,37 +96,37 @@
           title: Life Upkeep
           sites:
             - title: My LinkStack
-              url: https://links.int.devboer.com/@devboer#
+              url: https://${LINKSTACK_HOST}.${INT}/@devboer#
               icon: ../assets/icons/linkstack.png
             - title: A to Z
               url: https://atoz-login.amazon.work/?source=ac
               icon: ../assets/icons/amazon.png
             - title: MySpeed
-              url: http://10.0.40.114:5216/
+              url: https://${MYSPEED_HOST}.${INT}
               icon: ../assets/icons/myspeed.png
             - title: Inventory
-              url: https://home.int.devboer.com # http://10.0.40.32
+              url: https://${GROCY_HOST}.${INT}
               icon: ../assets/icons/grocy.png
             - title: LubeLogger
-              url: https://car.int.devboer.com/
+              url: https://${LUBELOGGER_HOST}.${INT}
               icon: ../assets/icons/lubelogger.png
             # - title: ListMonk
-            #   url: http://10.0.0.234:9000/
+            #   url: https://${LISTMONK_HOST}.${INT}
               # icon: ../assets/icons/listmonk
             - title: Reactive Resume
-              url: https://cv.int.devboer.com # 10.0.40.34:3000
+              url: https://${RXRESUME_HOST}.${INT}
               icon: ../assets/icons/reactive-resume-light.png
             - title: Home Assistant
-              url: https://hass.int.devboer.com
+              url: https://${HASS_HOST}.${INT}
               icon: ../assets/icons/home-assistant.png
             - title: Garden
-              url: https://garden.int.devboer.com/
+              url: https://${PLANTIT_HOST}.${INT}
               icon: ../assets/icons/plant-it.png
             - title: iCloud
               url: https://icloud.com
               icon: ../assets/icons/icloud.png
             - title: Subscriptions
-              url: https://wallos.int.devboer.com # http://10.0.40.59
+              url: https://${WALLOS_HOST}.${INT}
               icon: ../assets/icons/wallos.png
 
         - type: bookmarks

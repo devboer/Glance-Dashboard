@@ -14,170 +14,168 @@
         #   Proxmox Websites
         #
           - title: PVE-Dev [0.9]
-            url: https://10.0.0.9:8006
+            url: ${PVEDEV_IP}
             error-url: https://pve-dev-ilo.int.devboer.com
             allow-insecure: true
           - title: PVE-Hass [0.8]
-            url: https://10.0.0.8:8006
+            url: ${PVEHASS_IP}
             allow-insecure: true
           - title: PVE-Prod [0.7]
-            url: https://10.0.0.7:8006
+            url: ${PVEPROD_IP}
             allow-insecure: true
           - title: PVE-Prod-Files
-            url: http://10.0.0.7:8282
+            url: ${PVEPROD_FILES_IP}
         #
         #   LXC Containerized Services
         #       Server Central Apps
         #
           - title: glance [100|0.4:8080]
-            url: http://10.0.0.4:8080
+            url: ${GLANCE_IP}
           - title: glance [100|0.4:8680]
-            url: http://10.0.0.4:8680
+            url: ${GLANCE_CODE_IP}
           - title: bookstack [101|40.52:80]
-            url: http://10.0.40.52:80
+            url: ${BOOKSTACK_IP}
           - title: argus [102|40.50:8080]
-            url: http://10.0.40.50:8080
+            url: ${ARGUS_IP}
           - title: dockge [103|50.2:5001]
-            url: http://10.0.50.2:5001
+            url: ${DOCKGE_IP}
           - title: scribble [103|50.2:2283]
-            url: http://10.0.50.2:6969
-            error-url: https://docker.int.devboer.com/
+            url: ${SCRIBBLE_IP}
+            error-url: ${DOCKGE_HOST}.${INT}
           - title: pulse [104|0.231:7655]
-            url: http://10.0.0.231:7655
+            url: ${PULSE_IP}
           - title: gatus [105|0.227:8080]
-            url: http://10.0.0.227:8080
+            url: ${GATUS_IP}
           - title: code-server [106|40.54:8680]
-            url: http://10.0.40.54:8680
+            url: ${CODER_IP}
           - title: public-app-dash [107|40.112:7990]
-            url: http://10.0.40.112:7990
+            url: ${PUBLICDASH_IP}
         #
         #     Network & Internet
         #
           - title: myspeed [200|40.53:5216]
-            url: http://10.0.40.53:5216
+            url: ${MYSPEED_IP}
           - title: pihole [201|0.201:80]
-            url: http://10.0.0.201/admin
+            url: ${PIHOLE1_IP}
           - title: goaway-dns [202|0.122:8080]
-            url: http://10.0.0.122:8080
+            url: ${GOAWAY1_IP}
           - title: pi.alert [205|50.108:80]
-            url: http://10.0.50.108:80
+            url: ${PIALERT_IP}
           - title: iventoy [206|0.11:offline]
-            url: http://10.0.0.11
+            url: ${IVENTOY_IP}
           - title: authelia [210|40.55:9091]
-            url: http://10.0.40.55:9091
+            url: ${AUTHELIA_IP}
           - title: omada [220|0.3:8043]
-            url: https://10.0.0.3:8043
+            url: ${OMADA_IP}
             allow-insecure: true
         #
         #     Cloud Suite
         #
           - title: opencloud [301:40.57]
-            url: http://10.0.40.57
+            url: ${OPENCLOUD_IP}
           - title: opencloud [301:cloud.int]
-            url: https://cloud.int.devboer.com
+            url: ${OPENCLOUD_HOST}.${INT}
           - title: cryptpad [302|40.51:3000]
-            url: http://10.0.40.51:3000
-          - title: paperless [303|40.30:80]
-            url: http://10.0.40.30:80
+            url: ${CRYPTPAD_IP}
           - title: paperless [303|40.30:8000]
-            url: http://10.0.40.30:8000
+            url: ${PAPERLESS_IP}
           - title: baikal [304|40.38:80]
-            url: http://10.0.40.38:80
+            url: ${BAIKAL_IP}
           - title: freshrss [305|40.10:80]
-            url: http://10.0.40.10:80
+            url: ${FRESHRSS_IP}
           - title: stirling-pdf [306|40.31:8080]
-            url: http://10.0.40.31:8080
+            url: ${STIRLINGPDF_IP}
           - title: convertx [307|40.36:3000]
-            url: http://10.0.40.36:3000
+            url: ${CONVERTX_IP}
           - title: karakeep [308|40.35:offline]
-            url: http://10.0.40.35
+            url: ${KARAKEEP_IP}
           - title: searxng [309|0.215:8888]
-            url: http://10.0.0.215:8888
+            url: ${SEARXNG_IP}
             alt-status-codes:
               - 429
         #
         #     Household Management
         #
           - title: grocy [400|40.32:80]
-            url: http://10.0.40.32:80
+            url: ${GROCY_IP}
           - title: barcode-buddy [401|40.33:80]
-            url: http://10.0.40.33:80
+            url: ${BARCODE_IP}
           - title: plant-it [402|40.37:3000]
-            url: http://10.0.40.37:3000
+            url: ${PLANTIT_IP}
           - title: lubelogger [403|40.12:5000]
-            url: http://10.0.40.12:5000
+            url: ${LUBELOGGER_IP}
           - title: tududi [404|40.14:3002]
-            url: http://10.0.40.14:3002
+            url: ${TUDUDI_IP}
         #
         #     Fun & Games
         #
           - title: mud3k-copyparty [500|40.40:1086]
-            url: http://10.0.40.40:1086
+            url: ${MUD3K_FILES_IP}
           - title: alpine-redlib [501|0.123:5252]
-            url: http://10.0.0.123:5252
+            url: ${REDLIB_IP}
         #
         #     Business & Career Growth
         #
           - title: ghost [600|40.56:80]
-            url: http://10.0.40.56:80
+            url: ${GHOST_IP}
           - title: linkstack [601|40.13:80]
-            url: http://10.0.40.13:80
+            url: ${LINKSTACK_IP}
           - title: listmonk [602|0.234:9000]
-            url: http://10.0.0.234:9000
+            url: ${LISTMONK_IP}
           - title: reactive-resume [603|40.34:3000]
-            url: http://10.0.40.34:3000
+            url: ${RXRESUME_IP}
         #
         #     Media Servarr Apps
         #
           - title: jellyfin [700|40.20:8096]
-            url: http://10.0.40.20:8096
+            url: ${JELLYFIN_IP}
           - title: jellyseerr [701|40.22:5055]
-            url: http://10.0.40.22:5055
+            url: ${SEERR_IP}
           - title: nzbget [704|40.29:6789]
-            url: http://10.0.40.29:6789
+            url: ${NZBGET_IP}
             basic-auth:
-              username: nzbget
-              password: ${NZB_PASS}
+              username: ${NZBGET_USER}
+              password: ${NZBGET_PASS}
           - title: prowlarr [705|40.16:9696]
-            url: http://10.0.40.16:9696
+            url: ${PROWLARR_IP}
           - title: radarr [706|40.23:7878]
-            url: http://10.0.40.23:7878
+            url: ${RADARR_IP}
           - title: sonarr [707|40.28:8989]
-            url: http://10.0.40.28:8989
+            url: ${SONARR_IP}
           - title: lidarr [708|40.26:8686]
-            url: http://10.0.40.26:8686
+            url: ${LIDARR_IP}
           - title: whisparr [709|40.18:6969]
-            url: http://10.0.40.18:6969
+            url: ${WHISPARR_IP}
           - title: bazarr [710|40.15:6767]
-            url: http://10.0.40.15:6767
+            url: ${BAZARR_IP}
           - title: cleanuparr [711|40.17:11011]
-            url: http://10.0.40.17:11011
+            url: ${CLEANUPARR_IP}
           - title: mylar3 [712|40.41:8090]
-            url: http://10.0.40.41:8090
+            url: ${MYLAR3_IP}
           - title: youtarr [714|50.149:3087]
-            url: http://10.0.40.21:3087
+            url: ${YOUTARR_IP}
           - title: navidrome [715|40.25:4533]
-            url: http://10.0.40.25:4533
+            url: ${NAVIDROME_IP}
           - title: navidrome-files [715|40.25:8080]
-            url: http://10.0.40.25:8080
+            url: ${NAVIDROME_FILES_IP}
           - title: immich [716|40.24:2283]
-            url: http://10.0.40.24:2283
+            url: ${IMMICH_IP}
           - title: immich-code [716|40.24:8680]
-            url: http://10.0.40.24:8680
+            url: ${IMMICH_CODE_IP}
           - title: tunarr [717|40.43:8000]
-            url: http://10.0.40.43:8000
+            url: ${TUNARR_IP}
           - title: jackett [718|40.110:9117]
-            url: http://10.0.40.110:9117
+            url: ${JACKETT_IP}
             alt-status-codes:
               - 400
           - title: mediamanager [719|40.111:8000]
-            url: http://10.0.40.111:8000
+            url: ${MEDIAMANAGER_IP}
             alt-status-codes:
               - 404
           - title: huntarr [720|40.42:9705]
-            url: http://10.0.40.42:9705
+            url: ${HUNTARR_IP}
           - title: sabnzbd [721|40.113:7777]
-            url: http://10.0.40.113:7777  
+            url: ${SABNZBD_IP} 
     # width: wide
     center-vertically: true
     columns:
@@ -305,25 +303,25 @@
           title: Network
           sites:
             - title: Firewall/Router
-              url: https://10.0.0.1:8443 # WIP: https://opn.int.devboer.com
+              url: ${OPNSENSE_IP} # WIP: ${OPNSENSE_HOST}.${INT}
               icon: ../assets/icons/opnsense-v1.png
               allow-insecure: true
             - title: WiFi Controller
-              url: https://wifi.int.devboer.com # https://10.0.0.3:8043/
+              url: https://${OMADA_HOST}.${INT} # ${OMADA_IP}
               icon: ../assets/icons/omada.png
               allow-insecure: true
             - title: POE+ Switch
-              url: https://switch.int.devboer.com # http://10.0.0.2
+              url: https://${SWITCH_HOST}.${INT} # ${SWITCH_IP}
               icon: ../assets/icons/tp-link-light.png 
             - title: Pi-Hole
-              url: http://10.0.0.201/admin/
+              url: ${PIHOLE1_IP}
               icon: ../assets/icons/pi-hole.png
             - title: Printer
-              url: https://10.0.10.3
+              url: ${PRINTER_IP}
               icon: ../assets/icons/printer.png
-              check-url: http://10.0.10.3
+              check-url: ${PRINTER_INSECURE}
             - title: Travel Router
-              url: https://192.168.8.1
+              url: ${TRAVEL_ROUTER_IP}
               icon: ../assets/icons/glinet.png
 
         - type: monitor
@@ -331,45 +329,39 @@
           title: Servers
           sites:
             - title: PVE-Prod
-              url: https://pve-main.int.devboer.com # https://10.0.0.7:8006
+              url: https://${PVEPROD_HOST}.${INT}
               icon: ../assets/icons/proxmox.png
               allow-insecure: true
             - title: PVE-Dev
-              url: https://pve-dev.int.devboer.com # https://10.0.0.9:8006 || https://pve-dev.int.devboer.com
+              url: https://${PVEDEV_HOST}.${INT}
               icon: ../assets/icons/linux-containers-lxc.png
               allow-insecure: true            
             - title: iLO (PVE-Dev)
-              url: https://pve-dev-ilo.int.devboer.com # https://10.0.0.10
+              url: https://${PVEDEV_KVM_HOST}.${INT}
               icon: ../assets/icons/hewlett-packard-enterprise.png
               allow-insecure: true
             - title: PVE-Hass
-              url: https://pve-hass.int.devboer.com # https://10.0.0.8:8006
+              url: https://${PVEHASS_HOST}.${INT}
               icon: ../assets/icons/google-home.png
               allow-insecure: true
             - title: Dockge
-              url: https://docker.int.devboer.com # http://10.0.50.2:5001/
+              url: https://${DOCKGE_HOST}.${INT}
               icon: ../assets/icons/dockge.png
             - title: Cal/Contacts Sync
-              url: https://ccdav.int.devboer.com # http://10.0.40.38/admin/
+              url: https://${BAIKAL_HOST}.${INT} # http://10.0.40.38/admin/
               icon: ../assets/icons/baikal.png    
         - type: monitor
           cache: 1m
           title: Resources
           sites:  
             - title: App Releases
-              url: https://argus.int.devboer.com/
+              url: https://${ARGUS_HOST}.${INT}
               icon: ../assets/icons/argus.png
-            - title: Helper Scripts
-              url: https://helper-scripts.com
-              icon: ../assets/icons/proxmox-helper-scripts.png
             - title: Documentation
-              url: https://wiki.int.devboer.com/
+              url: https:/${BOOKSTACK_HOST}.${INT}
               icon: ../assets/icons/bookstack-light.png
-            - title: Apache Guacamole
-              url: http://10.0.0.217:8080/ # https://guac.int.devboer.com [ currently here is a Tomcat page ]
-              icon: ../assets/icons/apache-guacamole.png
             - title: Code Editor
-              url: https://code.int.devboer.com # http://10.0.40.54:8680
+              url: https://${CODER_HOST}.${INT}
               icon: ../assets/icons/visual-studio-code-light.png 
             - title: devBoer Labs
               url: https://docs.devboer.com
@@ -381,7 +373,7 @@
               url: https://github.com/blocklistproject/Lists
               icon: ../assets/icons/adguard-home.png
             - title: Gitea
-              url: https://git.int.devboer.com
+              url: https://${GITEA_HOST}.${INT}
               icon: ../assets/icons/gitea-light.png
 
         - type: bookmarks
@@ -422,9 +414,6 @@
             - title: Servarr
               hide-arrow: true
               links:
-                - title: Tdarr
-                  url: https://docs.tdarr.io/docs/installation/getting-started
-                  icon: ../assets/icons/tdarr.png
                 - title: Navidrome
                   url: https://www.navidrome.org/docs/overview/
                   icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/navidrome.png
@@ -434,3 +423,9 @@
                 - title: Open Archiver
                   url: https://docs.openarchiver.com/
                   icon: ../assets/icons/open-archiver.png
+            - title: Resources
+              hide-arrow: true
+              links:
+                - title: Helper Scripts
+                  url: https://helper-scripts.com
+                  icon: ../assets/icons/proxmox-helper-scripts.png

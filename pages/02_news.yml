@@ -47,7 +47,7 @@
                 - title: ProtonDB
                   url: https://www.protondb.com
                 - title: 3k Mud Files
-                  url: http://10.0.40.40:1086
+                  url: ${MUD3K_FILES_IP}
           - type: group
             title: Local News
             widgets:
