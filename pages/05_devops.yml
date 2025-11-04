@@ -178,6 +178,17 @@
             url: ${SABNZBD_IP} 
           - title: dispatcharr [702|40.70:80]
             url: ${DISPATCHARR_IP}
+
+      - type: search
+        placeholder: "!yt"
+        autofocus: true
+        new-tab: true
+        search-engine: duckduckgo
+        bangs:
+          - title: YouTube
+            shortcut: "!yt"
+            url: https://www.youtube.com/results?search_query={QUERY}
+
     # width: wide
     center-vertically: true
     columns:
@@ -289,16 +300,6 @@
 
     - size: full
       widgets:
-        - type: search
-          placeholder: "!yt"
-          autofocus: true
-          new-tab: true
-          search-engine: duckduckgo
-          bangs:
-          - title: YouTube
-            shortcut: "!yt"
-            url: https://www.youtube.com/results?search_query={QUERY}
-
         - type: monitor
           show-failing-only: false
           cache: 1m

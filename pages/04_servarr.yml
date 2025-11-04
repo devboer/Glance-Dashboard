@@ -1491,6 +1491,9 @@
           cache: 1m
           title: Process Media
           sites:
+            - title: Tunarr
+              url: https://${TUNARR_HOST}.${ARR}
+              icon: ../assets/icons/tunarr.png
             - title: FileFlows
               url: https://${FILEFLOWS_HOST}.${ARR}
               icon: ../assets/icons/fileflows.png
