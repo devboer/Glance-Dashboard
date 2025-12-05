@@ -112,6 +112,9 @@
             - title: Garden
               url: https://${PLANTIT_HOST}.${INT}
               icon: ../assets/icons/plant-it.png
+            - title: Recipes
+              url: https://${MEALIE_HOST}.${INT}
+              icon: sh:mealie
             - title: Todos
               url: https://${TUDUDI_HOST}.${INT}
               icon: ../assets/icons/tududi.png

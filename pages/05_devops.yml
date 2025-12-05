@@ -1,5 +1,42 @@
   - name: DevOps
     head-widgets:
+      - type: custom-api
+        title: Proxmox-VE Stats
+        cache: 1m
+        url: https://${PVEPROD_API_URL}/api2/json/cluster/resources
+        allow-insecure: true
+        headers:
+          Accept: application/json
+          Authorization: PVEAPIToken=${PVEPROD_API}
+        template: |
+          <div class="flex flex-column gap-5">
+            <div class="flex justify-between text-center">
+              <div>
+                {{ $nodes_online := len (.JSON.Array "data.#(type==\"node\")#|#(status==\"online\")#") }}
+                {{ $nodes_total := len (.JSON.Array "data.#(type==\"node\")#") }}
+                <div class="color-highlight size-h3">{{ $nodes_online }}/{{ $nodes_total }}</div>
+                <div class="size-h5 uppercase">Node</div>
+              </div>
+              <div>
+                {{ $lxc_running := len (.JSON.Array "data.#(type==\"lxc\")#|#(status==\"running\")#|#(template==0)#") }}
+                {{ $lxc_total := len (.JSON.Array "data.#(type==\"lxc\")#|#(template==0)#") }}
+                <div class="color-highlight size-h3">{{ $lxc_running }}/{{ $lxc_total }}</div>
+                <div class="size-h5 uppercase">LXC</div>
+              </div>
+              <div>
+                {{ $qemu_running := len (.JSON.Array "data.#(type==\"qemu\")#|#(status==\"running\")#|#(template==0)#") }}
+                {{ $qemu_total := len (.JSON.Array "data.#(type==\"qemu\")#|#(template==0)#") }}
+                <div class="color-highlight size-h3">{{ $qemu_running }}/{{ $qemu_total }}</div>
+                <div class="size-h5 uppercase">VM</div>
+              </div>
+              <div>
+                  {{ $storage_available := len (.JSON.Array "data.#(type==\"storage\")#|#(status==\"available\")#") }}
+                  {{ $storage_total := len (.JSON.Array "data.#(type==\"storage\")#") }}
+                  <div class="color-highlight size-h3">{{ $storage_available }}/{{ $storage_total }}</div>
+                  <div class="size-h5 uppercase">Storage</div>
+              </div>
+            </div>
+          </div>
       - type: monitor
         hide-header: true
         # The servers needing pingable address:
@@ -29,10 +66,10 @@
         #   LXC Containerized Services
         #       Server Central Apps
         #
-          - title: glance [100|0.4:8080]
-            url: ${GLANCE_IP}
-          - title: glance [100|0.4:8680]
-            url: ${GLANCE_CODE_IP}
+          # - title: glance [100|0.4:8080]
+          #   url: ${GLANCE_IP}
+          # - title: glance [100|0.4:8680]
+          #   url: ${GLANCE_CODE_IP}
           - title: bookstack [101|40.52:80]
             url: ${BOOKSTACK_IP}
           - title: argus [102|40.50:8080]
@@ -206,6 +243,9 @@
                 - title: SelfH.st Apps
                   url: https://selfh.st/apps/
                   icon: ../assets/icons/selfh-st.png
+                - title: SelfHostList
+                  url: https://selfhostlist.org
+                  icon: ../assets/icons/selfh-st.png
                 - title: Smart Home Index
                   url: https://smarthomeindex.com/
                   icon: ../assets/icons/home-assistant-light.png
@@ -369,9 +409,6 @@
             - title: devBoer Labs
               url: https://docs.devboer.com
               icon: ../assets/icons/hugo.png
-            - title: Quadro P2200 Driver
-              url: https://www.nvidia.com/Download/driverResults.aspx/205464/en-us/
-              icon: ../assets/icons/nvidia.png
             - title: Adblock Lists
               url: https://github.com/blocklistproject/Lists
               icon: ../assets/icons/adguard-home.png
@@ -426,9 +463,13 @@
                 - title: Open Archiver
                   url: https://docs.openarchiver.com/
                   icon: ../assets/icons/open-archiver.png
-            - title: Resources
+            - title: Server Resources
               hide-arrow: true
               links:
                 - title: Helper Scripts
                   url: https://helper-scripts.com
                   icon: ../assets/icons/proxmox-helper-scripts.png
+                - title: Nvidia Drivers Search
+                  url: https://www.nvidia.com/en-us/drivers/
+                  icon: ../assets/icons/nvidia.png
+                  description: Quadro Series P2200
