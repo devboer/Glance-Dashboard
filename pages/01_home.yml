@@ -28,11 +28,7 @@
               links:
                 - title: Gmail
                   url: https://gmail.com
-                  description: testing property
                   icon: ../assets/icons/gmail.png
-                - title: Yahoo
-                  url: https://mail.yahoo.com
-                  icon: ../assets/icons/yahoo.png
                 - title: Proton
                   url: https://mail.proton.me
                   icon: ../assets/icons/proton-mail.png
@@ -49,6 +45,10 @@
                 - title: Claude AI
                   url: https://claude.ai
                   icon: ../assets/icons/claude.png
+                - title: Karvec's OpenWebUI
+                  url: https://openwebui.maybeits.us
+                  icon: sh:openwebui
+                  description: Local LLMs 
             - title: Entertainment
               color: 10 70 50
               hide-arrow: true
@@ -103,36 +103,46 @@
           cache: 1m
           title: Household
           sites:
+          # Screwed up HASS because I didn't back it up and chose to fake remove for joining main cluster node
             - title: Home Assistant
               url: https://${HASS_HOST}.${INT}
               icon: ../assets/icons/home-assistant.png
+            # This link is nice for editing/viewing/scrubbing footage however can it be part of HASS?  
             - title: Doorbell
               url: ${DOORBELL_IP}
               icon: ../assets/icons/reolink.png
-            - title: Garden
-              url: https://${PLANTIT_HOST}.${INT}
-              icon: ../assets/icons/plant-it.png
+           # May keep or replace because I can't expect the enduser to enter in an API uri occasionally or new device. Something triggers it   
+           # - title: Garden
+           #   url: https://${PLANTIT_HOST}.${INT}
+           #   icon: ../assets/icons/plant-it.png
             - title: Recipes
               url: https://${MEALIE_HOST}.${INT}
               icon: sh:mealie
             - title: Todos
               url: https://${TUDUDI_HOST}.${INT}
               icon: ../assets/icons/tududi.png
-            - title: Files
-              url: https://${OPENCLOUD_HOST}.${INT}
-              icon: ../assets/icons/opencloud.png
-              allow-insecure: true
+           # I have yet to set this up and see if this my prefered solution for iCloud replacement   
+           # - title: Files
+           #   url: https://${OPENCLOUD_HOST}.${INT}
+           #   icon: ../assets/icons/opencloud.png
+           #   allow-insecure: true
+            - title: CryptPad
+              url: https://${CRYPTPAD_HOST}.${INT}
+              icon: sh:cryptpad
+            # Needs further setup ^ why does it lock me out after initial setup?   
         - type: monitor
           show-failing-only: false
           cache: 1m
           title: Office
           sites:
-            - title: Edit PDFs
-              url: https://${STIRLINGPDF_HOST}.${INT}
-              icon: ../assets/icons/stirling-pdf.png
-            - title: Hoard Websites
-              url: https://${KARAKEEP_HOST}.${INT}
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/karakeep-light.png # ../assets/icons/karakeep-light.png
+          # I want to replace with BentoPDF to move away from paywall features
+          #  - title: Edit PDFs
+          #    url: https://${STIRLINGPDF_HOST}.${INT}
+          #    icon: ../assets/icons/stirling-pdf.png
+          # Needs database fixing after failed migration
+          #  - title: Hoard Websites
+          #    url: https://${KARAKEEP_HOST}.${INT}
+          #    icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/karakeep-light.png # ../assets/icons/karakeep-light.png
             - title: Convert Files
               url: https://${CONVERTX_HOST}.${INT}
               icon: ../assets/icons/convertx.png
