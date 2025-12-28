@@ -42,12 +42,12 @@
                 - title: ChatGPT
                   url: https://chat.openai.com
                   icon: ../assets/icons/chatgpt.png
-                - title: Claude AI
+                - title: Claude
                   url: https://claude.ai
                   icon: ../assets/icons/claude.png
                 - title: Karvec's OpenWebUI
                   url: https://openwebui.maybeits.us
-                  icon: sh:openwebui
+                  icon: sh:open-webui-dark.png
                   description: Local LLMs 
             - title: Entertainment
               color: 10 70 50
@@ -126,10 +126,7 @@
            #   url: https://${OPENCLOUD_HOST}.${INT}
            #   icon: ../assets/icons/opencloud.png
            #   allow-insecure: true
-            - title: CryptPad
-              url: https://${CRYPTPAD_HOST}.${INT}
-              icon: sh:cryptpad
-            # Needs further setup ^ why does it lock me out after initial setup?   
+ 
         - type: monitor
           show-failing-only: false
           cache: 1m
@@ -143,6 +140,10 @@
           #  - title: Hoard Websites
           #    url: https://${KARAKEEP_HOST}.${INT}
           #    icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/karakeep-light.png # ../assets/icons/karakeep-light.png
+            - title: CryptPad
+              url: https://${CRYPTPAD_HOST}.${INT}
+              icon: sh:cryptpad
+            # Needs further setup ^ why does it lock me out after initial setup?  
             - title: Convert Files
               url: https://${CONVERTX_HOST}.${INT}
               icon: ../assets/icons/convertx.png
