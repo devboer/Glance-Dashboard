@@ -2,8 +2,6 @@
     columns:
       - size: small
         widgets:
-          - type: to-do
-            id: home
           - type: calendar
             first-day-of-week: monday
 
@@ -221,3 +219,12 @@
                 - title: Benefit | Premera
                   url: https://authn.premera.com/u/login/identifier?state=hKFo2SBJeWY0cE1aM1RqbXFvalhwUmVGZ3BxZEtWeTVydmRORqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIEVacFNsUmVRU1BfRXFNbTM0TEJNYzR2VzBXTjhZSVVho2NpZNkgWUNNa0tCOGJlMmR3QkRRMWRubmh0MXQxaG04ZlhnbXA
                   icon: ../assets/icons/medassist-light.png
+            - title: Taxes
+              color: 0 50 100
+              hide-arrow: true
+              links:
+                - title: DVS
+                  description: Renew Tabs or ID
+                  url: https://onlineservices.dps.mn.gov/EServices/_/
+                  icon: mdi:taxes
+                
