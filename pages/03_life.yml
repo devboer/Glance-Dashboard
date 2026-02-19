@@ -128,7 +128,7 @@
               icon: ../assets/icons/wallos.png
 
         - type: bookmarks
-          title: Mostly Bills
+          title: Finances
           groups:
             - title: Money
               color: 126 100 40
@@ -137,9 +137,6 @@
                 - title: Bank
                   url: https://www.wingscu.com/
                   icon: mdi:bank
-                - title: Taxes
-                  url: https://myturbotax.intuit.com/
-                  icon: si:intuit
                 - title: Monetr
                   url: https://my.monetr.app
                   icon: ../assets/icons/monetr.png
@@ -154,7 +151,7 @@
                   icon: ../assets/icons/robinhood.png
 
             - title: Utilities
-              color: 2 78 48
+              color: 2 58 36
               hide-arrow: true
               links:
                 - title: SPU | Water/Elec/Sewage
@@ -204,7 +201,7 @@
                   url: https://samsclub.syf.com/accounts/login/
                   icon: si:samsclub
             - title: Health
-              color: 0 100 40
+              color: 247 60 58
               hide-arrow: true
               links:
                 - title: Meds | Lorenz
@@ -220,11 +217,18 @@
                   url: https://authn.premera.com/u/login/identifier?state=hKFo2SBJeWY0cE1aM1RqbXFvalhwUmVGZ3BxZEtWeTVydmRORqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIEVacFNsUmVRU1BfRXFNbTM0TEJNYzR2VzBXTjhZSVVho2NpZNkgWUNNa0tCOGJlMmR3QkRRMWRubmh0MXQxaG04ZlhnbXA
                   icon: ../assets/icons/medassist-light.png
             - title: Taxes
-              color: 0 50 100
+              color: 2 58 36
               hide-arrow: true
               links:
-                - title: DVS
-                  description: Renew Tabs or ID
-                  url: https://onlineservices.dps.mn.gov/EServices/_/
-                  icon: mdi:taxes
-                
+                - title: Scott County Gov Bldg
+                  description: Make an appointment for DMV & more.
+                  url: https://www.scottcountymn.gov/2082/Make-Appointments
+                  icon: mdi:card-account-details-outline
+                - title: DVS Renew Tabs
+                  description: Renew your vehicle tabs here.
+                  url: https://onlineservices.dps.mn.gov/EServices/_/#3
+                  icon: mdi:car-back
+                - title: Intuit TurboTax
+                  description: Prepare your annual tax return here.
+                  url: https://myturbotax.intuit.com/
+                  icon: si:intuit
