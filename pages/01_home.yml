@@ -59,9 +59,6 @@
                 - title: Netflix
                   url: https://netflix.com
                   icon: ../assets/icons/netflix.png
-                - title: Peacock
-                  url: https://peacock.com
-                  icon: ../assets/icons/peacock.png
                 - title: Podcasts
                   url: https://pocketcasts.com/
                   icon: ../assets/icons/pocket-casts.png

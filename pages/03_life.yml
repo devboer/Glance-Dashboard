@@ -99,9 +99,9 @@
             - title: A to Z
               url: https://atoz-login.amazon.work/?source=ac
               icon: ../assets/icons/amazon.png
-            - title: MySpeed
+            - title: Speedtest Tracker
               url: https://${SPEEDTRACKER_HOST}.${INT}
-              icon: ../assets/icons/myspeed.png
+              icon: sh:speedtest-tracker
             - title: Inventory
               url: https://${GROCY_HOST}.${INT}
               icon: ../assets/icons/grocy.png
@@ -157,6 +157,9 @@
                 - title: Xfinity | Internet
                   url: https://login.xfinity.com/login?c_ds_na=c_ds_na%2Cc_ds_no%2Cc_ds_ts%2Cclient_id%2Ccontinue%2Cr%2CreqId%2Cs%2CselectAccount&c_ds_no=EBC20B7DBF81207751689E9825CBF2BB&c_ds_ts=1748821904&c_ds_val=9D045141A26006A03902D7289324CFB366305396A45EBEF5CE7ECF5337BB5D25&client_id=shoplearn-web&continue=https%3A%2F%2Foauth.xfinity.com%2F%2Foauth%2Fauthorize%3Fresponse_type%3Dcode%26prompt%3Dselect_billing_account%26redirect_uri%3Dhttps%253A%252F%252Fwww.xfinity.com%252Fsitecore%252Fapi%252Flearn%252Fneptune%252Fcustomer%252Fexisting%252Fpostauth%26client_id%3Dshoplearn-web%26state%3Dhttps%253A%252F%252Fwww.xfinity.com%252Fauth%26response%3D1%26reqId%3D9ccff459-055c-4bf7-b0a9-0703fcc1cd3f&r=comcast.net&reqId=9ccff459-055c-4bf7-b0a9-0703fcc1cd3f&s=oauth&selectAccount=1
                   icon: mdi:ip-outline
+                - title: AT&T Fiber | Internet
+                  url: https://signin.att.com/
+                  icon: si:atandt
                 - title: DSI | Trash
                   url: https://myaccount.wcicustomer.com/district/3460
                   icon: mdi:trash-can-outline
@@ -177,7 +180,7 @@
                 - title: Windows | PowerPay
                   url: https://mypowerpayaccount.com/login
                   icon: mdi:window-closed
-                - title: Synchrony
+                - title: Water Heater | Synchrony
                   url: https://customercare.syf.com/
                   icon: mdi:water-boiler
 
