@@ -54,7 +54,7 @@
             url: ${PVEDEV_IP}
             error-url: https://pve-dev-ilo.int.devboer.com
             allow-insecure: true
-          - title: PVE-Prod [0.7]
+          - title: PVE-Prod [70.4]
             url: ${PVEPROD_IP}
             allow-insecure: true
           - title: PVE-Prod-Files
@@ -67,21 +67,21 @@
           #   url: ${GLANCE_IP}
           # - title: glance [100|0.4:8680]
           #   url: ${GLANCE_CODE_IP}
-          - title: bookstack [101|40.52:80]
-            url: ${BOOKSTACK_IP}
-          - title: argus [102|40.50:8080]
-            url: ${ARGUS_IP}
-          - title: dockge [103|50.2:5001]
-            url: ${DOCKGE_IP}
-          - title: scribble [103|50.2:2283]
-            url: ${SCRIBBLE_IP}
-            error-url: ${DOCKGE_HOST}.${INT}
-          - title: code-server [106|40.54:8680]
-            url: ${CODER_IP}
+          # - title: bookstack [101|40.52:80]
+          #   url: ${BOOKSTACK_IP}
+          # - title: argus [102|40.50:8080]
+          #   url: ${ARGUS_IP}
+          # - title: dockge [103|50.2:5001]
+          #   url: ${DOCKGE_IP}
+          # - title: scribble [103|50.2:2283]
+          #   url: ${SCRIBBLE_IP}
+          #   error-url: ${DOCKGE_HOST}.${INT}
+          # - title: code-server [106|40.54:8680]
+          #  url: ${CODER_IP}
         #
         #     Network & Internet
         #
-          - title: myspeed [200|40.53:5216]
+          - title: speedtest tracker [200|40.53:5216]
             url: ${SPEEDTRACKER_IP}
           - title: pihole [201|0.201:80]
             url: ${PIHOLE1_IP}
@@ -97,18 +97,18 @@
         #
         #     Cloud Suite
         #
-          - title: opencloud [301:40.57]
-            url: ${OPENCLOUD_IP}
-          - title: opencloud [301:cloud.int]
-            url: ${OPENCLOUD_HOST}.${OC}
-          - title: paperless [303|40.30:8000]
-            url: ${PAPERLESS_IP}
+         # - title: opencloud [301:40.57]
+         #   url: ${OPENCLOUD_IP}
+         # - title: opencloud [301:cloud.int]
+         #   url: ${OPENCLOUD_HOST}.${OC}
+         # - title: paperless [303|40.30:8000]
+          #  url: ${PAPERLESS_IP}
           - title: freshrss [305|40.10:80]
             url: ${FRESHRSS_IP}
           - title: convertx [307|40.36:3000]
             url: ${CONVERTX_IP}
-          - title: karakeep [308|40.35:offline]
-            url: ${KARAKEEP_IP}
+         # - title: karakeep [308|40.35:offline]
+         #   url: ${KARAKEEP_IP}
           - title: searxng [309|0.215:8888]
             url: ${SEARXNG_IP}
             alt-status-codes:
@@ -131,12 +131,12 @@
         #
         #     Business & Career Growth
         #
-          - title: ghost [600|40.56:80]
-            url: ${GHOST_IP}
-          - title: linkstack [601|40.13:80]
-            url: ${LINKSTACK_IP}
-          - title: reactive-resume [603|40.34:3000]
-            url: ${RXRESUME_IP}
+        #  - title: ghost [600|40.56:80]
+         #   url: ${GHOST_IP}
+         # - title: linkstack [601|40.13:80]
+         #   url: ${LINKSTACK_IP}
+        #  - title: reactive-resume [603|40.34:3000]
+         #   url: ${RXRESUME_IP}
         #
         #     Media Servarr Apps
         #
@@ -149,20 +149,18 @@
             basic-auth:
               username: ${SABNZBD_USER}
               password: ${SABNZBD_PASS}
-          - title: prowlarr [705|40.16:9696]
+          - title: prowlarr [705|40.74:9696]
             url: ${PROWLARR_IP}
-          - title: radarr [706|40.23:7878]
+          - title: radarr [706|40.70:7878]
             url: ${RADARR_IP}
-          - title: sonarr [707|40.28:8989]
+          - title: sonarr [707|40.71:8989]
             url: ${SONARR_IP}
-          - title: lidarr [708|40.26:8686]
+          - title: lidarr [708|40.72:8686]
             url: ${LIDARR_IP}
           - title: bazarr [710|40.15:6767]
             url: ${BAZARR_IP}
           - title: navidrome [715|40.25:4533]
             url: ${NAVIDROME_IP}
-          - title: sabnzbd [721|40.113:7777]
-            url: ${SABNZBD_IP} 
 
       - type: search
         placeholder: "!yt"
