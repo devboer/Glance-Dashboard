@@ -54,9 +54,6 @@
             url: ${PVEDEV_IP}
             error-url: https://pve-dev-ilo.int.devboer.com
             allow-insecure: true
-          - title: PVE-Hass [0.8]
-            url: ${PVEHASS_IP}
-            allow-insecure: true
           - title: PVE-Prod [0.7]
             url: ${PVEPROD_IP}
             allow-insecure: true
@@ -79,23 +76,15 @@
           - title: scribble [103|50.2:2283]
             url: ${SCRIBBLE_IP}
             error-url: ${DOCKGE_HOST}.${INT}
-          - title: pulse [104|0.231:7655]
-            url: ${PULSE_IP}
-          - title: gatus [105|0.227:8080]
-            url: ${GATUS_IP}
           - title: code-server [106|40.54:8680]
             url: ${CODER_IP}
-          - title: public-app-dash [107|40.112:7990]
-            url: ${PUBLICDASH_IP}
         #
         #     Network & Internet
         #
           - title: myspeed [200|40.53:5216]
-            url: ${MYSPEED_IP}
+            url: ${SPEEDTRACKER_IP}
           - title: pihole [201|0.201:80]
             url: ${PIHOLE1_IP}
-          - title: goaway-dns [202|0.122:8080]
-            url: ${GOAWAY1_IP}
           - title: pi.alert [205|50.108:80]
             url: ${PIALERT_IP}
           - title: iventoy [206|0.11:offline]
@@ -111,17 +100,11 @@
           - title: opencloud [301:40.57]
             url: ${OPENCLOUD_IP}
           - title: opencloud [301:cloud.int]
-            url: ${OPENCLOUD_HOST}.${INT}
-          - title: cryptpad [302|40.51:3000]
-            url: ${CRYPTPAD_IP}
+            url: ${OPENCLOUD_HOST}.${OC}
           - title: paperless [303|40.30:8000]
             url: ${PAPERLESS_IP}
-          - title: baikal [304|40.38:80]
-            url: ${BAIKAL_IP}
           - title: freshrss [305|40.10:80]
             url: ${FRESHRSS_IP}
-          - title: stirling-pdf [306|40.31:8080]
-            url: ${STIRLINGPDF_IP}
           - title: convertx [307|40.36:3000]
             url: ${CONVERTX_IP}
           - title: karakeep [308|40.35:offline]
@@ -137,12 +120,7 @@
             url: ${GROCY_IP}
           - title: barcode-buddy [401|40.33:80]
             url: ${BARCODE_IP}
-          - title: plant-it [402|40.37:3000]
-            url: ${PLANTIT_IP}
-          - title: lubelogger [403|40.12:5000]
-            url: ${LUBELOGGER_IP}
-          - title: tududi [404|40.14:3002]
-            url: ${TUDUDI_IP}
+
         #
         #     Fun & Games
         #
@@ -157,8 +135,6 @@
             url: ${GHOST_IP}
           - title: linkstack [601|40.13:80]
             url: ${LINKSTACK_IP}
-          - title: listmonk [602|0.234:9000]
-            url: ${LISTMONK_IP}
           - title: reactive-resume [603|40.34:3000]
             url: ${RXRESUME_IP}
         #
@@ -166,13 +142,13 @@
         #
           - title: jellyfin [700|40.20:8096]
             url: ${JELLYFIN_IP}
-          - title: jellyseerr [701|40.22:5055]
+          - title: Seerr [801|40.21:5055]
             url: ${SEERR_IP}
-          - title: nzbget [704|40.29:6789]
-            url: ${NZBGET_IP}
+          - title: SABnzbd [719|40.69:7777]
+            url: ${SABNZBD_IP}
             basic-auth:
-              username: ${NZBGET_USER}
-              password: ${NZBGET_PASS}
+              username: ${SABNZBD_USER}
+              password: ${SABNZBD_PASS}
           - title: prowlarr [705|40.16:9696]
             url: ${PROWLARR_IP}
           - title: radarr [706|40.23:7878]
@@ -181,40 +157,12 @@
             url: ${SONARR_IP}
           - title: lidarr [708|40.26:8686]
             url: ${LIDARR_IP}
-          - title: whisparr [709|40.18:6969]
-            url: ${WHISPARR_IP}
           - title: bazarr [710|40.15:6767]
             url: ${BAZARR_IP}
-          - title: cleanuparr [711|40.17:11011]
-            url: ${CLEANUPARR_IP}
-          - title: mylar3 [712|40.41:8090]
-            url: ${MYLAR3_IP}
-          - title: youtarr [714|50.149:3087]
-            url: ${YOUTARR_IP}
           - title: navidrome [715|40.25:4533]
             url: ${NAVIDROME_IP}
-          - title: navidrome-files [715|40.25:8080]
-            url: ${NAVIDROME_FILES_IP}
-          - title: immich [716|40.24:2283]
-            url: ${IMMICH_IP}
-          - title: immich-code [716|40.24:8680]
-            url: ${IMMICH_CODE_IP}
-          - title: tunarr [717|40.43:8000]
-            url: ${TUNARR_IP}
-          - title: jackett [718|40.110:9117]
-            url: ${JACKETT_IP}
-            alt-status-codes:
-              - 400
-          - title: mediamanager [719|40.111:8000]
-            url: ${MEDIAMANAGER_IP}
-            alt-status-codes:
-              - 404
-          - title: huntarr [720|40.42:9705]
-            url: ${HUNTARR_IP}
           - title: sabnzbd [721|40.113:7777]
             url: ${SABNZBD_IP} 
-          - title: dispatcharr [702|40.70:80]
-            url: ${DISPATCHARR_IP}
 
       - type: search
         placeholder: "!yt"
@@ -346,15 +294,15 @@
           title: Network
           sites:
             - title: Firewall/Router
-              url: ${OPNSENSE_IP} # WIP: ${OPNSENSE_HOST}.${INT}
+              url: ${OPNSENSE_HOST}.${NSA} # WIP: ${OPNSENSE_HOST}.${INT}
               icon: ../assets/icons/opnsense-v1.png
               allow-insecure: true
             - title: WiFi Controller
-              url: https://${OMADA_HOST}.${INT} # ${OMADA_IP}
+              url: https://${OMADA_HOST}.${NSA} # ${OMADA_IP}
               icon: ../assets/icons/omada.png
               allow-insecure: true
             - title: POE+ Switch
-              url: https://${SWITCH_HOST}.${INT} # ${SWITCH_IP}
+              url: https://${SWITCH_HOST}.${NSA} # ${SWITCH_IP}
               icon: ../assets/icons/tp-link-light.png 
             - title: Pi-Hole
               url: ${PIHOLE1_IP}
@@ -383,15 +331,11 @@
               url: https://${PVEDEV_KVM_HOST}.${INT}
               icon: ../assets/icons/hewlett-packard-enterprise.png
               allow-insecure: true
-            - title: PVE-Hass
-              url: https://${PVEHASS_HOST}.${INT}
-              icon: ../assets/icons/google-home.png
-              allow-insecure: true
             - title: Dockge
               url: https://${DOCKGE_HOST}.${INT}
               icon: ../assets/icons/dockge.png
             - title: Cal/Contacts Sync
-              url: https://${BAIKAL_HOST}.${INT} # http://10.0.40.38/admin/
+              url: https://${RADICALE_HOST}.${INT} # http://10.0.40.38/admin/
               icon: ../assets/icons/baikal.png    
         - type: monitor
           cache: 1m
@@ -436,15 +380,9 @@
                 - title: LinkStack
                   url: https://docs.linkstack.org/
                   icon: ../assets/icons/linkstack.png
-                - title: LubeLogger
-                  url: ../assets/icons/lubelogger.png
-                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/lubelogger.png
                 - title: OPNsense
                   url: https://docs.opnsense.org/intro.html
                   icon: ../assets/icons/opnsense.png
-                - title: Plant-It
-                  url: https://docs.plant-it.org/0.9.0/
-                  icon: ../assets/icons/plant-it.png
                 - title: Minarca
                   url: https://nexus.ikus-soft.com/repository/archive/minarca/6.1.2/doc/index.html
                   icon: ../assets/icons/minarca.png
@@ -463,13 +401,3 @@
                 - title: Open Archiver
                   url: https://docs.openarchiver.com/
                   icon: ../assets/icons/open-archiver.png
-            - title: Server Resources
-              hide-arrow: true
-              links:
-                - title: Helper Scripts
-                  url: https://helper-scripts.com
-                  icon: ../assets/icons/proxmox-helper-scripts.png
-                - title: Nvidia Drivers Search
-                  url: https://www.nvidia.com/en-us/drivers/
-                  icon: ../assets/icons/nvidia.png
-                  description: Quadro Series P2200

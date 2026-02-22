@@ -10,8 +10,23 @@ server:
   proxied: true
 branding:
   custom-footer: |
-    <h3>Managed by <a href="https://docs.devboer.com" target="_blank" style="color: #781ce2">devBoer Labs</a></h3><br/>
-    <p><a href="http://10.0.0.4:8680" target="_blank" style="color: #e2781c">Config</a> | <a href="${PVEPROD_FILES_IP}" target="_blank" style="color: #048bf6">Files</a></p>
+    <h3 style="margin: 12px;">Managed by <a href="https://docs.devboer.com" target="_blank" style="color: #781ce2">devBoer Labs</a></h3><br/>
+    <p style="display: flex; align-items: center; gap: 15px;">
+      <a href="https://opn.nsa.devboer.com" target="_blank" style="margin-right: 12px;">
+        <img src="https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/opnsense.png" width="36px" />
+      </a>
+      <a href="http://10.0.0.4:8680" target="_blank" style="margin-right: 12px;">
+        <img src="https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/vscodium.png" width="36px" />
+      </a> 
+
+      <a href="${PVEPROD_FILES_IP}" target="_blank" style="margin-right: 12px;">
+        <img src="https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/filebrowser-quantum.png" width="36px" />
+      </a> 
+
+      <a href="https://helper-scripts.com" target="_blank">
+        <img src="https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/proxmox-helper-scripts.png" width="36px" />
+      </a>
+    </p>
   logo-url: ./assets/branding/logo-devboer.png
   favicon-url: ./assets/branding/logo-devboer.png
   app-name: devboer labs

@@ -100,14 +100,11 @@
               url: https://atoz-login.amazon.work/?source=ac
               icon: ../assets/icons/amazon.png
             - title: MySpeed
-              url: https://${MYSPEED_HOST}.${INT}
+              url: https://${SPEEDTRACKER_HOST}.${INT}
               icon: ../assets/icons/myspeed.png
             - title: Inventory
               url: https://${GROCY_HOST}.${INT}
               icon: ../assets/icons/grocy.png
-            - title: LubeLogger
-              url: https://${LUBELOGGER_HOST}.${INT}
-              icon: ../assets/icons/lubelogger.png
             # - title: ListMonk
             #   url: https://${LISTMONK_HOST}.${INT}
               # icon: ../assets/icons/listmonk
@@ -117,9 +114,6 @@
             - title: Home Assistant
               url: https://${HASS_HOST}.${INT}
               icon: ../assets/icons/home-assistant.png
-            - title: Garden
-              url: https://${PLANTIT_HOST}.${INT}
-              icon: ../assets/icons/plant-it.png
             - title: iCloud
               url: https://icloud.com
               icon: ../assets/icons/icloud.png

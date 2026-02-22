@@ -96,7 +96,7 @@
               icon: ../assets/icons/freshrss.png
             - title: Discover New Media
               url: https://${SEERR_HOST}.${INT}
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyseerr-light.png # ../assets/icons/jellyseerr-light.png
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
 
         - type: monitor
           show-failing-only: false
@@ -111,16 +111,10 @@
             - title: Doorbell
               url: ${DOORBELL_IP}
               icon: ../assets/icons/reolink.png
-           # May keep or replace because I can't expect the enduser to enter in an API uri occasionally or new device. Something triggers it   
-           # - title: Garden
-           #   url: https://${PLANTIT_HOST}.${INT}
-           #   icon: ../assets/icons/plant-it.png
             - title: Recipes
               url: https://${MEALIE_HOST}.${INT}
               icon: sh:mealie
-            - title: Todos
-              url: https://${TUDUDI_HOST}.${INT}
-              icon: ../assets/icons/tududi.png
+
            # I have yet to set this up and see if this my prefered solution for iCloud replacement   
            # - title: Files
            #   url: https://${OPENCLOUD_HOST}.${INT}
@@ -133,17 +127,16 @@
           title: Office
           sites:
           # I want to replace with BentoPDF to move away from paywall features
-          #  - title: Edit PDFs
-          #    url: https://${STIRLINGPDF_HOST}.${INT}
-          #    icon: ../assets/icons/stirling-pdf.png
+          #  - title: BentoPDF
+
           # Needs database fixing after failed migration
           #  - title: Hoard Websites
           #    url: https://${KARAKEEP_HOST}.${INT}
           #    icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/karakeep-light.png # ../assets/icons/karakeep-light.png
-            - title: CryptPad
-              url: https://${CRYPTPAD_HOST}.${INT}
-              icon: sh:cryptpad
             # Needs further setup ^ why does it lock me out after initial setup?  
+            - title: Jotty*Page
+              url: https://${JOTTY_HOST}.${INT}
+              icon: sh:jotty
             - title: Convert Files
               url: https://${CONVERTX_HOST}.${INT}
               icon: ../assets/icons/convertx.png

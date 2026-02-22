@@ -1478,15 +1478,7 @@
             - title: Series
               url: https://${SONARR_HOST}.${ARR}
               icon: ../assets/icons/sonarr-radarr.png
-            - title: IPTV
-              url: https://${DISPATCHARR_HOST}.${ARR}
-              icon: ../assets/icons/dispatcharr.png
-            - title: Comics
-              url: https://${MYLAR3_HOST}.${ARR}
-              icon: ../assets/icons/mylar3.png
-            - title: XXX
-              url: https://${WHISPARR_HOST}.${ARR}
-              icon: ../assets/icons/whisparr.png
+
         - type: monitor
           cache: 1m
           title: Process Media
@@ -1494,21 +1486,15 @@
             - title: Bazarr
               url: https://${BAZARR_HOST}.${ARR}
               icon: ../assets/icons/bazarr.png
-            - title: Tunarr
-              url: https://${TUNARR_HOST}.${ARR}
-              icon: ../assets/icons/tunarr.png
             - title: FileFlows
               url: https://${FILEFLOWS_HOST}.${ARR}
               icon: ../assets/icons/fileflows.png
-            - title: Cleanuparr
-              url: https://${CLEANUPARR_HOST}.${ARR}
-              icon: ../assets/icons/cleanuparr.png
-            - title: NZBget
-              url: https://${NZBGET_HOST}.${ARR}
-              icon: ../assets/icons/nzbget.png
+            - title: SABnzbd
+              url: https://${SABNZBD_HOST}.${ARR}
+              icon: sh:sabnzbd
               basic-auth:
-                username: nzbget
-                password: ${NZBGET_PASS}              
+                username: ${SABNZBD_USER}
+                password: ${SABNZBD_PASS}              
             - title: Youtarr
               url: https://${YOUTARR_HOST}.${ARR}
               icon: ../assets/icons/youtarr.png
