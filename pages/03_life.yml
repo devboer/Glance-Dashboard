@@ -94,14 +94,14 @@
           title: Life Upkeep
           sites:
             - title: My LinkStack
-              url: https://${LINKSTACK_HOST}.${INT}/@devboer#
+              url: https://linkstack.${OC}/@devboer#
               icon: ../assets/icons/linkstack.png
             - title: A to Z
               url: https://atoz-login.amazon.work/?source=ac
               icon: ../assets/icons/amazon.png
             - title: Speedtest Tracker
-              url: https://${SPEEDTRACKER_HOST}.${INT}
-              icon: sh:speedtest-tracker
+              url: https://${SPEEDTRACKER_HOST}.${NSA}
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/speedtest-tracker.png
             - title: Inventory
               url: https://${GROCY_HOST}.${INT}
               icon: ../assets/icons/grocy.png
@@ -112,13 +112,13 @@
               url: https://${RXRESUME_HOST}.${INT}
               icon: ../assets/icons/reactive-resume-light.png
             - title: Home Assistant
-              url: https://${HASS_HOST}.${INT}
+              url: https://${HASS_HOST}.${IOT}
               icon: ../assets/icons/home-assistant.png
             - title: iCloud
               url: https://icloud.com
               icon: ../assets/icons/icloud.png
             - title: Subscriptions
-              url: https://${WALLOS_HOST}.${INT}
+              url: https://${WALLOS_HOST}.${OC}
               icon: ../assets/icons/wallos.png
 
         - type: bookmarks

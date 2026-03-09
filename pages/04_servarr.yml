@@ -66,34 +66,43 @@
               - title: Servarr Wiki
                 url: https://wiki.servarr.com/
                 icon: ../assets/icons/servarr.png
-
+              - title: MusicBrainz
+                url: https://musicbrainz.org/search
+                icon: ../assets/icons/musicbrainz.png
+              - title: IP-TV
+                url: https://github.com/iptv-org/iptv/blob/master/PLAYLISTS.md
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/tvheadend.png
+              - title: Jellyfin Cover Maker
+                url: https://jfcovers.jan.run/
+                icon: sh:jellyfin                  
             - title: Sources
               hide-arrow: true
               links:
-                - title: All
+                - title: Prowlarr
+                  url: https://prowl.${ARR}
+                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/prowlarr-radarr.png
+                - title: ThePirateBay
                   url: https://thepiratebay.org/
                   icon: ../assets/icons/the-pirate-bay.png
                 - title: Movies
                   url: https://yts.mx/browse-movies/film/all/all/0/latest/0/all
                   icon: ../assets/icons/yts.png
-                - title: EzTv
+                - title: Series
                   url: https://eztvx.to/home
                   icon: ../assets/icons/eztvit.png
-                - title: IP-TV
-                  url: https://github.com/iptv-org/iptv/blob/master/PLAYLISTS.md
-                  icon: ../assets/icons/utorrent.png     
                 - title: Bandcamp
                   url: https://bandcamp.com
                   icon: ../assets/icons/bandcamp.png
-                - title: nzbgeek
+
+            - title: Usenet
+              hide-arrow: true
+              links:
+                - title: nzbgeek (index)
                   url: https://nzbgeek.info
                   icon: ../assets/icons/nzbgeek.png
-                - title: giganews
+                - title: giganews (provider)
                   url: https://www.giganews.com/
-                  icon: ../assets/icons/nzb-dav.png
-                - title: MusicBrainz
-                  url: https://musicbrainz.org/search
-                  icon: ../assets/icons/musicbrainz.png   
+                  icon: ../assets/icons/nzb-dav.png                  
 
         - type: custom-api
           title: Movie Releases
@@ -1454,30 +1463,45 @@
           cache: 1m
           title: Frontend Services
           sites:
-            - title: devBoer's Jellyfin
+            - title: Jellyfin
               url: https://${JELLYFIN_HOST}.${INT}
-              icon: sh:jellyfin # ../assets/icons/jellyfin.png
-            - title: Navidrome
-              url: https://${NAVIDROME_HOST}.${INT}
-              icon: sh:navidrome # ../assets/icons/navidrome-light.png
-            - title: Request (devBoer)
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin-light.png # ../assets/icons/jellyfin-light.png
+            - title: Immich
+              url: https://${IMMICH_HOST}.${INT}
+              icon: ../assets/icons/immich.png
+            - title: Kima-Hub
+              url: https://kimahub.${ARR}
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kima-hub.png
+            - title: Koel
+              url: https://music.${INT}
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/koel.png
+            - title: AudioBookShelf
+              url: http://10.0.40.78:13378
+              icon: sh:audiobookshelf
+            - title: Seerr
               url: https://${SEERR_HOST}.${ARR}
-              icon: sh:jellyseerr # ../assets/icons/jellyseerr.png
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
+            - title: Shelfmark
+              url: https://shelfmark.${ARR}
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
 
         - type: monitor
           cache: 1m
           title: Manage Libraries
           sites:
-            - title: Music
+            - title: Lidarr
               url: https://${LIDARR_HOST}.${ARR}
               icon: ../assets/icons/lidarr-radarr.png
               description: Lidarr
-            - title: Movies
+            - title: Radarr
               url: https://${RADARR_HOST}.${ARR}
               icon: ../assets/icons/radarr.png
-            - title: Series
+            - title: Sonarr
               url: https://${SONARR_HOST}.${ARR}
               icon: ../assets/icons/sonarr-radarr.png
+            - title: Kapowarr
+              url: https://kapow.${ARR}
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kapowarr.png
 
         - type: monitor
           cache: 1m

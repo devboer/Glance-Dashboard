@@ -227,6 +227,9 @@
                - title: Unsplash
                  url: https://unsplash.com/t/wallpapers 
                  icon: si:unsplash 
+               - title: Dashboard Icons
+                 url: https://dashboardicons.com/
+                 icon: 
 
             - title: AI Tools
               hide-arrow: true
@@ -292,15 +295,15 @@
           title: Network
           sites:
             - title: Firewall/Router
-              url: ${OPNSENSE_HOST}.${NSA} # WIP: ${OPNSENSE_HOST}.${INT}
+              url: https://opn.${NSA} # WIP: ${OPNSENSE_HOST}.${INT}
               icon: ../assets/icons/opnsense-v1.png
               allow-insecure: true
             - title: WiFi Controller
-              url: https://${OMADA_HOST}.${NSA} # ${OMADA_IP}
+              url: https://wifi.${NSA} # ${OMADA_IP}
               icon: ../assets/icons/omada.png
               allow-insecure: true
             - title: POE+ Switch
-              url: https://${SWITCH_HOST}.${NSA} # ${SWITCH_IP}
+              url: https://switch.${NSA} # ${SWITCH_IP}
               icon: ../assets/icons/tp-link-light.png 
             - title: Pi-Hole
               url: ${PIHOLE1_IP}
@@ -357,6 +360,9 @@
             - title: Gitea
               url: https://${GITEA_HOST}.${INT}
               icon: ../assets/icons/gitea-light.png
+            - title: acng
+              url: http://10.0.40.5:3142/acng-report.html
+              icon: 
 
         - type: bookmarks
           # Should this block be its own page?

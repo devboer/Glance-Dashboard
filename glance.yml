@@ -12,7 +12,7 @@ branding:
   custom-footer: |
     <h3 style="margin: 12px;">Managed by <a href="https://docs.devboer.com" target="_blank" style="color: #781ce2">devBoer Labs</a></h3><br/>
     <p style="display: flex; align-items: center; gap: 15px;">
-      <a href="https://opn.nsa.devboer.com" target="_blank" style="margin-right: 12px;">
+      <a href="https://10.0.0.1:8443" target="_blank" style="margin-right: 12px;">
         <img src="https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/opnsense.png" width="36px" />
       </a>
       <a href="http://10.0.0.4:8680" target="_blank" style="margin-right: 12px;">

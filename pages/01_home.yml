@@ -79,21 +79,24 @@
           cache: 1m
           title: Media
           sites:
-            - title: Movies/Series
+            - title: Jellyfin (Netflix alt)
               url: https://${JELLYFIN_HOST}.${INT}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin-light.png # ../assets/icons/jellyfin-light.png
-            - title: Photos
+            - title: Immich (Google Photos alt)
               url: https://${IMMICH_HOST}.${INT}
               icon: ../assets/icons/immich.png
-            - title: Music
-              url: https://${NAVIDROME_HOST}.${INT}
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/navidrome-light.png # ../assets/icons/navidrome-light.png
-            - title: News Reader
+            - title: Kima-Hub (Spotify alt)
+              url: https://kimahub.${ARR}
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kima-hub.png
+            - title: FreshRSS (News Reader)
               url: https://${FRESHRSS_HOST}.${INT}
               icon: ../assets/icons/freshrss.png
-            - title: Discover New Media
-              url: https://${SEERR_HOST}.${INT}
+            - title: Seerr (Discover Movies/TV)
+              url: https://${SEERR_HOST}.${ARR}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
+            - title: Shelfmark (Discover Books)
+              url: https://shelfmark.arr.devboer.com
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
 
         - type: monitor
           show-failing-only: false
@@ -102,15 +105,19 @@
           sites:
           # Screwed up HASS because I didn't back it up and chose to fake remove for joining main cluster node
             - title: Home Assistant
-              url: https://${HASS_HOST}.${INT}
+              url: https://${HASS_HOST}.${IOT}
               icon: ../assets/icons/home-assistant.png
             # This link is nice for editing/viewing/scrubbing footage however can it be part of HASS?  
             - title: Doorbell
               url: ${DOORBELL_IP}
               icon: ../assets/icons/reolink.png
-            - title: Recipes
+              allow-insecure: true
+            - title: Mealie (Recipes, Planning)
               url: https://${MEALIE_HOST}.${INT}
               icon: sh:mealie
+            - title: Warracker (Warranty Tracker)
+              url: https://${WARRACKER_HOST}.${OC}
+              icon: sh:warracker
 
            # I have yet to set this up and see if this my prefered solution for iCloud replacement   
            # - title: Files
@@ -123,8 +130,9 @@
           cache: 1m
           title: Office
           sites:
-          # I want to replace with BentoPDF to move away from paywall features
-          #  - title: BentoPDF
+            - title: BentoPDF
+              url: http://10.0.40.39:8080
+              icon: sh:bentopdf
 
           # Needs database fixing after failed migration
           #  - title: Hoard Websites
@@ -134,16 +142,19 @@
             - title: Jotty*Page
               url: https://${JOTTY_HOST}.${INT}
               icon: sh:jotty
-            - title: Convert Files
-              url: https://${CONVERTX_HOST}.${INT}
+            - title: ConvertX ( …Files)
+              url: ${CONVERTX_IP}
               icon: ../assets/icons/convertx.png
-            - title: LinkStack
-              url: https://${LINKSTACK_HOST}.${INT}
+            - title: LinkStack (Linktree alt)
+              url: https://linkstack.${OC}
               icon: ../assets/icons/linkstack.png
-            - title: Build Resume
+            - title: Linkding
+              url: https://links.${OC}
+              icon: sh:linkding
+            - title: RxResumé
               url: https://${RXRESUME_HOST}.${INT}
               icon: ../assets/icons/reactive-resume-light.png
-            - title: Git Repository
+            - title: Gitea (GitHub alt)
               url: https://${GITEA_HOST}.${INT}
               icon: ../assets/icons/gitea.png
            
