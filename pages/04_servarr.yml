@@ -1519,6 +1519,9 @@
               basic-auth:
                 username: ${SABNZBD_USER}
                 password: ${SABNZBD_PASS}              
+            - title: Yubal
+              url: http://10.0.40.248:8000/
+              icon: sh:yubal
             - title: Youtarr
               url: https://${YOUTARR_HOST}.${ARR}
               icon: ../assets/icons/youtarr.png
