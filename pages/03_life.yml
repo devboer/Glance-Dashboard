@@ -72,7 +72,7 @@
       - size: full
         widgets:
         - type: search
-          placeholder: "!yt; !ph; !im; !tph"
+          placeholder: "! + yt imdb"
           autofocus: true
           new-tab: true
           search-engine: duckduckgo
@@ -80,15 +80,10 @@
           - title: YouTube
             shortcut: "!yt"
             url: https://www.youtube.com/results?search_query={QUERY}
-          - title: PornHub
-            shortcut: "!ph"
-            url: https://www.pornhub.com/video/search?search={QUERY}
           - title: IMDb
-            shortcut: "!im"
+            shortcut: "!imdb"
             url: https://www.imdb.com/find/?q={QUERY}
-          - title: The Pirate Bay
-            shortcut: "!tpb"
-            url: https://thepiratebay.org/search.php?q={QUERY}
+      
         - type: monitor
           cache: 1m
           title: Life Upkeep
@@ -128,7 +123,7 @@
               color: 126 100 40
               hide-arrow: true
               links:
-                - title: Bank
+                - title: Wings Financial
                   url: https://www.wingscu.com/
                   icon: mdi:bank
                 - title: Monetr

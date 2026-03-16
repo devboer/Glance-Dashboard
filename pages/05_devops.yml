@@ -50,10 +50,10 @@
         #
         #   Proxmox Websites
         #
-          - title: PVE-Dev [0.9]
-            url: ${PVEDEV_IP}
-            error-url: https://pve-dev-ilo.int.devboer.com
-            allow-insecure: true
+          # - title: PVE-Dev [0.9]
+          #   url: ${PVEDEV_IP}
+          #   error-url: https://pve-dev-ilo.int.devboer.com
+          #   allow-insecure: true
           - title: PVE-Prod [70.4]
             url: ${PVEPROD_IP}
             allow-insecure: true
@@ -81,16 +81,14 @@
         #
         #     Network & Internet
         #
-          - title: speedtest tracker [200|40.53:5216]
-            url: ${SPEEDTRACKER_IP}
+          - title: speedtest tracker [208|4:80]
+            url: http://10.0.40.4
           - title: pihole [201|0.201:80]
             url: ${PIHOLE1_IP}
-          - title: pi.alert [205|50.108:80]
-            url: ${PIALERT_IP}
-          - title: iventoy [206|0.11:offline]
-            url: ${IVENTOY_IP}
-          - title: authelia [210|40.55:9091]
-            url: ${AUTHELIA_IP}
+          # - title: pi.alert [205|50.108:80]
+          #   url: ${PIALERT_IP}
+          # - title: iventoy [206|0.11:offline]
+          #   url: ${IVENTOY_IP}
           - title: omada [220|0.3:8043]
             url: ${OMADA_IP}
             allow-insecure: true
@@ -103,9 +101,9 @@
          #   url: ${OPENCLOUD_HOST}.${OC}
          # - title: paperless [303|40.30:8000]
           #  url: ${PAPERLESS_IP}
-          - title: freshrss [305|40.10:80]
-            url: ${FRESHRSS_IP}
-          - title: convertx [307|40.36:3000]
+          - title: freshrss [302|100:80]
+            url: http://10.0.40.100
+          - title: convertx [304|36:3000]
             url: ${CONVERTX_IP}
          # - title: karakeep [308|40.35:offline]
          #   url: ${KARAKEEP_IP}
@@ -124,10 +122,10 @@
         #
         #     Fun & Games
         #
-          - title: mud3k-copyparty [500|40.40:1086]
-            url: ${MUD3K_FILES_IP}
-          - title: alpine-redlib [501|0.123:5252]
-            url: ${REDLIB_IP}
+          # - title: mud3k-copyparty [500|40.40:1086]
+          #   url: ${MUD3K_FILES_IP}
+          # - title: alpine-redlib [501|0.123:5252]
+          #   url: ${REDLIB_IP}
         #
         #     Business & Career Growth
         #
@@ -157,13 +155,11 @@
             url: ${SONARR_IP}
           - title: lidarr [708|40.72:8686]
             url: ${LIDARR_IP}
-          - title: bazarr [710|40.15:6767]
-            url: ${BAZARR_IP}
-          - title: navidrome [715|40.25:4533]
-            url: ${NAVIDROME_IP}
+          - title: bazarr [726|76:6767]
+            url: http://10.0.40.76:6767
 
       - type: search
-        placeholder: "!yt"
+        placeholder: "! + yt di si"
         autofocus: true
         new-tab: true
         search-engine: duckduckgo
@@ -171,6 +167,12 @@
           - title: YouTube
             shortcut: "!yt"
             url: https://www.youtube.com/results?search_query={QUERY}
+          - title: Dashboard Icons
+            shortcut: "!di"
+            url: https://dashboardicons.com/icons?q={QUERY}
+          - title: Simple Icons
+            shortcut: "!si"
+            url: https://simpleicons.org/?q={QUERY}            
 
     # width: wide
     center-vertically: true

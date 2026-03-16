@@ -2,7 +2,7 @@
     head-widgets:
       - type: search
         hide-header: true
-        placeholder: "!yt; !im"
+        placeholder: "! + yt imdb"
         autofocus: true
         new-tab: true
         search-engine: duckduckgo
@@ -11,7 +11,7 @@
           shortcut: "!yt"
           url: https://www.youtube.com/results?search_query={QUERY}
         - title: IMDb
-          shortcut: "!im"
+          shortcut: "!imdb"
           url: https://www.imdb.com/find/?q={QUERY}
 
     # width: slim
