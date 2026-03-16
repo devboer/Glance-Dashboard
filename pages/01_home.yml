@@ -53,6 +53,9 @@
               color: 10 70 50
               hide-arrow: true
               links:
+                - title: Yamtrack
+                  url: http://10.0.40.248:8000
+                  icon: sh:yamtrack
                 - title: YouTube
                   url: https://youtube.com
                   icon: ../assets/icons/youtube.png
@@ -68,7 +71,7 @@
                 - title: Karvec's Jellyfin
                   url: https://jellyfin.maybeits.us
                   icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin.png # ../assets/icons/jellyfin.png
-                - title: Request (Karvec)
+                - title: Karvec's Jellyseerr
                   url: https://jellyseerr.maybeits.us/
                   icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyseerr.png # ../assets/icons/jellyseerr.png
 
