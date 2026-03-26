@@ -106,7 +106,8 @@
                - title: Kima Hub
                  url: https://kimahub.${ARR}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kima-hub.png
-                 description: Discover & listen to music, audiobooks, or podcasts.        - title: FreshRSS
+                 description: Discover & listen to music, audiobooks, podcasts.        
+               - title: FreshRSS
                  url: https://rss.${INT}
                  icon: ../assets/icons/freshrss.png
                  description: Read your news, reddits, and blogs.
