@@ -296,18 +296,18 @@
           cache: 1m
           title: Network
           sites:
-            - title: Firewall/Router
+            - title: Router
               url: https://opn.${NSA} # WIP: ${OPNSENSE_HOST}.${INT}
               icon: ../assets/icons/opnsense-v1.png
               allow-insecure: true
-            - title: WiFi Controller
+            - title: WiFi
               url: https://wifi.${NSA} # ${OMADA_IP}
               icon: ../assets/icons/omada.png
               allow-insecure: true
-            - title: POE+ Switch
+            - title: Network Switch
               url: https://switch.${NSA} # ${SWITCH_IP}
               icon: ../assets/icons/tp-link-light.png 
-            - title: Pi-Hole
+            - title: DNS01
               url: ${PIHOLE1_IP}
               icon: ../assets/icons/pi-hole.png
             - title: Printer
@@ -337,7 +337,7 @@
             - title: Dockge
               url: https://${DOCKGE_HOST}.${INT}
               icon: ../assets/icons/dockge.png
-            - title: Cal/Contacts Sync
+            - title: Radicale
               url: https://${RADICALE_HOST}.${INT} # http://10.0.40.38/admin/
               icon: ../assets/icons/baikal.png    
         - type: monitor
@@ -362,48 +362,9 @@
             - title: Gitea
               url: https://${GITEA_HOST}.${INT}
               icon: ../assets/icons/gitea-light.png
-            - title: acng
+            - title: acng report
               url: http://10.0.40.5:3142/acng-report.html
-              icon: 
-
-        - type: bookmarks
-          # Should this block be its own page?
-          # I'll see when it has all links listed
-          title: Apps' Documentation
-          groups:
-            - title: Any
-              hide-arrow: true
-              links:
-                - title: Argus
-                  url: https://release-argus.io/docs/overview/
-                  icon: ../assets/icons/argus.png
-                - title: Barcode Buddy
-                  url: https://barcodebuddy-documentation.readthedocs.io/en/latest/index.html 
-                  icon: ../assets/icons/barcode-buddy.png
-                - title: Glance
-                  url: https://github.com/glanceapp/glance/blob/main/docs/configuration.md
-                  icon: ../assets/icons/glance.png
-                - title: LinkStack
-                  url: https://docs.linkstack.org/
-                  icon: ../assets/icons/linkstack.png
-                - title: OPNsense
-                  url: https://docs.opnsense.org/intro.html
-                  icon: ../assets/icons/opnsense.png
-                - title: Minarca
-                  url: https://nexus.ikus-soft.com/repository/archive/minarca/6.1.2/doc/index.html
-                  icon: ../assets/icons/minarca.png
-                - title: MDN
-                  url: https://developer.mozilla.org/en-US/
-                  icon: ../assets/icons/firefox.png
-            - title: Servarr
-              hide-arrow: true
-              links:
-                - title: Navidrome
-                  url: https://www.navidrome.org/docs/overview/
-                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/navidrome.png
-            - title: Productivity
-              hide-arrow: true
-              links:
-                - title: Open Archiver
-                  url: https://docs.openarchiver.com/
-                  icon: ../assets/icons/open-archiver.png
+              icon: sh:debian
+            - title: Docs for Services
+              url: https://links.oc.devboer.com/bookmarks?bundle=1
+              icon: sh:linkding

@@ -13,7 +13,21 @@
         - title: IMDb
           shortcut: "!imdb"
           url: https://www.imdb.com/find/?q={QUERY}
-
+        - title: PornHub
+          shortcut: "!ph"
+          url: https://www.pornhub.com/video/search?search={QUERY}
+        - title: IMDb
+          shortcut: "!im"
+          url: https://www.imdb.com/find/?q={QUERY}
+        - title: The Pirate Bay
+          shortcut: "!tpb"
+          url: https://thepiratebay.org/search.php?q={QUERY}
+        - title: Dashboard Icons
+          shortcut: "!di"
+          url: https://dashboardicons.com/icons?q={QUERY}
+        - title: Simple Icons
+          shortcut: "!si"
+          url: https://simpleicons.org/?q={QUERY}
     # width: slim
     center-vertically: true
     columns:
@@ -53,10 +67,6 @@
               color: 10 70 50
               hide-arrow: true
               links:
-                - title: Yamtrack
-                  url: http://10.0.40.248:8000
-                  icon: sh:yamtrack
-                  description: Track any content type…
                 - title: YouTube
                   url: https://youtube.com
                   icon: ../assets/icons/youtube.png
@@ -83,24 +93,30 @@
           cache: 1m
           title: Media
           sites:
-            - title: Jellyfin (Netflix alt)
+            - title: Netflix
               url: https://${JELLYFIN_HOST}.${INT}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin-light.png # ../assets/icons/jellyfin-light.png
-            - title: Immich (Google Photos alt)
+            - title: Photos
               url: https://${IMMICH_HOST}.${INT}
               icon: ../assets/icons/immich.png
-            - title: Kima-Hub (Spotify alt)
+            - title: Spotify
               url: https://kimahub.${ARR}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kima-hub.png
-            - title: FreshRSS (News Reader)
+            - title: News Feed
               url: https://${FRESHRSS_HOST}.${INT}
               icon: ../assets/icons/freshrss.png
-            - title: Seerr (Discover Movies/TV)
+            - title: Add TV/Movies
               url: https://${SEERR_HOST}.${ARR}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
-            - title: Shelfmark (Discover Books)
+            - title: Add [Audio]books
               url: https://shelfmark.arr.devboer.com
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
+            - title: Content Tracker
+              url: http://10.0.40.67:8000
+              icon: sh:yamtrack             
+            - title: Gameboy
+              url: http://10.0.40.22
+              icon: sh:romm
 
         - type: monitor
           show-failing-only: false
@@ -116,10 +132,10 @@
               url: ${DOORBELL_IP}
               icon: ../assets/icons/reolink.png
               allow-insecure: true
-            - title: Mealie (Recipes, Planning)
+            - title: Meal Planning
               url: https://${MEALIE_HOST}.${INT}
               icon: sh:mealie
-            - title: Warracker (Warranty Tracker)
+            - title: Warranty Tracker
               url: https://${WARRACKER_HOST}.${OC}
               icon: sh:warracker
 
@@ -134,7 +150,7 @@
           cache: 1m
           title: Office
           sites:
-            - title: BentoPDF
+            - title: PDF Toolkit
               url: http://10.0.40.39:8080
               icon: sh:bentopdf
 
@@ -143,24 +159,27 @@
           #    url: https://${KARAKEEP_HOST}.${INT}
           #    icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/karakeep-light.png # ../assets/icons/karakeep-light.png
             # Needs further setup ^ why does it lock me out after initial setup?  
-            - title: Jotty*Page
+            - title: Notes & Tasks
               url: https://${JOTTY_HOST}.${INT}
               icon: sh:jotty
-            - title: ConvertX ( …Files)
+            - title: Convert X Files
               url: ${CONVERTX_IP}
               icon: ../assets/icons/convertx.png
-            - title: LinkStack (Linktree alt)
+            - title: Linkstack
               url: https://linkstack.${OC}
               icon: ../assets/icons/linkstack.png
-            - title: Linkding
+            - title: Bookmarks
               url: https://links.${OC}
               icon: sh:linkding
-            - title: RxResumé
+            - title: Build Resumé
               url: https://${RXRESUME_HOST}.${INT}
               icon: ../assets/icons/reactive-resume-light.png
-            - title: Gitea (GitHub alt)
+            - title: Git Repos
               url: https://${GITEA_HOST}.${INT}
               icon: ../assets/icons/gitea.png
+            - title: Drawing
+              url: http://10.0.40.229:8080
+              icon: sh:drawio
            
         - type: custom-api
           title: Random Fact
