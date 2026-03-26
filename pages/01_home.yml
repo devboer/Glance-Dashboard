@@ -98,19 +98,18 @@
                - title: Jellyfin
                  url: https://jellyfin.${INT}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin-light.png
-                 description: Stream movies, series, memories, and music!
+                 description: Stream movies, series, memories, and music.
                - title: Immich
                  url: https://photos.${INT}
                  icon: ../assets/icons/immich.png
-                 description: Apple & Google Photos replacement
+                 description: View photos and videos of memories.
                - title: Kima Hub
                  url: https://kimahub.${ARR}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kima-hub.png
-                 description: Discover & Stresm music, audiobooks, and podcasts like Spotify.
-               - title: FreshRSS
+                 description: Discover & listen to music, audiobooks, or podcasts.        - title: FreshRSS
                  url: https://rss.${INT}
                  icon: ../assets/icons/freshrss.png
-                 description: Google RSS Reader alt
+                 description: Read your news, reddits, and blogs.
                - title: Seerr
                  url: https://${SEERR_HOST}.${ARR}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
@@ -122,7 +121,7 @@
                - title: Yamtrack
                  url: http://10.0.40.67:8000
                  icon: sh:yamtrack
-                 description: Track content you want to do or done. Content includes movies, series, books, games, and more.             
+                 description: Track any content you want to do or done.            
                - title: Romm
                  url: http://10.0.40.22
                  icon: sh:romm
