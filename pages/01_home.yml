@@ -114,7 +114,7 @@
                - title: Seerr
                  url: https://${SEERR_HOST}.${ARR}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
-                 description: Request movies and series (soon™️: music)
+                 description: Request movies and series (soon™️ music)
                - title: Shelfmark
                  url: https://shelfmark.arr.devboer.com
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
@@ -148,12 +148,6 @@
             - title: Warranty Tracker
               url: https://${WARRACKER_HOST}.${OC}
               icon: sh:warracker
-
-           # I have yet to set this up and see if this my prefered solution for iCloud replacement   
-           # - title: Files
-           #   url: https://${OPENCLOUD_HOST}.${INT}
-           #   icon: ../assets/icons/opencloud.png
-           #   allow-insecure: true
  
         - type: monitor
           show-failing-only: false
