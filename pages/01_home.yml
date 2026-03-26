@@ -2,7 +2,7 @@
     head-widgets:
       - type: search
         hide-header: true
-        placeholder: "! + yt imdb"
+        placeholder: " web search or ! + yt imdb ... "
         autofocus: true
         new-tab: true
         search-engine: duckduckgo
@@ -88,35 +88,45 @@
 
     - size: full
       widgets:          
-        - type: monitor
-          show-failing-only: false
-          cache: 1m
-          title: Media
-          sites:
-            - title: Netflix
-              url: https://${JELLYFIN_HOST}.${INT}
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin-light.png # ../assets/icons/jellyfin-light.png
-            - title: Photos
-              url: https://${IMMICH_HOST}.${INT}
-              icon: ../assets/icons/immich.png
-            - title: Spotify
-              url: https://kimahub.${ARR}
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kima-hub.png
-            - title: News Feed
-              url: https://${FRESHRSS_HOST}.${INT}
-              icon: ../assets/icons/freshrss.png
-            - title: Add TV/Movies
-              url: https://${SEERR_HOST}.${ARR}
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
-            - title: Add [Audio]books
-              url: https://shelfmark.arr.devboer.com
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
-            - title: Content Tracker
-              url: http://10.0.40.67:8000
-              icon: sh:yamtrack             
-            - title: Gameboy
-              url: http://10.0.40.22
-              icon: sh:romm
+        - type: bookmarks
+          hide-header: true
+          groups:
+           - title: Media
+             color: 10 70 50
+             hide-arrow: true
+             links:
+               - title: Jellyfin
+                 url: https://jellyfin.${INT}
+                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin-light.png
+                 description: Stream movies, series, memories, and music!
+               - title: Immich
+                 url: https://photos.${INT}
+                 icon: ../assets/icons/immich.png
+                 description: Apple & Google Photos replacement
+               - title: Kima Hub
+                 url: https://kimahub.${ARR}
+                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kima-hub.png
+                 description: Discover & Stresm music, audiobooks, and podcasts like Spotify.
+               - title: FreshRSS
+                 url: https://rss.${INT}
+                 icon: ../assets/icons/freshrss.png
+                 description: Google RSS Reader alt
+               - title: Seerr
+                 url: https://${SEERR_HOST}.${ARR}
+                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
+                 description: Request movies and series (soon™️: music)
+               - title: Shelfmark
+                 url: https://shelfmark.arr.devboer.com
+                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
+                 description: Search & download books and audiobooks.
+               - title: Yamtrack
+                 url: http://10.0.40.67:8000
+                 icon: sh:yamtrack
+                 description: Track content you want to do or done. Content includes movies, series, books, games, and more.             
+               - title: Romm
+                 url: http://10.0.40.22
+                 icon: sh:romm
+                 description: Retro games and emulators hosted here.
 
         - type: monitor
           show-failing-only: false
