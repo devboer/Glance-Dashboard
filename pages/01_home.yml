@@ -175,35 +175,35 @@
           #    url: https://${KARAKEEP_HOST}.${INT}
           #    icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/karakeep-light.png # ../assets/icons/karakeep-light.png
             # Needs further setup ^ why does it lock me out after initial setup?  
-              - title: Jotty*Page
-                url: https://jotty.${INT}
-                icon: sh:jotty
-                description: Quick Notes. A simple spot for your checklists and random thoughts. ✍️✅
+               - title: Jotty
+                 url: https://jotty.${INT}
+                 icon: sh:jotty
+                 description: Quick Notes. A simple spot for your checklists and random thoughts. ✍️✅
 
-              - title: ConvertX
-                url: ${CONVERTX_IP}
-                icon: ../assets/icons/convertx.png
-                description: The File Swapper. Change any file--like a photo or doc--into a different format. 📂✨
+               - title: ConvertX
+                 url: ${CONVERTX_IP}
+                 icon: ../assets/icons/convertx.png
+                 description: The File Swapper. Change any file--like a photo or doc--into a different format. 📂✨
 
-              - title: LinkStack
-                url: https://linkstack.${OC}
-                icon: ../assets/icons/linkstack.png
-                description: Your Profile Link. One page that holds all your important social links. 🌳📱
+               - title: LinkStack
+                 url: https://linkstack.${OC}
+                 icon: ../assets/icons/linkstack.png
+                 description: Your Profile Link. One page that holds all your important social links. 🌳📱
 
-              - title: Linkding
-                url: https://links.${OC}
-                icon: sh:linkding
-                description: The Bookmark Bin. Save cool websites and links so you never lose them. 🌐📌
+               - title: Linkding
+                 url: https://links.${OC}
+                 icon: sh:linkding
+                 description: The Bookmark Bin. Save cool websites and links so you never lose them. 🌐📌
 
-              - title: Rx Resumé
-                url: https://rxresume.${INT}
-                icon: ../assets/icons/reactive-resume-light.png
-                description: The Job Winner. Quickly build a professional resume that looks amazing. 👔💼
+               - title: Rx Resumé
+                 url: https://rxresume.${INT}
+                 icon: ../assets/icons/reactive-resume-light.png
+                 description: The Job Winner. Quickly build a professional resume that looks amazing. 👔💼
 
-              - title: Gitea
-                url: https://gitea.${INT}
-                icon: ../assets/icons/gitea.png
-                description: Code Home. A private place to store and manage all your coding projects. 🛠️📦
+               - title: Gitea
+                 url: https://gitea.${INT}
+                 icon: ../assets/icons/gitea.png
+                 description: Code Home. A private place to store and manage all your coding projects. 🛠️📦
            
         - type: custom-api
           title: Random Fact
