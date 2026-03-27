@@ -98,7 +98,7 @@
                - title: Jellyfin
                  url: https://jellyfin.${INT}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin-light.png
-                 description: Your Personal Netflix. All your movies and shows in one place, ad-free. 🍿
+                 description: Your Media Hub. Stream your movies, shows, and music ad-free. 🍿🎵
 
                - title: Immich
                  url: https://photos.${INT}
@@ -109,7 +109,8 @@
                - title: Kima Hub
                  url: https://kimahub.${ARR}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kima-hub.png
-                 description: Discover & listen to music, audiobooks, podcasts.        
+                 description: Under Construction. Future Spotify Replacement. 🚧🛠️ 
+                        
                - title: FreshRSS
                  url: https://rss.${INT}
                  icon: ../assets/icons/freshrss.png
