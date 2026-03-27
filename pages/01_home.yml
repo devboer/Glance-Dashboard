@@ -98,11 +98,14 @@
                - title: Jellyfin
                  url: https://jellyfin.${INT}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin-light.png
-                 description: Stream movies, series, memories, and music.
+                 description: Your Personal Netflix. All your movies and shows in one place, ad-free. 🍿
+
                - title: Immich
                  url: https://photos.${INT}
                  icon: ../assets/icons/immich.png
-                 description: View photos and videos of memories.
+                 description: Magic Photo Vault. Saves and organizes every memory automatically. 🖼️
+
+
                - title: Kima Hub
                  url: https://kimahub.${ARR}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kima-hub.png
@@ -110,19 +113,23 @@
                - title: FreshRSS
                  url: https://rss.${INT}
                  icon: ../assets/icons/freshrss.png
-                 description: Read your news, reddits, and blogs.
+                 description: All-In-One Feed. Your favorite sites and news in one single scroll. 📱
+
                - title: Seerr
                  url: https://${SEERR_HOST}.${ARR}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
-                 description: Request movies and series (soon™️ music)
+                 description: The Request Line. Want a movie or show? Just ask for it here. 🪄
+
                - title: Shelfmark
                  url: https://shelfmark.arr.devboer.com
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
-                 description: Search & download books and audiobooks.
+                 description: Book Finder. Search and grab any book or audiobook in seconds. 📖
+
                - title: Yamtrack
                  url: http://10.0.40.67:8000
                  icon: sh:yamtrack
-                 description: Track any content you want to do or done.            
+                 description: The Life Tracker. Log your movies, shows, games, and books in one spot. 📈
+           
                - title: Romm
                  url: http://10.0.40.22
                  icon: sh:romm
