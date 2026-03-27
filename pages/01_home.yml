@@ -195,7 +195,7 @@
                 icon: sh:linkding
                 description: The Bookmark Bin. Save cool websites and links so you never lose them. 🌐📌
 
-              - title: Rx Resumè
+              - title: Rx Resumé
                 url: https://rxresume.${INT}
                 icon: ../assets/icons/reactive-resume-light.png
                 description: The Job Winner. Quickly build a professional resume that looks amazing. 👔💼
@@ -204,7 +204,6 @@
                 url: https://gitea.${INT}
                 icon: ../assets/icons/gitea.png
                 description: Code Home. A private place to store and manage all your coding projects. 🛠️📦
-
            
         - type: custom-api
           title: Random Fact
