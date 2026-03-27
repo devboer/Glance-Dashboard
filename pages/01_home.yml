@@ -134,64 +134,77 @@
                - title: Romm
                  url: http://10.0.40.22
                  icon: sh:romm
-                 description: Retro games and emulators hosted here.
+                 description: Retro Game Room. Play all your classic games right in the browser. 👾🎮
 
-        - type: monitor
-          show-failing-only: false
-          cache: 1m
-          title: Household
-          sites:
-          # Screwed up HASS because I didn't back it up and chose to fake remove for joining main cluster node
-            - title: Home Assistant
-              url: https://${HASS_HOST}.${IOT}
-              icon: ../assets/icons/home-assistant.png
-            # This link is nice for editing/viewing/scrubbing footage however can it be part of HASS?  
-            - title: Doorbell
-              url: ${DOORBELL_IP}
-              icon: ../assets/icons/reolink.png
-              allow-insecure: true
-            - title: Meal Planning
-              url: https://${MEALIE_HOST}.${INT}
-              icon: sh:mealie
-            - title: Warranty Tracker
-              url: https://${WARRACKER_HOST}.${OC}
-              icon: sh:warracker
+           - title: Home Hub
+             color: 10 70 50
+             hide-arrow: true
+             links:
+
+               - title: Home Assistant
+                 url: https://hass.${IOT}
+                 icon: ../assets/icons/home-assistant.png
+                 description: The House Brain. Control your lights, locks, and smart gadgets from one app. 💡🤖
+
+               - title: Reolink Doorbell
+                 url: ${DOORBELL_IP}
+                 icon: ../assets/icons/reolink.png
+                 description: Front Door Cam. See who’s there and playback video of who stopped by. 🚪📹
+
+               - title: Meal Planning
+                 url: https://mealie.${INT}
+                 icon: sh:mealie
+                 description: The Recipe Book. Save your favorite meals and plan what’s for dinner. 🍲📝
+                 
+               - title: Warranty Tracker
+                 url: https://warracker.${OC}
+                 icon: sh:warracker
+                 description: Warranty Vault. Tracks when your stuff's warranty expires so you don't lose money. 💸⏳
  
-        - type: monitor
-          show-failing-only: false
-          cache: 1m
-          title: Office
-          sites:
-            - title: PDF Toolkit
-              url: http://10.0.40.39:8080
-              icon: sh:bentopdf
+           - title: Web Office
+             color: 10 70 50
+             hide-arrow: true
+             links:
+               - title: PDF Toolkit
+                 url: http://10.0.40.39:8080
+                 icon: sh:bentopdf
+                 description: PDF Toolkit. Merge, split, or edit your PDF files right in the browser. 📂✂️
 
           # Needs database fixing after failed migration
           #  - title: Hoard Websites
           #    url: https://${KARAKEEP_HOST}.${INT}
           #    icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/karakeep-light.png # ../assets/icons/karakeep-light.png
             # Needs further setup ^ why does it lock me out after initial setup?  
-            - title: Notes & Tasks
-              url: https://${JOTTY_HOST}.${INT}
-              icon: sh:jotty
-            - title: Convert X Files
-              url: ${CONVERTX_IP}
-              icon: ../assets/icons/convertx.png
-            - title: Linkstack
-              url: https://linkstack.${OC}
-              icon: ../assets/icons/linkstack.png
-            - title: Bookmarks
-              url: https://links.${OC}
-              icon: sh:linkding
-            - title: Build Resumé
-              url: https://${RXRESUME_HOST}.${INT}
-              icon: ../assets/icons/reactive-resume-light.png
-            - title: Git Repos
-              url: https://${GITEA_HOST}.${INT}
-              icon: ../assets/icons/gitea.png
-            - title: Drawing
-              url: http://10.0.40.229:8080
-              icon: sh:drawio
+              - title: Notes & Tasks
+                url: https://jotty.${INT}
+                icon: sh:jotty
+                description: Quick Notes. A simple spot for your checklists and random thoughts. ✍️✅
+
+              - title: Convert X Files
+                url: ${CONVERTX_IP}
+                icon: ../assets/icons/convertx.png
+                description: The File Swapper. Change any file--like a photo or doc--into a different format. 📂✨
+
+              - title: LinkStack
+                url: https://linkstack.${OC}
+                icon: ../assets/icons/linkstack.png
+                description: Your Profile Link. One page that holds all your important social links. 🌳📱
+
+              - title: Linkding
+                url: https://links.${OC}
+                icon: sh:linkding
+                description: The Bookmark Bin. Save cool websites and links so you never lose them. 🌐📌
+
+              - title: Build Resumé
+                url: https://${RXRESUME_HOST}.${INT}
+                icon: ../assets/icons/reactive-resume-light.png
+                description: The Job Winner. Quickly build a professional resume that looks amazing. 👔💼
+
+              - title: Git Repos
+                url: https://${GITEA_HOST}.${INT}
+                icon: ../assets/icons/gitea.png
+                description: Code Home. A private place to store and manage all your coding projects. 🛠️📦
+
            
         - type: custom-api
           title: Random Fact
