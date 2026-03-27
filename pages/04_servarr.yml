@@ -154,7 +154,7 @@
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kapowarr.png
             - title: JellyStats
               url: http://10.0.40.21:3000
-              icon: sh:jellystat
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jellystat.png
 
         - type: monitor
           cache: 1m
