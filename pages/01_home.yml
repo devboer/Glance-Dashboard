@@ -59,9 +59,7 @@
                 - title: Claude
                   url: https://claude.ai
                   icon: ../assets/icons/claude.png
-                - title: Karvec's OpenWebUI
-                  url: https://openwebui.maybeits.us
-                  icon: sh:open-webui-dark.png
+
                   description: Local LLMs 
             - title: Entertainment
               color: 10 70 50
@@ -79,13 +77,22 @@
                 - title: Scribble.rs
                   url: https://scribble.devboer.com # http://10.0.50.2:6969/
                   icon: ../assets/icons/excalidraw.png
-                - title: Karvec's Jellyfin
+
+                  
+            - title: Karvec's Services
+              color: 10 69 50
+              hide-arrow: true
+              links:  
+                - title: Jellyfin
                   url: https://jellyfin.maybeits.us
                   icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin.png # ../assets/icons/jellyfin.png
-                - title: Karvec's Jellyseerr
+                - title: Jellyseerr
                   url: https://jellyseerr.maybeits.us/
                   icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyseerr.png # ../assets/icons/jellyseerr.png
-
+                - title: OpenWebUI
+                  url: https://openwebui.maybeits.us
+                  icon: sh:open-webui-dark.png 
+                  
     - size: full
       widgets:          
         - type: bookmarks
