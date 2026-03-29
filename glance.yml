@@ -12,10 +12,10 @@ branding:
   custom-footer: |
     <h3 style="margin: 12px;">Managed by <a href="https://docs.devboer.com" target="_blank" style="color: #781ce2">devBoer Labs</a></h3><br/>
     <p style="display: flex; align-items: center; gap: 15px;">
-      <a href="https://10.0.0.1:8443" target="_blank" style="margin-right: 12px;">
+      <a href="${OPNSENSE_IP}" target="_blank" style="margin-right: 12px;">
         <img src="https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/opnsense.png" width="36px" />
       </a>
-      <a href="http://10.0.0.4:8680" target="_blank" style="margin-right: 12px;">
+      <a href="${GLANCE_CODE_IP}" target="_blank" style="margin-right: 12px;">
         <img src="https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/vscodium.png" width="36px" />
       </a> 
 
@@ -23,7 +23,7 @@ branding:
         <img src="https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/filebrowser-quantum.png" width="36px" />
       </a> 
 
-      <a href="https://helper-scripts.com" target="_blank">
+      <a href="https://community-scripts.org/" target="_blank">
         <img src="https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/proxmox-helper-scripts.png" width="36px" />
       </a>
     </p>
@@ -38,4 +38,4 @@ pages:
   - $include: ./pages/03_life.yml
   - $include: ./pages/04_servarr.yml
   - $include: ./pages/05_devops.yml
-  # move demo page to demo server and link to it in devops
+  - $include: ./pages/06_tailscale.yml

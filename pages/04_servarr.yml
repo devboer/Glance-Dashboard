@@ -111,28 +111,28 @@
           title: Frontend Services
           sites:
             - title: Jellyfin
-              url: https://${JELLYFIN_HOST}.${INT}
+              url: https://jellyfin.${INT}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin-light.png # ../assets/icons/jellyfin-light.png
             - title: Immich
-              url: https://${IMMICH_HOST}.${INT}
+              url: https://immich.${INT}
               icon: ../assets/icons/immich.png
             - title: Kima-Hub
               url: https://kimahub.${ARR}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kima-hub.png
             - title: Koel
-              url: https://music.${INT}
+              url: https://koel.${INT}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/koel.png
             - title: AudioBookShelf
-              url: http://10.0.40.78:13378
+              url: ${AUDIOBOOKSHELF_IP} # https://abs.${INT}
               icon: sh:audiobookshelf
             - title: Seerr
-              url: https://${SEERR_HOST}.${ARR}
+              url: https://seerr.${ARR}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
             - title: Shelfmark
               url: https://shelfmark.${ARR}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
             - title: Yamtrack
-              url: https://yamtrack.arr.devboer.com
+              url: https://yamtrack.${ARR}
               icon: sh:yamtrack
 
         - type: monitor
@@ -140,20 +140,20 @@
           title: Manage Libraries
           sites:
             - title: Lidarr
-              url: https://${LIDARR_HOST}.${ARR}
+              url: https://lid.${ARR}
               icon: ../assets/icons/lidarr-radarr.png
               description: Lidarr
             - title: Radarr
-              url: https://${RADARR_HOST}.${ARR}
+              url: https://rad.${ARR}
               icon: ../assets/icons/radarr.png
             - title: Sonarr
-              url: https://${SONARR_HOST}.${ARR}
+              url: https://son.${ARR}
               icon: ../assets/icons/sonarr-radarr.png
             - title: Kapowarr
               url: https://kapow.${ARR}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kapowarr.png
-            - title: JellyStats
-              url: http://10.0.40.21:3000
+            - title: JellyStat
+              url: ${JELLYSTAT_IP}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jellystat.png
 
         - type: monitor
@@ -161,25 +161,22 @@
           title: Process Media
           sites:
             - title: Bazarr
-              url: https://${BAZARR_HOST}.${ARR}
+              url: https://baz.${ARR}
               icon: ../assets/icons/bazarr.png
             - title: FileFlows
-              url: https://${FILEFLOWS_HOST}.${ARR}
+              url: https://fileflows.${ARR}
               icon: ../assets/icons/fileflows.png
             - title: SABnzbd
-              url: https://${SABNZBD_HOST}.${ARR}
+              url: https://nzb.${ARR}
               icon: sh:sabnzbd
               basic-auth:
                 username: ${SABNZBD_USER}
                 password: ${SABNZBD_PASS}              
             - title: Yubal
-              url: http://10.0.40.248:8000/
+              url: ${YUBAL_IP}
               icon: sh:yubal
-            - title: Prowlarr
-              url: https://prowl.arr.devboer.com
-              icon: sh:prowlarr
             - title: Youtarr
-              url: https://${YOUTARR_HOST}.${ARR}
+              url: https://yout.${ARR}
               icon: ../assets/icons/youtarr.png
     - size: small
       widgets:

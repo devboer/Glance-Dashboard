@@ -60,7 +60,6 @@
                   url: https://claude.ai
                   icon: ../assets/icons/claude.png
 
-                  description: Local LLMs 
             - title: Entertainment
               color: 10 70 50
               hide-arrow: true
@@ -108,7 +107,7 @@
                  description: Your Media Hub. Stream your movies, shows, and music ad-free. 🍿🎵
 
                - title: Immich
-                 url: https://photos.${INT}
+                 url: https://immich.${INT}
                  icon: ../assets/icons/immich.png
                  description: Magic Photo Vault. Saves and organizes every memory automatically. 🖼️
 
@@ -119,17 +118,17 @@
                  description: Under Construction. Future Spotify Replacement. 🚧🛠️ 
                         
                - title: FreshRSS
-                 url: https://rss.${INT}
+                 url: https://rss.${OC}
                  icon: ../assets/icons/freshrss.png
                  description: All-In-One Feed. Your favorite sites and news in one single scroll. 📱
 
                - title: Seerr
-                 url: https://${SEERR_HOST}.${ARR}
+                 url: https://seerr.${ARR}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
                  description: The Request Line. Want a movie or show? Just ask for it here. 🪄
 
                - title: Shelfmark
-                 url: https://shelfmark.arr.devboer.com
+                 url: https://shelfmark.${ARR}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
                  description: Book Finder. Search and grab any book or audiobook in seconds. 📖
 
@@ -159,7 +158,7 @@
                  description: Front Door Cam. See who’s there and playback video of who stopped by. 🚪📹
 
                - title: Meal Planning
-                 url: https://mealie.${INT}
+                 url: https://mealie.${OC}
                  icon: sh:mealie
                  description: The Recipe Book. Save your favorite meals and plan what’s for dinner. 🍲📝
                  
@@ -179,11 +178,11 @@
 
           # Needs database fixing after failed migration
           #  - title: Hoard Websites
-          #    url: https://${KARAKEEP_HOST}.${INT}
+          #    url: https://karakeep.${INT}
           #    icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/karakeep-light.png # ../assets/icons/karakeep-light.png
             # Needs further setup ^ why does it lock me out after initial setup?  
                - title: Jotty
-                 url: https://jotty.${INT}
+                 url: https://jotty.${OC}
                  icon: sh:jotty
                  description: Quick Notes. A simple spot for your checklists and random thoughts. ✍️✅
 
@@ -203,12 +202,12 @@
                  description: The Bookmark Bin. Save cool websites and links so you never lose them. 🌐📌
 
                - title: Rx Resumé
-                 url: https://rxresume.${INT}
+                 url: https://rxresume.${OC}
                  icon: ../assets/icons/reactive-resume-light.png
                  description: The Job Winner. Quickly build a professional resume that looks amazing. 👔💼
 
                - title: Gitea
-                 url: https://gitea.${INT}
+                 url: https://gitea.${OC}
                  icon: ../assets/icons/gitea.png
                  description: Code Home. A private place to store and manage all your coding projects. 🛠️📦
            

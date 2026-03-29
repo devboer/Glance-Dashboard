@@ -19,7 +19,7 @@
                     url: https://gmail.com/
                     icon: ../assets/icons/gmail.png
                   - title: Feeds
-                    url: https://${FRESHRSS_HOST}.${INT}
+                    url: https://rss.${INT}
                     icon: ../assets/icons/freshrss.png
               - title: Tools
                 hide-arrow: true
@@ -35,7 +35,7 @@
                     url: https://www.focusmate.com/
                     icon: ../assets/icons/focusmate.png
                   - title: Barcode Buddy
-                    url: https://${BARCODE_HOST}.${INT}
+                    url: https://upc.${OC}
                     icon: ../assets/icons/barcode-buddy.png
               - title: Retailers
                 color: 4 20 100
@@ -71,18 +71,6 @@
                     icon: ../assets/icons/coder-light.png
       - size: full
         widgets:
-        - type: search
-          placeholder: "! + yt imdb"
-          autofocus: true
-          new-tab: true
-          search-engine: duckduckgo
-          bangs:
-          - title: YouTube
-            shortcut: "!yt"
-            url: https://www.youtube.com/results?search_query={QUERY}
-          - title: IMDb
-            shortcut: "!imdb"
-            url: https://www.imdb.com/find/?q={QUERY}
       
         - type: monitor
           cache: 1m
@@ -95,25 +83,25 @@
               url: https://atoz-login.amazon.work/?source=ac
               icon: ../assets/icons/amazon.png
             - title: Speedtest Tracker
-              url: https://${SPEEDTRACKER_HOST}.${NSA}
+              url: https://fast.${NSA}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/speedtest-tracker.png
             - title: Inventory
-              url: https://${GROCY_HOST}.${INT}
+              url: https://grocy.${INT}
               icon: ../assets/icons/grocy.png
             # - title: ListMonk
-            #   url: https://${LISTMONK_HOST}.${INT}
+            #   url: https://listmonk.${INT}
               # icon: ../assets/icons/listmonk
             - title: Reactive Resume
-              url: https://${RXRESUME_HOST}.${INT}
+              url: https://rxresume.${OC}
               icon: ../assets/icons/reactive-resume-light.png
             - title: Home Assistant
-              url: https://${HASS_HOST}.${IOT}
+              url: https://hass.${IOT}
               icon: ../assets/icons/home-assistant.png
             - title: iCloud
               url: https://icloud.com
               icon: ../assets/icons/icloud.png
             - title: Subscriptions
-              url: https://${WALLOS_HOST}.${OC}
+              url: https://wallos.${OC}
               icon: ../assets/icons/wallos.png
 
         - type: bookmarks

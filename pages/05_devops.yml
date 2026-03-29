@@ -63,33 +63,32 @@
         #   LXC Containerized Services
         #       Server Central Apps
         #
-          # - title: glance [100|0.4:8080]
-          #   url: ${GLANCE_IP}
-          # - title: glance [100|0.4:8680]
-          #   url: ${GLANCE_CODE_IP}
+          - title: glance [100|0.4:8080]
+            url: ${GLANCE_IP}
+          - title: glance [100|0.4:8680]
+            url: ${GLANCE_CODE_IP}
           # - title: bookstack [101|40.52:80]
           #   url: ${BOOKSTACK_IP}
           # - title: argus [102|40.50:8080]
           #   url: ${ARGUS_IP}
-          # - title: dockge [103|50.2:5001]
-          #   url: ${DOCKGE_IP}
-          # - title: scribble [103|50.2:2283]
-          #   url: ${SCRIBBLE_IP}
-          #   error-url: ${DOCKGE_HOST}.${INT}
-          # - title: code-server [106|40.54:8680]
-          #  url: ${CODER_IP}
+          - title: dockge [114|40.6:5001]
+            url: ${DOCKGE_IP}
+          - title: scribble [114|40.6:2283]
+            url: ${SCRIBBLE_IP}
+            error-url: https://docker.${INT}
+
         #
         #     Network & Internet
         #
-          - title: speedtest tracker [208|4:80]
-            url: http://10.0.40.4
+          - title: speedtest tracker [208|40.4:80]
+            url: ${SPEEDTEST_IP}
           - title: pihole [201|0.201:80]
             url: ${PIHOLE1_IP}
           # - title: pi.alert [205|50.108:80]
           #   url: ${PIALERT_IP}
           # - title: iventoy [206|0.11:offline]
           #   url: ${IVENTOY_IP}
-          - title: omada [220|0.3:8043]
+          - title: omada [206|0.3:8043]
             url: ${OMADA_IP}
             allow-insecure: true
         #
@@ -98,16 +97,16 @@
          # - title: opencloud [301:40.57]
          #   url: ${OPENCLOUD_IP}
          # - title: opencloud [301:cloud.int]
-         #   url: ${OPENCLOUD_HOST}.${OC}
+         #   url: https://cloud.${OC}
          # - title: paperless [303|40.30:8000]
           #  url: ${PAPERLESS_IP}
-          - title: freshrss [302|100:80]
-            url: http://10.0.40.100
-          - title: convertx [304|36:3000]
+          - title: freshrss [302|40.100:80]
+            url: ${FRESHRSS_IP}
+          - title: convertx [304|40.36:3000]
             url: ${CONVERTX_IP}
          # - title: karakeep [308|40.35:offline]
          #   url: ${KARAKEEP_IP}
-          - title: searxng [309|0.215:8888]
+          - title: searxng [306|40.209:8888]
             url: ${SEARXNG_IP}
             alt-status-codes:
               - 429
@@ -156,7 +155,7 @@
           - title: lidarr [708|40.72:8686]
             url: ${LIDARR_IP}
           - title: bazarr [726|76:6767]
-            url: http://10.0.40.76:6767
+            url: ${BAZARR_IP}
 
       - type: search
         placeholder: "! + yt di si"
@@ -231,7 +230,7 @@
                  icon: si:unsplash 
                - title: Dashboard Icons
                  url: https://dashboardicons.com/
-                 icon: 
+                 icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/dashboard-icons-dark.png
 
             - title: AI Tools
               hide-arrow: true
@@ -297,7 +296,7 @@
           title: Network
           sites:
             - title: Router
-              url: https://opn.${NSA} # WIP: ${OPNSENSE_HOST}.${INT}
+              url: https://opn.${NSA}
               icon: ../assets/icons/opnsense-v1.png
               allow-insecure: true
             - title: WiFi
@@ -323,35 +322,35 @@
           title: Servers
           sites:
             - title: PVE-Prod
-              url: https://${PVEPROD_HOST}.${INT}
+              url: https://pve01.${INT}
               icon: ../assets/icons/proxmox.png
               allow-insecure: true
             - title: PVE-Dev
-              url: https://${PVEDEV_HOST}.${INT}
+              url: https://pve-dev.${INT}
               icon: ../assets/icons/linux-containers-lxc.png
               allow-insecure: true            
             - title: iLO (PVE-Dev)
-              url: https://${PVEDEV_KVM_HOST}.${INT}
+              url: https://pve-dev-ilo.${INT}
               icon: ../assets/icons/hewlett-packard-enterprise.png
               allow-insecure: true
             - title: Dockge
-              url: https://${DOCKGE_HOST}.${INT}
+              url: https://docker.${INT}
               icon: ../assets/icons/dockge.png
             - title: Radicale
-              url: https://${RADICALE_HOST}.${INT} # http://10.0.40.38/admin/
+              url: https://radicale.${OC} # http://10.0.40.38/admin/
               icon: ../assets/icons/baikal.png    
         - type: monitor
           cache: 1m
           title: Resources
           sites:  
             - title: App Releases
-              url: https://${ARGUS_HOST}.${INT}
+              url: https://argus.${INT}
               icon: ../assets/icons/argus.png
             - title: Documentation
-              url: https://${BOOKSTACK_HOST}.${INT}
+              url: https://bookstack.${INT}
               icon: ../assets/icons/bookstack-light.png
             - title: Code Editor
-              url: https://${CODER_HOST}.${INT}
+              url: https://vscode.${OC}
               icon: ../assets/icons/visual-studio-code-light.png 
             - title: devBoer Labs
               url: https://docs.devboer.com
@@ -360,11 +359,11 @@
               url: https://github.com/blocklistproject/Lists
               icon: ../assets/icons/adguard-home.png
             - title: Gitea
-              url: https://${GITEA_HOST}.${INT}
+              url: https://gitea.${OC}
               icon: ../assets/icons/gitea-light.png
             - title: acng report
-              url: http://10.0.40.5:3142/acng-report.html
+              url: ${ACNG_IP}/acng-report.html
               icon: sh:debian
             - title: Docs for Services
-              url: https://links.oc.devboer.com/bookmarks?bundle=1
+              url: https://linkding.${OC}/bookmarks?bundle=1
               icon: sh:linkding
