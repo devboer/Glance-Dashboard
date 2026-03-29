@@ -73,9 +73,9 @@
                 - title: Podcasts
                   url: https://pocketcasts.com/
                   icon: ../assets/icons/pocket-casts.png
-                - title: Scribble.rs
-                  url: https://scribble.devboer.com # http://10.0.50.2:6969/
-                  icon: ../assets/icons/excalidraw.png
+                # - title: Scribble.rs
+                #   url: https://scribble.devboer.com # 
+                #   icon: ../assets/icons/excalidraw.png
 
                   
             - title: Karvec's Services
@@ -106,11 +106,15 @@
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin-light.png
                  description: Your Media Hub. Stream your movies, shows, and music ad-free. 🍿🎵
 
+               - title: Seerr
+                 url: https://seerr.${ARR}
+                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
+                 description: The Request Line. Want a movie or show? Just ask for it here. 🪄
+
                - title: Immich
                  url: https://immich.${INT}
                  icon: ../assets/icons/immich.png
                  description: Magic Photo Vault. Saves and organizes every memory automatically. 🖼️
-
 
                - title: Kima Hub
                  url: https://kimahub.${ARR}
@@ -122,25 +126,25 @@
                  icon: ../assets/icons/freshrss.png
                  description: All-In-One Feed. Your favorite sites and news in one single scroll. 📱
 
-               - title: Seerr
-                 url: https://seerr.${ARR}
-                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
-                 description: The Request Line. Want a movie or show? Just ask for it here. 🪄
+               - title: Audiobookshelf
+                 url: ${AUDIOBOOKSHELF_IP} # https://abs.${INT}
+                 icon: sh:audiobookshelf
+                 description: The Digital Library. Stream your audiobooks, read your books, and catch up on podcasts. 🎧📖🎙️
 
                - title: Shelfmark
                  url: https://shelfmark.${ARR}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
                  description: Book Finder. Search and grab any book or audiobook in seconds. 📖
-
-               - title: Yamtrack
-                 url: http://10.0.40.67:8000
-                 icon: sh:yamtrack
-                 description: The Life Tracker. Log your movies, shows, games, and books in one spot. 📈
            
                - title: Romm
                  url: http://10.0.40.22
                  icon: sh:romm
                  description: Retro Game Room. Play all your classic games right in the browser. 👾🎮
+
+               - title: Yamtrack
+                 url: http://10.0.40.67:8000
+                 icon: sh:yamtrack
+                 description: The Life Tracker. Log your movies, shows, games, and books in one spot. 📈
 
            - title: Home Hub
              color: 10 70 50

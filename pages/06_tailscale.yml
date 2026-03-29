@@ -139,7 +139,11 @@
                - title: Yamtrack
                  url: ${YAMTRACK_TN} # https://yamtrack.${TN}
                  icon: sh:yamtrack
-           
+
+               - title: Swiparr
+                 url: ${SWIPARR_TN} # https://swiparr.${TN}
+                 icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/swiparr.png
+                 
                - title: Romm
                  url: ${ROMM_TN} # https://romm.${TN}
                  icon: sh:romm
