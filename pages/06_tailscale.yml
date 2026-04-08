@@ -73,6 +73,9 @@
                 - title: Radicale
                   url: ${RADICALE_TN} # https://radicale.${TN}
                   icon: sh:radicale 
+                - title: Edit Glance
+                  url: ${GLANCE_CODE_TN}
+                  icon: sh:glance
             - title: Media Controls
               color: 267 100 50
               hide-arrow: true
@@ -132,6 +135,14 @@
                  url: ${SEERR_TN} # https://seerr.${TN}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png 
 
+               - title: MusicSeerr
+                 url: ${MSEERR_TN}
+                 icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/requestrr.png
+
+               - title: Audiobookshelf
+                 url: ${AUDIOBOOKSHELF_TN} # https://abs.${TN}
+                 icon: sh:audiobookshelf
+
                - title: Shelfmark
                  url: ${SHELFMARK_TN} # https://shelfmark.${TN}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
@@ -143,7 +154,7 @@
                - title: Swiparr
                  url: ${SWIPARR_TN} # https://swiparr.${TN}
                  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/swiparr.png
-                 
+
                - title: Romm
                  url: ${ROMM_TN} # https://romm.${TN}
                  icon: sh:romm

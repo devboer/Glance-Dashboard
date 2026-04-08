@@ -128,6 +128,9 @@
             - title: Seerr
               url: https://seerr.${ARR}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
+            - title: MusicSeerr
+              url: ${MSEERR_IP}
+              icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/requestrr.png  
             - title: Shelfmark
               url: https://shelfmark.${ARR}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
