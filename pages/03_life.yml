@@ -34,9 +34,9 @@
                   - title: FocusMate
                     url: https://www.focusmate.com/
                     icon: ../assets/icons/focusmate.png
-                  - title: Barcode Buddy
-                    url: https://upc.${OC}
-                    icon: ../assets/icons/barcode-buddy.png
+                  - title: iCloud
+                    url: https://icloud.com
+                    icon: ../assets/icons/icloud.png                    
               - title: Retailers
                 color: 4 20 100
                 hide-arrow: true
@@ -72,37 +72,45 @@
       - size: full
         widgets:
       
-        - type: monitor
-          cache: 1m
+        - type: bookmarks
           title: Life Upkeep
-          sites:
-            - title: My LinkStack
-              url: https://linkstack.${OC}/@devboer#
-              icon: ../assets/icons/linkstack.png
-            - title: A to Z
-              url: https://atoz-login.amazon.work/?source=ac
-              icon: ../assets/icons/amazon.png
-            - title: Speedtest Tracker
-              url: https://fast.${NSA}
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/speedtest-tracker.png
-            - title: Inventory
-              url: https://grocy.${INT}
-              icon: ../assets/icons/grocy.png
-            # - title: ListMonk
-            #   url: https://listmonk.${INT}
-              # icon: ../assets/icons/listmonk
-            - title: Reactive Resume
-              url: https://rxresume.${OC}
-              icon: ../assets/icons/reactive-resume-light.png
-            - title: Home Assistant
-              url: https://hass.${IOT}
-              icon: ../assets/icons/home-assistant.png
-            - title: iCloud
-              url: https://icloud.com
-              icon: ../assets/icons/icloud.png
-            - title: Subscriptions
-              url: https://wallos.${OC}
-              icon: ../assets/icons/wallos.png
+          groups:
+            - title: Career
+              color: 126 100 40
+              hide-arrow: true
+              links:
+                - title: My LinkStack
+                  url: https://linkstack.${OC}/@devboer#
+                  icon: ../assets/icons/linkstack.png
+                - title: A to Z
+                  url: https://atoz-login.amazon.work/?source=ac
+                  icon: ../assets/icons/amazon.png
+                - title: Reactive Resume
+                  url: https://rxresume.${OC}
+                  icon: ../assets/icons/reactive-resume-light.png
+                # - title: ListMonk
+                #   url: https://listmonk.${INT}
+                #   icon: ../assets/icons/listmonk
+            - title: Home Management
+              color: 126 100 40
+              hide-arrow: true
+              links:
+                - title: Speedtest Tracker
+                  url: https://fast.${NSA}
+                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/speedtest-tracker.png
+                  description: See Internet bandwidth ISP health.
+                - title: Grocy
+                  url: https://grocy.${INT}
+                  icon: ../assets/icons/grocy.png
+                  description: Track household inventory. Track chores. Vault of manuals.
+                - title: Barcode Buddy
+                  url: https://upc.${OC}
+                  icon: ../assets/icons/barcode-buddy.png
+                  description: Barcode database to assist Grocy. Implements hardware scanners.
+                - title: Home Assistant
+                  url: https://hass.${IOT}
+                  icon: ../assets/icons/home-assistant.png
+                  description: Ultimate smart home controller.
 
         - type: bookmarks
           title: Finances
@@ -114,18 +122,31 @@
                 - title: Wings Financial
                   url: https://www.wingscu.com/
                   icon: mdi:bank
+                  description: My bank accounts.
                 - title: Monetr
                   url: https://my.monetr.app
                   icon: ../assets/icons/monetr.png
+                  description: Budgeting application that I blindly support $4/mo. Sigh.
                 - title: Fidelity
                   url: https://www.fidelity.com/
                   icon: ../assets/icons/fidelity.png
+                  description: IRA and 401k portfolio and brokerage.
                 - title: Coinbase
                   url: https://www.coinbase.com/
                   icon: https://global-uploads.webflow.com/5b0c471ddb589cf22d4477a4/5cec15f8c0831c35aa6fe349_coinbase-app-icon.png
+                  description: Cryptocurrency portfolio and brokerage.
                 - title: Robinhood
                   url: https://robinhood.com/us/en/
                   icon: ../assets/icons/robinhood.png
+                  description: Stock portfolio and brokerage.
+                - title: Wallos
+                  url: https://wallos.${OC}
+                  icon: ../assets/icons/wallos.png
+                  description: Track recurring subscriptions.
+                - title: Brightside Financial
+                  url: https://amazon.gobrightside.com/home
+                  icon: https://play-lh.googleusercontent.com/0QRjyoKDYnTqPGLiQTIT-5N863h-ZwFybHxL478qOLHCN_SQgCpd0t88SDwPx8NOZww
+                  description: Chat with a financial expert to hopefully relieve me of stress.
 
             - title: Utilities
               color: 2 58 36
