@@ -73,9 +73,12 @@
           #   url: ${ARGUS_IP}
           - title: dockge [114|40.6:5001]
             url: ${DOCKGE_IP}
-          - title: scribble [114|40.6:2283]
+          - title: scribble [114|40.6:8181]
             url: ${SCRIBBLE_IP}
             error-url: https://docker.${INT}
+          # - title: wordle [114|40.6:3333]
+          #   url: ${WORDLE_IP}
+          #   error-url: https://docker.${INT}
 
         #
         #     Network & Internet
@@ -106,8 +109,8 @@
             url: ${CONVERTX_IP}
          # - title: karakeep [308|40.35:offline]
          #   url: ${KARAKEEP_IP}
-          - title: searxng [306|40.209:8888]
-            url: ${SEARXNG_IP}
+          - title: degoog [311|40.231:4444]
+            url: ${DEGOOG_IP}
             alt-status-codes:
               - 429
         #
@@ -161,7 +164,7 @@
         placeholder: "! + yt di si"
         autofocus: true
         new-tab: true
-        search-engine: duckduckgo
+        search-engine: ${DEGOOG_IP}/search?q={QUERY}
         bangs:
           - title: YouTube
             shortcut: "!yt"
@@ -295,6 +298,9 @@
           cache: 1m
           title: Network
           sites:
+            - title: Homelable
+              url: ${HOMELABLE_IP}
+              icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/homelable.png
             - title: Router
               url: https://opn.${NSA}
               icon: ../assets/icons/opnsense-v1.png
