@@ -290,6 +290,9 @@
                 - title: OpenRouter AI
                   url: https://openrouter.ai
                   icon: ../assets/icons/openrouter-light.png
+                - title: OpenWeatherMap
+                  url: https://openweathermap.org
+                   
 
     - size: full
       widgets:
@@ -344,7 +347,11 @@
               icon: ../assets/icons/dockge.png
             - title: Radicale
               url: https://radicale.${OC} # http://10.0.40.38/admin/
-              icon: ../assets/icons/baikal.png    
+              icon: sh:radicale
+            - title: n8n
+              url: http://10.0.40.214:5678
+              icon: sh:n8n
+              
         - type: monitor
           cache: 1m
           title: Resources

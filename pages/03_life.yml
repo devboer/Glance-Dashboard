@@ -158,6 +158,29 @@
                   url: https://hass.${IOT}
                   icon: ../assets/icons/home-assistant.png
                   description: Ultimate smart home controller.
+            - title: Kiddos
+              color: 126 100 40
+              hide-arrow: true
+              links:
+                - title: Infinite Campus
+                  url: https://shakopeemn.infinitecampus.org/campus/portal/parents/shakopee.jsp
+                  description: Shakopee Schools access to the kids' progress and more.       
+                  
+            - title: Civics
+              color: 126 100 40
+              hide-arrow: true
+              links:
+                - title: Ballotpedia
+                  url: https://ballotpedia.org
+                  description: See who is on the ballot. 
+                
+                - title: The People
+                  url: https://www.thepeople.org/voting-resource-guide
+                  description: Multiple resources linked including ballotpedia. 
+                  
+                - title: Blue Voter Guide
+                  url: https://bluevoterguide.org/
+                  description: Planning wizard giving you a wealth of knowledge to make an informed vote. 
 
         - type: bookmarks
           title: Finances
@@ -203,11 +226,8 @@
                   url: https://shakopeeutilities.smarthub.coop/ui
                   icon: mdi:meter-electric-outline
                 - title: CenterPoint | Gas/HSP
-                  url: https://login.centerpointenergy.com/cnpcwecafprod.onmicrosoft.com/b2c_1a_signuporsignin/oauth2/v2.0/authorize?client_id=a6386527-7544-45d9-94e0-f0e22e480d15&redirect_uri=https%3A%2F%2Fmyaccount.centerpointenergy.com%2Fmyaccounts%2FIndex&response_type=id_token&scope=openid&state=OpenIdConnect.AuthenticationProperties%3DbnmfJcjgkdRKBp1JPbqZiT_UCXbKc338kgW95p02L7E9z465N5HkWOIXGy46CqehXoZkSbRaDLdtqSgS89dFR01yUc6FFqfe5f5oSXdabGbck33iXgC35ncXHD-L1tABU_w5VJzN07-w9OZISuCWc_2D7NmhYhjtPArWucDDUrkTlZ6qAmKum7V1BhSU7dzEaYeidPVsN725CZYQqUr5-0XGSSSLtgmx2fbazxWQ-dwPh0SpkgMvKjPhfQhxkon4l7P_dAVSCzk-ASnslleyxsTgB0fdn2ltq5wb064aSNhKvFvSBcqnbcV0wXuFNQx_xMUmOuSLKU1WtoYgoQEVV78l1aNz0Yhwd-pL_LAY62A&response_mode=form_post&nonce=638844179512775554.M2VjMmU2NDQtNzc2OC00NDRkLWFlMjYtMmQwNDkwN2U0NDMzMWJiMTE2NWMtYjNlNi00MGU2LTk4MDItNTQ5ZWI1MGJhYWI3&x-client-SKU=ID_NET451&x-client-ver=5.3.0.0
+                  url: https://login.centerpointenergy.com/
                   icon: mdi:gas-burner
-                - title: Xfinity | Internet
-                  url: https://login.xfinity.com/login?c_ds_na=c_ds_na%2Cc_ds_no%2Cc_ds_ts%2Cclient_id%2Ccontinue%2Cr%2CreqId%2Cs%2CselectAccount&c_ds_no=EBC20B7DBF81207751689E9825CBF2BB&c_ds_ts=1748821904&c_ds_val=9D045141A26006A03902D7289324CFB366305396A45EBEF5CE7ECF5337BB5D25&client_id=shoplearn-web&continue=https%3A%2F%2Foauth.xfinity.com%2F%2Foauth%2Fauthorize%3Fresponse_type%3Dcode%26prompt%3Dselect_billing_account%26redirect_uri%3Dhttps%253A%252F%252Fwww.xfinity.com%252Fsitecore%252Fapi%252Flearn%252Fneptune%252Fcustomer%252Fexisting%252Fpostauth%26client_id%3Dshoplearn-web%26state%3Dhttps%253A%252F%252Fwww.xfinity.com%252Fauth%26response%3D1%26reqId%3D9ccff459-055c-4bf7-b0a9-0703fcc1cd3f&r=comcast.net&reqId=9ccff459-055c-4bf7-b0a9-0703fcc1cd3f&s=oauth&selectAccount=1
-                  icon: mdi:ip-outline
                 - title: AT&T Fiber | Internet
                   url: https://signin.att.com/
                   icon: si:atandt
