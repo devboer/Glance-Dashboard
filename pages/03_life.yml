@@ -91,6 +91,53 @@
                 # - title: ListMonk
                 #   url: https://listmonk.${INT}
                 #   icon: ../assets/icons/listmonk
+            - title: Civics
+              color: 126 100 40
+              hide-arrow: true
+              links:
+                - title: The People
+                  url: https://www.thepeople.org/voting-resource-guide/
+                  icon: mdi:vote-outline
+                  description: Voting Resource Guide 
+
+                - title: Can I Vote
+                  url: https://www.nass.org/can-I-vote
+                  icon: mdi:vote-outline
+                  description: National Association of Secretaries of State by nonpartisan State Election Officials.
+
+                - title: NASED.org
+                  url: https://www.nased.org/blog/minnesota
+                  icon: mdi:vote-outline
+                  description: Minnesota voting resource.
+
+                - title: Vote.gov 
+                  url: https://vote.gov/
+                  icon: mdi:vote-outline
+                  description: Federal voting resource.
+                
+                - title: USEAC.gov
+                  url: https://www.eac.gov/voters/register-and-vote-in-your-state
+                  icon: mdi:vote-outline
+                  description: US Election Assistance Commission.
+
+                - title: FVAP.gov
+                  url: https://www.eac.gov/voters/register-and-vote-in-your-state
+                  icon: mdi:vote-outline
+                  description: Federal Voting Assistance Program.
+                
+                - title: City of Shakopee
+                  url: https://www.shakopeemn.gov/
+                  icon: mdi:city-variant-outline
+                  description: A bundle of information related to Shakopee.
+            - title: Fun Activities
+              color: 126 100 40
+              hide-arrow: true
+              links:
+                - title: Discover Shakopee
+                  url: https://discovershakopee.org/
+                  icon: mdi:city-variant-outline
+                  description: Find date ideas, family outings/events, etc.
+                  
             - title: Home Management
               color: 126 100 40
               hide-arrow: true
