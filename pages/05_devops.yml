@@ -352,6 +352,23 @@
               url: http://10.0.40.214:5678
               icon: sh:n8n
               
+        - type: monitor 
+          cache: 1m
+          title: Data
+          sites:
+            - title: Prometheus
+              url: ${PROMETHEUS_IP}
+              icon: sh:prometheus
+            - title: InfluxDBv2
+              url: ${INFLUXDB2_IP}
+              icon: sh:influxdb
+            - title: Grafana
+              url: ${GRAFANA_IP}
+              icon: sh:grafana
+            - title: JellyStats
+              url: ${JELLYSTATS_IP}
+              icon: sh:jellystats     
+              
         - type: monitor
           cache: 1m
           title: Resources
