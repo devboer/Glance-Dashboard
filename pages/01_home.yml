@@ -5,7 +5,7 @@
         placeholder: " web search or ! + yt imdb ... "
         autofocus: true
         new-tab: true
-        search-engine: ${DEGOOG_IP}/search?q={QUERY}
+        search-engine: ${DEGOOG_IP}/search?q={QUERY} # http://10.0.40.231:4444/search?q
         bangs:
         - title: YouTube
           shortcut: "!yt"
