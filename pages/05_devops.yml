@@ -330,10 +330,19 @@
           cache: 1m
           title: Servers
           sites:
+            - title: Patchmon
+              url: http://10.0.40.250/login
+              icon: sh:patchmon
+            - title: Termix
+              url: http://10.0.40.245/
+              icon: sh:termix  
             - title: PVE-Prod
               url: https://pve01.${INT}
               icon: ../assets/icons/proxmox.png
               allow-insecure: true
+            - title: Proxmox Backup Server
+              url: https://10.0.70.100:8007
+              icon: sh:proxmox  
             - title: PVE-Dev
               url: https://pve-dev.${INT}
               icon: ../assets/icons/linux-containers-lxc.png
@@ -365,9 +374,21 @@
             - title: Grafana
               url: ${GRAFANA_IP}
               icon: sh:grafana
+            - title: Graylog
+              url: http://10.0.40.11:9000/
+              icon: sh:graylog  
             - title: JellyStat
               url: ${JELLYSTAT_IP}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jellystat.png  
+            - title: Gotify
+              url: http://10.0.40.7
+              icon: sh:gotify
+            - title: iGotify
+              url: http://10.0.40.8
+              icon: sh:gotify
+            - title: ntfy.sh
+              url: http://10.0.40.254
+              icon: sh:ntfy   
               
         - type: monitor
           cache: 1m
