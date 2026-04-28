@@ -181,6 +181,12 @@
             - title: Youtarr
               url: https://yout.${ARR}
               icon: ../assets/icons/youtarr.png
+            - title: Muxarr
+              url: http://10.0.40.6:8183
+              icon: https://github.com/KirovAir/muxarr/blob/master/docs/logo.png
+            - title: Bindery
+              url: http://10.0.40.6:8787
+              icon: https://github.com/vavallee/bindery/blob/main/web/src/assets/logo.png
     - size: small
       widgets:
         - type: custom-api
