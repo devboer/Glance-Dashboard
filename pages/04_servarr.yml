@@ -106,87 +106,77 @@
 
     - size: full
       widgets:
-        - type: monitor
-          cache: 1m
-          title: Frontend Services
-          sites:
-            - title: Jellyfin
-              url: https://jellyfin.${INT}
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin-light.png # ../assets/icons/jellyfin-light.png
-            - title: Immich
-              url: https://immich.${INT}
-              icon: ../assets/icons/immich.png
-            - title: Kima-Hub
-              url: https://kimahub.${ARR}
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kima-hub.png
-            - title: Koel
-              url: https://koel.${INT}
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/koel.png
-            - title: AudioBookShelf
-              url: ${AUDIOBOOKSHELF_IP} # https://abs.${INT}
-              icon: sh:audiobookshelf
-            - title: Seerr
-              url: https://seerr.${ARR}
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
-            - title: MusicSeerr
-              url: ${MSEERR_IP}
-              icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/requestrr.png  
-            - title: Shelfmark
-              url: https://shelfmark.${ARR}
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
-            - title: Yamtrack
-              url: https://yamtrack.${ARR}
-              icon: sh:yamtrack
 
         - type: monitor
           cache: 1m
           title: Manage Libraries
           sites:
+          # Music
             - title: Lidarr
               url: https://lid.${ARR}
-              icon: ../assets/icons/lidarr-radarr.png
+              icon: ../assets/icons/lidarr-radarr.png 
               description: Lidarr
+          # Movies 
             - title: Radarr
               url: https://rad.${ARR}
               icon: ../assets/icons/radarr.png
+          # Series  
             - title: Sonarr
               url: https://son.${ARR}
               icon: ../assets/icons/sonarr-radarr.png
+          # Comics    
             - title: Kapowarr
               url: https://kapow.${ARR}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kapowarr.png
+          # Books/Audiobooks
+            - title: Bindery
+              url: ${BINDERY_IP}
+              icon: https://github.com/vavallee/bindery/blob/main/web/src/assets/logo.png
+          # Monitor Jellyfin usage     
             - title: JellyStat
               url: ${JELLYSTAT_IP}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jellystat.png
-
+          # Config to delete content    
+            - title: Maintainerr
+              url: ${MAINTAINERR_IP}
+              icon: sh:maintainerr
+          # Config for downloading content     
+            - title: Profilarr
+              url: ${PROFILARR_IP}
+              icon: sh:profilarr
+              
         - type: monitor
           cache: 1m
           title: Process Media
           sites:
+          # Take care of subtitles
             - title: Bazarr
               url: https://baz.${ARR}
               icon: ../assets/icons/bazarr.png
+          # Pre-transcode library to optimize    
             - title: FileFlows
               url: https://fileflows.${ARR}
               icon: ../assets/icons/fileflows.png
+          # Download client    
             - title: SABnzbd
               url: https://nzb.${ARR}
               icon: sh:sabnzbd
               basic-auth:
                 username: ${SABNZBD_USER}
                 password: ${SABNZBD_PASS}              
+          # Replacing with Tubifarry  
             - title: Yubal
               url: ${YUBAL_IP}
               icon: sh:yubal
+          # YouTube video manager    
             - title: Youtarr
               url: https://yout.${ARR}
               icon: ../assets/icons/youtarr.png
+          # Removes unwanted audio and subtitle tracks without re encoding  
             - title: Muxarr
-              url: http://10.0.40.6:8183
+              url: ${MUXARR_IP}
               icon: https://github.com/KirovAir/muxarr/blob/master/docs/logo.png
-            - title: Bindery
-              url: http://10.0.40.6:8787
-              icon: https://github.com/vavallee/bindery/blob/main/web/src/assets/logo.png
+
     - size: small
       widgets:
         - type: custom-api

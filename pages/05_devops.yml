@@ -375,20 +375,93 @@
               url: ${GRAFANA_IP}
               icon: sh:grafana
             - title: Graylog
-              url: http://10.0.40.11:9000/
+              url: ${GRAYLOG_IP}
               icon: sh:graylog  
             - title: JellyStat
               url: ${JELLYSTAT_IP}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jellystat.png  
+            - title: Scraparr
+              url: ${SCRAPARR_IP}
+              icon: sh:scraparr  
             - title: Gotify
-              url: http://10.0.40.7
+              url: ${GOTIFY_IP}
               icon: sh:gotify
             - title: iGotify
-              url: http://10.0.40.8
+              url: ${IGOTIFY_IP}
               icon: sh:gotify
             - title: ntfy.sh
-              url: http://10.0.40.254
+              url: ${NTFY_IP}
               icon: sh:ntfy   
+              
+        - type: monitor
+          cache: 1m
+          title: Manage Libraries
+          sites:
+          # Music
+            - title: Lidarr
+              url: https://lid.${ARR}
+              icon: ../assets/icons/lidarr-radarr.png 
+              description: Lidarr
+          # Movies 
+            - title: Radarr
+              url: https://rad.${ARR}
+              icon: ../assets/icons/radarr.png
+          # Series  
+            - title: Sonarr
+              url: https://son.${ARR}
+              icon: ../assets/icons/sonarr-radarr.png
+          # Comics    
+            - title: Kapowarr
+              url: https://kapow.${ARR}
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kapowarr.png
+          # Books/Audiobooks
+            - title: Bindery
+              url: ${BINDERY_IP}
+              icon: https://github.com/vavallee/bindery/blob/main/web/src/assets/logo.png
+          # Monitor Jellyfin usage     
+            - title: JellyStat
+              url: ${JELLYSTAT_IP}
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jellystat.png
+          # Config to delete content    
+            - title: Maintainerr
+              url: ${MAINTAINERR_IP}
+              icon: sh:maintainerr
+          # Config for downloading content     
+            - title: Profilarr
+              url: ${PROFILARR_IP}
+              icon: sh:profilarr
+              
+        - type: monitor
+          cache: 1m
+          title: Process Media
+          sites:
+          # Take care of subtitles
+            - title: Bazarr
+              url: https://baz.${ARR}
+              icon: ../assets/icons/bazarr.png
+          # Pre-transcode library to optimize    
+            - title: FileFlows
+              url: https://fileflows.${ARR}
+              icon: ../assets/icons/fileflows.png
+          # Download client    
+            - title: SABnzbd
+              url: https://nzb.${ARR}
+              icon: sh:sabnzbd
+              basic-auth:
+                username: ${SABNZBD_USER}
+                password: ${SABNZBD_PASS}              
+          # Replacing with Tubifarry  
+            - title: Yubal
+              url: ${YUBAL_IP}
+              icon: sh:yubal
+          # YouTube video manager    
+            - title: Youtarr
+              url: https://yout.${ARR}
+              icon: ../assets/icons/youtarr.png
+          # Removes unwanted audio and subtitle tracks without re encoding  
+            - title: Muxarr
+              url: ${MUXARR_IP}
+              icon: https://github.com/KirovAir/muxarr/blob/master/docs/logo.png 
               
         - type: monitor
           cache: 1m

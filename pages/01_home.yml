@@ -5,7 +5,7 @@
         placeholder: " web search or ! + yt imdb ... "
         autofocus: true
         new-tab: true
-        search-engine: ${DEGOOG_IP}/search?q={QUERY} # http://10.0.40.231:4444/search?q
+        search-engine: ${DEGOOG_IP}/search?q={QUERY}
         bangs:
         - title: YouTube
           shortcut: "!yt"
@@ -59,6 +59,12 @@
                 - title: Claude
                   url: https://claude.ai
                   icon: ../assets/icons/claude.png
+            - title: Cameras
+              hide-arrow: true
+              links:
+               - title: Reolink Doorbell
+                 url: ${DOORBELL_IP}
+                 icon: ../assets/icons/reolink.png       
 
             - title: Entertainment
               color: 10 70 50
@@ -119,7 +125,11 @@
                - title: Kima Hub
                  url: https://kimahub.${ARR}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kima-hub.png
-                 description: Under Construction. Future Spotify Replacement. 🚧🛠️ 
+                 description: Under Construction. Future Spotify Replacement. 🚧🛠️
+                 
+               - title: Koel
+                 url: https://koel.${INT}
+                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/koel.png  
                         
                - title: FreshRSS
                  url: https://rss.${OC}
@@ -135,14 +145,18 @@
                  url: https://shelfmark.${ARR}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
                  description: Book Finder. Search and grab any book or audiobook in seconds. 📖
+                 
+               - title: MusicSeerr
+                 url: ${MSEERR_IP}
+                 icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/requestrr.png   
            
                - title: Romm
-                 url: http://10.0.40.22
+                 url: ${ROMM_IP}
                  icon: sh:romm
                  description: Retro Game Room. Play all your classic games right in the browser. 👾🎮
 
                - title: Yamtrack
-                 url: http://10.0.40.67:8000
+                 url: ${YAMTRACK_IP}
                  icon: sh:yamtrack
                  description: The Life Tracker. Log your movies, shows, games, and books in one spot. 📈
 
@@ -156,27 +170,18 @@
                  icon: ../assets/icons/home-assistant.png
                  description: The House Brain. Control your lights, locks, and smart gadgets from one app. 💡🤖
 
-               - title: Reolink Doorbell
-                 url: ${DOORBELL_IP}
-                 icon: ../assets/icons/reolink.png
-                 description: Front Door Cam. See who’s there and playback video of who stopped by. 🚪📹
-
                - title: Meal Planning
                  url: https://mealie.${OC}
                  icon: sh:mealie
                  description: The Recipe Book. Save your favorite meals and plan what’s for dinner. 🍲📝
                  
-               - title: Warranty Tracker
-                 url: https://warracker.${OC}
-                 icon: sh:warracker
-                 description: Warranty Vault. Tracks when your stuff's warranty expires so you don't lose money. 💸⏳
  
            - title: Web Office
              color: 10 70 50
              hide-arrow: true
              links:
                - title: BentoPDF
-                 url: http://10.0.40.39:8080
+                 url: ${BENTOPDF_IP}
                  icon: sh:bentopdf
                  description: PDF Toolkit. Merge, split, or edit your PDF files right in the browser. 📂✂️
 
@@ -204,11 +209,19 @@
                  url: https://links.${OC}
                  icon: sh:linkding
                  description: The Bookmark Bin. Save cool websites and links so you never lose them. 🌐📌
+               - title: changedetection.io
+                 url: ${CHANGEDETECTIONIO_IP}
+                 icon: sh:changedetectionio
+                 description: Track change of specific or whole webpages. See price changes. New blog post.
 
                - title: Rx Resumé
                  url: https://rxresume.${OC}
                  icon: ../assets/icons/reactive-resume-light.png
                  description: The Job Winner. Quickly build a professional resume that looks amazing. 👔💼
+               - title: Nametag
+                 url: ${NAMETAG_IP}
+                 icon: sh:nametag
+                 description: Relationship Manager. Journal personal relationships.
 
                - title: Gitea
                  url: https://gitea.${OC}
