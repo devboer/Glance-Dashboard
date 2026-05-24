@@ -29,7 +29,7 @@
           shortcut: "!si"
           url: https://simpleicons.org/?q={QUERY}
     # width: slim
-    center-vertically: true
+    center-vertically: false
     columns:
     - size: small
       widgets:
@@ -112,24 +112,10 @@
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin-light.png
                  description: Your Media Hub. Stream your movies, shows, and music ad-free. 🍿🎵
 
-               - title: Seerr
-                 url: https://seerr.${ARR}
-                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
-                 description: The Request Line. Want a movie or show? Just ask for it here. 🪄
-
                - title: Immich
                  url: https://immich.${INT}
                  icon: ../assets/icons/immich.png
                  description: Magic Photo Vault. Saves and organizes every memory automatically. 🖼️
-
-               - title: Kima Hub
-                 url: https://kimahub.${ARR}
-                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kima-hub.png
-                 description: Under Construction. Future Spotify Replacement. 🚧🛠️
-                 
-               - title: Koel
-                 url: https://koel.${INT}
-                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/koel.png  
                         
                - title: FreshRSS
                  url: https://rss.${OC}
@@ -140,25 +126,12 @@
                  url: ${AUDIOBOOKSHELF_IP} # https://abs.${INT}
                  icon: sh:audiobookshelf
                  description: The Digital Library. Stream your audiobooks, read your books, and catch up on podcasts. 🎧📖🎙️
-
-               - title: Shelfmark
-                 url: https://shelfmark.${ARR}
-                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
-                 description: Book Finder. Search and grab any book or audiobook in seconds. 📖
-                 
-               - title: MusicSeerr
-                 url: ${MSEERR_IP}
-                 icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/requestrr.png   
            
                - title: Romm
                  url: ${ROMM_IP}
                  icon: sh:romm
                  description: Retro Game Room. Play all your classic games right in the browser. 👾🎮
 
-               - title: Yamtrack
-                 url: ${YAMTRACK_IP}
-                 icon: sh:yamtrack
-                 description: The Life Tracker. Log your movies, shows, games, and books in one spot. 📈
 
            - title: Home Hub
              color: 10 70 50
@@ -234,3 +207,42 @@
           url: https://uselessfacts.jsph.pl/api/v2/facts/random
           template: |
             <p class="size-h4 color-paragraph">{{ .JSON.String "text" }}</p>
+
+    - size: small
+      widgets:
+        - type: bookmarks
+          hide-header: true
+          groups:
+           - title: Discovery
+             color: 10 70 50
+             hide-arrow: true
+             links:          
+               - title: Seerr
+                 url: https://seerr.${ARR}
+                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
+                 description: The Request Line. Want a movie or show? Just ask for it here. 🪄            
+               - title: MusicSeerr
+                 url: ${MSEERR_IP}
+                 icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/requestrr.png
+                 description: Yet Another R.L.. Want a new music album or new artist to follow? 
+               - title: Shelfmark
+                 url: https://shelfmark.${ARR}
+                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
+                 description: Book Finder. Search and grab any book or audiobook in seconds. 📖    
+               - title: Yamtrack
+                 url: ${YAMTRACK_IP}
+                 icon: sh:yamtrack
+                 description: The Fun Tracker. Log your movies, shows, games, and books in one spot. 📈                  
+           - title: Beta
+             color: 10 70 50
+             hide-arrow: true
+             links:
+               - title: Kima Hub
+                 url: https://kimahub.${ARR}
+                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kima-hub.png
+                 description: Under Construction. Future Spotify Replacement. 🚧🛠️
+                 
+               - title: Koel
+                 url: https://koel.${INT}
+                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/koel.png  
+                 description: Alternative music and podcast player. Includes Internet radio.             

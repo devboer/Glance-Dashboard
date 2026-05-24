@@ -91,6 +91,14 @@
                 # - title: ListMonk
                 #   url: https://listmonk.${INT}
                 #   icon: ../assets/icons/listmonk
+            - title: Kiddos
+              color: 126 100 40
+              hide-arrow: true
+              links:
+                - title: Infinite Campus
+                  url: https://shakopeemn.infinitecampus.org/campus/portal/parents/shakopee.jsp
+                  description: Shakopee Schools access to the kids' progress and more.
+
             - title: Civics
               color: 126 100 40
               hide-arrow: true
@@ -158,29 +166,10 @@
                   url: https://hass.${IOT}
                   icon: ../assets/icons/home-assistant.png
                   description: Ultimate smart home controller.
-            - title: Kiddos
-              color: 126 100 40
-              hide-arrow: true
-              links:
-                - title: Infinite Campus
-                  url: https://shakopeemn.infinitecampus.org/campus/portal/parents/shakopee.jsp
-                  description: Shakopee Schools access to the kids' progress and more.       
-                  
-            - title: Civics
-              color: 126 100 40
-              hide-arrow: true
-              links:
-                - title: Ballotpedia
-                  url: https://ballotpedia.org
-                  description: See who is on the ballot. 
-                
-                - title: The People
-                  url: https://www.thepeople.org/voting-resource-guide
-                  description: Multiple resources linked including ballotpedia. 
-                  
-                - title: Blue Voter Guide
-                  url: https://bluevoterguide.org/
-                  description: Planning wizard giving you a wealth of knowledge to make an informed vote. 
+                - title: Tracktor
+                  url: ${TRACKTOR_IP}
+                  icon: sh:tracktor
+                  description: Log transactions for vehicles.
 
         - type: bookmarks
           title: Finances
@@ -218,14 +207,14 @@
                   icon: https://play-lh.googleusercontent.com/0QRjyoKDYnTqPGLiQTIT-5N863h-ZwFybHxL478qOLHCN_SQgCpd0t88SDwPx8NOZww
                   description: Chat with a financial expert to hopefully relieve me of stress.
                   
-               - title: Warranty Tracker
-                 url: https://warracker.${OC}
-                 icon: sh:warracker
-                 description: Warranty Vault. Tracks when your stuff's warranty expires so you don't lose money. 💸⏳
-               - title: Wishlist
-                 url: ${WISHLIST_IP}
-                 icon: sh:wishlist
-                 description: Make wishlists and share. Wish makers can claim items on lists shared.  
+                - title: Warranty Tracker
+                  url: https://warracker.${OC}
+                  icon: sh:warracker
+                  description: Warranty Vault. Tracks when your stuff's warranty expires so you don't lose money. 💸⏳
+                - title: Wishlist
+                  url: ${WISHLIST_IP}
+                  icon: sh:wishlist
+                  description: Make wishlists and share. Wish makers can claim items on lists shared.  
 
             - title: Utilities
               color: 2 58 36
