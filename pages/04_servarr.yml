@@ -109,49 +109,58 @@
 
         - type: monitor
           cache: 1m
-          title: Manage Libraries
+          title: Library Directors
           sites:
           # Music
             - title: Lidarr
-              url: https://lid.${ARR}
+              url: http://${SERVARR_IP}:${LIDARR_PORT}
               icon: ../assets/icons/lidarr-radarr.png 
               description: Lidarr
           # Movies 
             - title: Radarr
-              url: https://rad.${ARR}
+              url: http://${SERVARR_IP}:${RADARR_PORT}
               icon: ../assets/icons/radarr.png
           # Series  
             - title: Sonarr
-              url: https://son.${ARR}
+              url: http://${SERVARR_IP}:${SONARR_PORT}
               icon: ../assets/icons/sonarr-radarr.png
           # Comics    
             - title: Kapowarr
-              url: https://kapow.${ARR}
+              url: http://${SERVARR_IP}:${KAPOWARR_PORT}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kapowarr.png
           # Books/Audiobooks
             - title: Bindery
-              url: ${BINDERY_IP}
-              icon: https://github.com/vavallee/bindery/blob/main/web/src/assets/logo.png
+              url: http://${SERVARR_IP}:${BINDERY_PORT}
+              icon: https://github.com/vavallee/bindery/blob/main/web/src/assets/logo.png              
+          # YouTube video manager    
+            - title: Youtarr
+              url: http://${SERVARR_IP}:${YOUTARR_PORT}
+              icon: ../assets/icons/youtarr.png
+        - type: monitor
+          cache: 1m
+          title: Cleanup Crew
+          sites:  
           # Monitor Jellyfin usage     
             - title: JellyStat
-              url: ${JELLYSTAT_IP}
+              url: http://${SERVARR_IP}:${JELLYSTAT_PORT}
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jellystat.png
           # Config to delete content    
             - title: Maintainerr
-              url: ${MAINTAINERR_IP}
+              url: http://${SERVARR_IP}:${MAINTAINERR_PORT}
               icon: sh:maintainerr
-          # Config for downloading content     
-            - title: Profilarr
-              url: ${PROFILARR_IP}
-              icon: sh:profilarr
+          # Download queue cleanup
+            - title: Cleanuparr
+              url: http://${SERVARR_IP}:${CLEANUPARR_PORT}
+              icon: sh:cleanuparr    
+
               
         - type: monitor
           cache: 1m
-          title: Process Media
+          title: Stage Hands
           sites:
           # Take care of subtitles
             - title: Bazarr
-              url: https://baz.${ARR}
+              url: http://${SERVARR_IP}:${BAZARR_PORT}
               icon: ../assets/icons/bazarr.png
           # Pre-transcode library to optimize    
             - title: FileFlows
@@ -159,19 +168,23 @@
               icon: ../assets/icons/fileflows.png
           # Download client    
             - title: SABnzbd
-              url: https://nzb.${ARR}
+              url: http://${SERVARR_IP}:${SABNZBD_PORT}
               icon: sh:sabnzbd
               basic-auth:
                 username: ${SABNZBD_USER}
                 password: ${SABNZBD_PASS}              
+          # Torrents
+            - title: qBittorrent
+              url: http://${SERVARR_IP}:${QBIT_PORT}
+              icon: sh:qbittorrent
           # Replacing with Tubifarry  
             - title: Yubal
               url: ${YUBAL_IP}
               icon: sh:yubal
-          # YouTube video manager    
-            - title: Youtarr
-              url: https://yout.${ARR}
-              icon: ../assets/icons/youtarr.png
+          # Config for downloading content     
+            - title: Profilarr
+              url: http://${SERVARR_IP}:${PROFILARR_PORT}
+              icon: sh:profilarr
           # Removes unwanted audio and subtitle tracks without re encoding  
             - title: Muxarr
               url: ${MUXARR_IP}
