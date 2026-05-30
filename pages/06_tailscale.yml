@@ -84,25 +84,25 @@
                   url: ${JELLYSTAT_TN} # https://jellystats.${TN}
                   icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jellystat.png
                 - title: Lidarr
-                  url: ${LIDARR_TN} # https://lidarr.${TN}
+                  url: https://lidarr.tailscale # https://lidarr.${TN}
                   icon: ../assets/icons/lidarr-radarr.png
                 - title: Radarr
-                  url: ${RADARR_TN} # https://radarr.${TN}
+                  url: https://radarr.tailscale # https://radarr.${TN}
                   icon: ../assets/icons/radarr.png
                 - title: Sonarr
-                  url: ${SONARR_TN} # https://sonarr.${TN}
+                  url: https://sonarr.tailscale # https://sonarr.${TN}
                   icon: ../assets/icons/sonarr-radarr.png
                 - title: Kapowarr
-                  url: ${KAPOWARR_TN} # https://kapowarr.${TN}
+                  url: https://kapowarr.tailscale # https://kapowarr.${TN}
                   icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kapowarr.png
                 - title: Bazarr
-                  url: ${BAZARR_TN} # https://bazarr.${TN} 
+                  url: https://bazarr.tailscale # https://bazarr.${TN} 
                   icon: ../assets/icons/bazarr.png
                 - title: FileFlows
                   url: ${FILEFLOWS_TN} # https://fileflows.${TN}
                   icon: ../assets/icons/fileflows.png
                 - title: SABnzbd
-                  url: ${SABNZBD_TN} # https://sabnzbd.${TN} needs this allowlisted
+                  url: https://sabnzbd.tailscale # https://sabnzbd.${TN} needs this allowlisted
                   icon: sh:sabnzbd
                   basic-auth:
                     username: ${SABNZBD_USER}
