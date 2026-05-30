@@ -143,9 +143,6 @@
                  url: ${AUDIOBOOKSHELF_TN} # https://abs.${TN}
                  icon: sh:audiobookshelf
 
-               - title: Shelfmark
-                 url: ${SHELFMARK_TN} # https://shelfmark.${TN}
-                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
 
                - title: Yamtrack
                  url: ${YAMTRACK_TN} # https://yamtrack.${TN}
