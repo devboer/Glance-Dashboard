@@ -222,9 +222,9 @@
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
                  description: The Request Line. Want a movie or show? Just ask for it here. 🪄            
                - title: MusicSeerr
-                 url: ${SERVARR_IP}:${MSEERR_PORT}
+                 url: http://${SERVARR_IP}:${MSEERR_PORT}
                  icon: https://github.com/HabiRabbu/Musicseerr/blob/main/Images/logo_icon.png
-                 description: Yet Another R.L.. Want a new music album or new artist to follow? 
+                 description: Seerr for music. 
 
                - title: Yamtrack
                  url: ${YAMTRACK_IP}
