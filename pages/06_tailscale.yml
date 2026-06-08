@@ -135,10 +135,6 @@
                  url: ${SEERR_TN} # https://seerr.${TN}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png 
 
-               - title: MusicSeerr
-                 url: ${MSEERR_TN}
-                 icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/requestrr.png
-
                - title: Audiobookshelf
                  url: ${AUDIOBOOKSHELF_TN} # https://abs.${TN}
                  icon: sh:audiobookshelf
