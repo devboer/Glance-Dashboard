@@ -54,7 +54,7 @@
       - type: bookmarks
         hide-header: true
         groups:
-          - title: Resources
+          - title: End-User Portals
             hide-arrow: true
             links:
               - title: Jellyfin
