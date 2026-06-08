@@ -218,12 +218,12 @@
              hide-arrow: true
              links:          
                - title: Seerr
-                 url: https://seerr.${ARR}
-                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
+                 url: http://${SERVARR_IP}:5055
+                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png
                  description: The Request Line. Want a movie or show? Just ask for it here. 🪄            
                - title: MusicSeerr
                  url: http://${SERVARR_IP}:${MSEERR_PORT}
-                 icon: https://github.com/HabiRabbu/Musicseerr/blob/main/Images/logo_icon.png
+                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/musicseerr.png
                  description: Seerr for music. 
 
                - title: Yamtrack

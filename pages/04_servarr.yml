@@ -49,7 +49,27 @@
               {{- else -}}
             <p>Failed: {{ $jellyfinData.Response.Status }}</p>
               {{- end -}}
-            {{- end -}}      
+            {{- end -}}
+            
+      - type: bookmarks
+        hide-header: true
+        groups:
+          - title: Resources
+            hide-arrow: true
+            links:
+              - title: Jellyfin
+                url: ${JELLYFIN_IP}
+                icon: sh:jellyfin
+              - title: Audiobookshelf
+                url: ${AUDIOBOOKSHELF_IP}
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/audiobookshelf-light.png  
+              - title: Seerr
+                url: http://${SERVARR_IP}:5055
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png
+  
+              - title: MusicSeerr
+                url: http://${SERVARR_IP}:${MSEERR_PORT}
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/musicseerr.png
     center-vertically: true
     columns:
     - size: small
@@ -78,9 +98,7 @@
             - title: Sources
               hide-arrow: true
               links:
-                - title: Prowlarr
-                  url: https://prowl.${ARR}
-                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/prowlarr-radarr.png
+
                 - title: ThePirateBay
                   url: https://thepiratebay.org/
                   icon: ../assets/icons/the-pirate-bay.png
@@ -189,6 +207,10 @@
             - title: Muxarr
               url: ${MUXARR_IP}
               icon: https://github.com/KirovAir/muxarr/blob/master/docs/logo.png
+              
+            - title: Prowlarr
+              url: http://${SERVARR_IP}:9696
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/prowlarr-radarr.png 
 
     - size: small
       widgets:
