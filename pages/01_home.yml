@@ -222,13 +222,10 @@
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png # ../assets/icons/jellyseerr-light.png
                  description: The Request Line. Want a movie or show? Just ask for it here. 🪄            
                - title: MusicSeerr
-                 url: ${MSEERR_IP}
-                 icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/requestrr.png
+                 url: ${SERVARR_IP}:${MSEERR_PORT}
+                 icon: https://github.com/HabiRabbu/Musicseerr/blob/main/Images/logo_icon.png
                  description: Yet Another R.L.. Want a new music album or new artist to follow? 
-               - title: Shelfmark
-                 url: https://shelfmark.${ARR}
-                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/shelfmark.png
-                 description: Book Finder. Search and grab any book or audiobook in seconds. 📖    
+
                - title: Yamtrack
                  url: ${YAMTRACK_IP}
                  icon: sh:yamtrack
