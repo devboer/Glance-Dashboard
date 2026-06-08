@@ -139,7 +139,7 @@
              links:
 
                - title: Home Assistant
-                 url: https://hass.${IOT}
+                 url: ${HASS_IP} 
                  icon: ../assets/icons/home-assistant.png
                  description: The House Brain. Control your lights, locks, and smart gadgets from one app. 💡🤖
 
