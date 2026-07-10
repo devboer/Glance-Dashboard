@@ -169,7 +169,7 @@
           # Download queue cleanup
             - title: Cleanuparr
               url: http://${SERVARR_IP}:${CLEANUPARR_PORT}
-              icon: sh:cleanuparr    
+              icon: ${ICONS}/cleanuparr.png   
 
               
         - type: monitor
@@ -179,7 +179,7 @@
           # Take care of subtitles
             - title: Bazarr
               url: http://${SERVARR_IP}:${BAZARR_PORT}
-              icon: ../assets/icons/bazarr.png
+              icon: ${ICONS}/bazarr.png
           # Pre-transcode library to optimize    
             - title: FileFlows
               url: https://fileflows.${ARR}
