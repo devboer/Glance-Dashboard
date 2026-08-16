@@ -2,9 +2,9 @@
     head-widgets:
       - type: custom-api
         title: "Jellyfin Stats"
-        base-url: ${JELLYFIN_IP}
+        base-url: http://${JELLYFIN_LAN}:8096
         options:
-          url: ${JELLYFIN_IP}
+          url: http://${JELLYFIN_LAN}:8096
           key: ${JELLYFIN_API}
 
         template: |
@@ -58,18 +58,18 @@
             hide-arrow: true
             links:
               - title: Jellyfin
-                url: ${JELLYFIN_IP}
+                url: http://${JELLYFIN_TN}:8096
                 icon: sh:jellyfin
               - title: Audiobookshelf
-                url: ${AUDIOBOOKSHELF_IP}
+                url: http://${AUDIOBOOKSHELF_TN}:13378
                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/audiobookshelf-light.png  
               - title: Seerr
-                url: http://${SERVARR_IP}:5055
+                url: http://${SERVARR_TN}:5055
                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png
   
-              - title: MusicSeerr
-                url: http://${SERVARR_IP}:${MSEERR_PORT}
-                icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/musicseerr.png
+              - title: DroppedNeedle
+                url: http://${SERVARR_TN}:8688
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/droppedneedle.png
     center-vertically: true
     columns:
     - size: small
@@ -131,28 +131,28 @@
           sites:
           # Music
             - title: Lidarr
-              url: http://${SERVARR_IP}:${LIDARR_PORT}
+              url: http://${SERVARR_TN}:8686
               icon: ../assets/icons/lidarr-radarr.png 
               description: Lidarr
           # Movies 
             - title: Radarr
-              url: http://${SERVARR_IP}:${RADARR_PORT}
+              url: http://${SERVARR_TN}:7878
               icon: ../assets/icons/radarr.png
           # Series  
             - title: Sonarr
-              url: http://${SERVARR_IP}:${SONARR_PORT}
+              url: http://${SERVARR_TN}:8989
               icon: ../assets/icons/sonarr-radarr.png
           # Comics    
             - title: Kapowarr
-              url: http://${SERVARR_IP}:${KAPOWARR_PORT}
+              url: http://${SERVARR_TN}:5656
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kapowarr.png
           # Books/Audiobooks
             - title: Bindery
-              url: http://${SERVARR_IP}:${BINDERY_PORT}
+              url: http://${SERVARR_TN}:8787
               icon: https://github.com/vavallee/bindery/blob/main/web/src/assets/logo.png              
           # YouTube video manager    
             - title: Youtarr
-              url: http://${SERVARR_IP}:${YOUTARR_PORT}
+              url: http://${SERVARR_TN}:3087
               icon: ../assets/icons/youtarr.png
         - type: monitor
           cache: 1m
@@ -160,15 +160,15 @@
           sites:  
           # Monitor Jellyfin usage     
             - title: JellyStat
-              url: http://${SERVARR_IP}:${JELLYSTAT_PORT}
+              url: http://${SERVARR_TN}:3000
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jellystat.png
           # Config to delete content    
             - title: Maintainerr
-              url: http://${SERVARR_IP}:${MAINTAINERR_PORT}
+              url: http://${SERVARR_TN}:8164
               icon: sh:maintainerr
           # Download queue cleanup
             - title: Cleanuparr
-              url: http://${SERVARR_IP}:${CLEANUPARR_PORT}
+              url: http://${SERVARR_TN}:11011
               icon: ${ICONS}/cleanuparr.png   
 
               
@@ -178,38 +178,38 @@
           sites:
           # Take care of subtitles
             - title: Bazarr
-              url: http://${SERVARR_IP}:${BAZARR_PORT}
+              url: http://${SERVARR_TN}:6767
               icon: ${ICONS}/bazarr.png
           # Pre-transcode library to optimize    
             - title: FileFlows
-              url: https://fileflows.${ARR}
+              url: https://fileflows.${INT}
               icon: ../assets/icons/fileflows.png
           # Download client    
             - title: SABnzbd
-              url: http://${SERVARR_IP}:${SABNZBD_PORT}
+              url: http://${SERVARR_TN}:8081
               icon: sh:sabnzbd
               basic-auth:
                 username: ${SABNZBD_USER}
                 password: ${SABNZBD_PASS}              
           # Torrents
             - title: qBittorrent
-              url: http://${SERVARR_IP}:${QBIT_PORT}
+              url: http://${SERVARR_TN}:8282
               icon: sh:qbittorrent
           # Replacing with Tubifarry  
             - title: Yubal
-              url: ${YUBAL_IP}
+              url: http://${SERVARR_TN}:8051
               icon: sh:yubal
           # Config for downloading content     
             - title: Profilarr
-              url: http://${SERVARR_IP}:${PROFILARR_PORT}
+              url: http://${SERVARR_TN}:6868
               icon: sh:profilarr
           # Removes unwanted audio and subtitle tracks without re encoding  
             - title: Muxarr
-              url: ${MUXARR_IP}
+              url: http://${SERVARR_TN}:8183
               icon: https://github.com/KirovAir/muxarr/blob/master/docs/logo.png
               
             - title: Prowlarr
-              url: http://${SERVARR_IP}:9696
+              url: http://${SERVARR_TN}:9696
               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/prowlarr-radarr.png 
 
     - size: small

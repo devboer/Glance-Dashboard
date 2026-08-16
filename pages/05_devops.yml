@@ -37,119 +37,12 @@
               </div>
             </div>
           </div>
-      - type: monitor
-        hide-header: true
-        # The servers needing pingable address:
-        # - 3K Mud TT++
-        # - Samba
-        cache: 1m
-        show-failing-only: true
-        style: compact
-        title: Disconnected
-        sites:
-        #
-        #   Proxmox Websites
-        #
-          # - title: PVE-Dev [0.9]
-          #   url: ${PVEDEV_IP}
-          #   error-url: https://pve-dev-ilo.int.devboer.com
-          #   allow-insecure: true
-          - title: PVE-Prod [70.4]
-            url: ${PVEPROD_IP}
-            allow-insecure: true
-          - title: PVE-Prod-Files
-            url: ${PVEPROD_FILES_IP}
-        #
-        #   LXC Containerized Services
-        #       Server Central Apps
-        #
-          - title: glance [100|0.4:8080]
-            url: ${GLANCE_IP}
-          - title: glance [100|0.4:8680]
-            url: ${GLANCE_CODE_IP}
-          # - title: bookstack [101|40.52:80]
-          #   url: ${BOOKSTACK_IP}
-
-          - title: dockge [114|40.6:5001]
-            url: ${DOCKGE_IP}
-          - title: scribble [114|40.6:8181]
-            url: ${SCRIBBLE_IP}
-            error-url: https://docker.${INT}
-          # - title: wordle [114|40.6:3333]
-          #   url: ${WORDLE_IP}
-          #   error-url: https://docker.${INT}
-
-        #
-        #     Network & Internet
-        #
-          - title: speedtest tracker [208|40.4:80]
-            url: ${SPEEDTEST_IP}
-          - title: pihole [201|0.201:80]
-            url: ${PIHOLE1_IP}
-          # - title: pi.alert [205|50.108:80]
-          #   url: ${PIALERT_IP}
-          # - title: iventoy [206|0.11:offline]
-          #   url: ${IVENTOY_IP}
-          - title: omada [206|0.3:8043]
-            url: ${OMADA_IP}
-            allow-insecure: true
-        #
-        #     Cloud Suite
-        #
-         # - title: opencloud [301:40.57]
-         #   url: ${OPENCLOUD_IP}
-         # - title: opencloud [301:cloud.int]
-         #   url: https://cloud.${OC}
-         # - title: paperless [303|40.30:8000]
-          #  url: ${PAPERLESS_IP}
-          - title: freshrss [302|40.100:80]
-            url: ${FRESHRSS_IP}
-          - title: convertx [304|40.36:3000]
-            url: ${CONVERTX_IP}
-         # - title: karakeep [308|40.35:offline]
-         #   url: ${KARAKEEP_IP}
-          - title: degoog [311|40.231:4444]
-            url: ${DEGOOG_IP}
-            alt-status-codes:
-              - 429
-        #
-        #     Household Management
-        #
-          - title: grocy [400|40.32:80]
-            url: ${GROCY_IP}
-          - title: barcode-buddy [401|40.33:80]
-            url: ${BARCODE_IP}
-
-        #
-        #     Fun & Games
-        #
-          # - title: mud3k-copyparty [500|40.40:1086]
-          #   url: ${MUD3K_FILES_IP}
-          # - title: alpine-redlib [501|0.123:5252]
-          #   url: ${REDLIB_IP}
-        #
-        #     Business & Career Growth
-        #
-        #  - title: ghost [600|40.56:80]
-         #   url: ${GHOST_IP}
-         # - title: linkstack [601|40.13:80]
-         #   url: ${LINKSTACK_IP}
-        #  - title: reactive-resume [603|40.34:3000]
-         #   url: ${RXRESUME_IP}
-        #
-        #     Media Servarr Apps
-        #
-          - title: jellyfin [700|40.20:8096]
-            url: ${JELLYFIN_IP}
-          - title: Seerr [801|40.21:5055]
-            url: ${SEERR_IP}
-
 
       - type: search
         placeholder: "! + yt di si"
         autofocus: true
         new-tab: true
-        search-engine: ${DEGOOG_IP}/search?q={QUERY}
+        search-engine: ${DEGOOG_LAN}/search?q={QUERY}
         bangs:
           - title: YouTube
             shortcut: "!yt"
@@ -287,7 +180,7 @@
           title: Network
           sites:
             - title: Homelable
-              url: ${HOMELABLE_IP}
+              url: ${HOMELABLE_LAN}
               icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/homelable.png
             - title: Router
               url: https://opn.${NSA}
@@ -300,15 +193,12 @@
             - title: Network Switch
               url: https://switch.${NSA} # ${SWITCH_IP}
               icon: ../assets/icons/tp-link-light.png 
-            - title: DNS01
-              url: ${PIHOLE1_IP}
-              icon: ../assets/icons/pi-hole.png
             - title: Printer
-              url: ${PRINTER_IP}
+              url: https://${PRINTER_LAN}:80
               icon: ../assets/icons/printer.png
-              check-url: ${PRINTER_INSECURE}
+              check-url: http://${PRINTER_LAN}:80
             - title: Travel Router
-              url: ${TRAVEL_ROUTER_IP}
+              url: https://${TRAVEL_ROUTER_TN}
               icon: ../assets/icons/glinet.png
 
         - type: monitor
@@ -316,31 +206,25 @@
           title: Servers
           sites:
             - title: Patchmon
-              url: ${PATCHMON_IP}
+              url: http://${HOMESTACK_TN}:8034
               icon: sh:patchmon
             - title: Termix
-              url: ${TERMIX_IP}
+              url: http://${HOMESTACK_TN}:7070
               icon: sh:termix  
             - title: PVE-Prod
               url: https://pve01.${INT}
               icon: ../assets/icons/proxmox.png
               allow-insecure: true
             - title: Proxmox Backup Server
-              url: ${PBS_IP}
+              url: https://${PBS_LAN}:8007
               icon: sh:proxmox  
-            - title: PVE-Dev
-              url: https://pve-dev.${INT}
-              icon: ../assets/icons/linux-containers-lxc.png
-              allow-insecure: true            
-            - title: iLO (PVE-Dev)
-              url: https://pve-dev-ilo.${INT}
-              icon: ../assets/icons/hewlett-packard-enterprise.png
-              allow-insecure: true
-            - title: Dockge
-              url: https://docker.${INT}
-              icon: ../assets/icons/dockge.png
+            - title: Arcane - HomeStack
+              url: http://${HOMESTACK_TN}:3552
+              icon: sh:arcane
+            - title: Arcane - Servarr
+              url: http://{$SERVARR_TN}:3552
             - title: Radicale
-              url: https://radicale.${OC} # http://10.0.40.38/admin/
+              url: http://{HOMESTACK_TN}:8042
               icon: sh:radicale
               
         - type: monitor 
@@ -348,31 +232,25 @@
           title: Data
           sites:
             - title: n8n
-              url: ${N8N_IP}
+              url: http://${N8N_TN}:5678
+              icon: sh:n8n
+            - title: n8n (external)
+              url: https://n8n.devboer.com
               icon: sh:n8n
             - title: Prometheus
-              url: ${PROMETHEUS_IP}
+              url: http://${HOMESTACK_TN}:9090
               icon: sh:prometheus
             - title: InfluxDBv2
-              url: ${INFLUXDB2_IP}
+              url: http://${HOMESTACK_TN}:8086
               icon: sh:influxdb
             - title: Grafana
-              url: ${GRAFANA_IP}
+              url: http://${HOMESTACK_TN}:3002
               icon: sh:grafana
-            - title: Graylog
-              url: ${GRAYLOG_IP}
-              icon: sh:graylog  
-            - title: Gotify
-              url: ${GOTIFY_IP}
-              icon: sh:gotify
-            - title: iGotify
-              url: ${IGOTIFY_IP}
-              icon: sh:gotify
             - title: ntfy.sh
-              url: ${NTFY_IP}
+              url: http://${HOMESTACK_TN}:8029
               icon: sh:ntfy    
             - title: acng report
-              url: ${ACNG_IP}/acng-report.html
+              url: http://${ACNG_LAN}:3142/acng-report.html
               icon: sh:debian              
               
         - type: monitor
@@ -384,7 +262,7 @@
               url: https://bookstack.${INT}
               icon: ../assets/icons/bookstack-light.png
             - title: Code Editor
-              url: https://vscode.${OC}
+              url: https://vscode.${INT}
               icon: ../assets/icons/visual-studio-code-light.png 
             - title: devBoer Labs
               url: https://docs.devboer.com
@@ -393,9 +271,9 @@
               url: https://github.com/blocklistproject/Lists
               icon: ../assets/icons/adguard-home.png
             - title: Gitea
-              url: https://gitea.${OC}
+              url: https://gitea.${INT}
               icon: ../assets/icons/gitea-light.png
 
             - title: Docs for Services
-              url: https://linkding.${OC}/bookmarks?bundle=1
+              url: https://linkding.${INT}/bookmarks?bundle=1
               icon: sh:linkding

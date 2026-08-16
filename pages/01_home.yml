@@ -5,7 +5,7 @@
         placeholder: " web search or ! + yt imdb ... "
         autofocus: true
         new-tab: true
-        search-engine: ${DEGOOG_IP}/search?q={QUERY}
+        search-engine: ${DEGOOG_LAN}/search?q={QUERY}
         bangs:
         - title: YouTube
           shortcut: "!yt"
@@ -63,7 +63,7 @@
               hide-arrow: true
               links:
                - title: Reolink Doorbell
-                 url: ${DOORBELL_IP}
+                 url: ${DOORBELL_LAN}
                  icon: ../assets/icons/reolink.png       
 
             - title: Entertainment
@@ -79,10 +79,6 @@
                 - title: Podcasts
                   url: https://pocketcasts.com/
                   icon: ../assets/icons/pocket-casts.png
-                # - title: Scribble.rs
-                #   url: https://scribble.devboer.com # 
-                #   icon: ../assets/icons/excalidraw.png
-
                   
             - title: Karvec's Services
               color: 10 69 50
@@ -118,17 +114,17 @@
                  description: Magic Photo Vault. Saves and organizes every memory automatically. 🖼️
                         
                - title: FreshRSS
-                 url: https://rss.${OC}
+                 url: https://rss.${INT}
                  icon: ../assets/icons/freshrss.png
                  description: All-In-One Feed. Your favorite sites and news in one single scroll. 📱
 
                - title: Audiobookshelf
-                 url: ${AUDIOBOOKSHELF_IP} # https://abs.${INT}
+                 url: ${AUDIOBOOKSHELF_TN} # https://abs.${INT}
                  icon: sh:audiobookshelf
                  description: The Digital Library. Stream your audiobooks, read your books, and catch up on podcasts. 🎧📖🎙️
            
                - title: Romm
-                 url: ${ROMM_IP}
+                 url: http://${SERVARR_TN}:8050
                  icon: sh:romm
                  description: Retro Game Room. Play all your classic games right in the browser. 👾🎮
 
@@ -139,12 +135,12 @@
              links:
 
                - title: Home Assistant
-                 url: ${HASS_IP} 
+                 url: ${HASS_TN} 
                  icon: ../assets/icons/home-assistant.png
                  description: The House Brain. Control your lights, locks, and smart gadgets from one app. 💡🤖
 
-               - title: Meal Planning
-                 url: https://mealie.${OC}
+               - title: Mealie
+                 url: http://${HOMESTACK_TN}:8012
                  icon: sh:mealie
                  description: The Recipe Book. Save your favorite meals and plan what’s for dinner. 🍲📝
                  
@@ -154,7 +150,7 @@
              hide-arrow: true
              links:
                - title: BentoPDF
-                 url: ${BENTOPDF_IP}
+                 url: http://${HOMESTACK_TN}:3001
                  icon: sh:bentopdf
                  description: PDF Toolkit. Merge, split, or edit your PDF files right in the browser. 📂✂️
 
@@ -164,40 +160,40 @@
           #    icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/karakeep-light.png # ../assets/icons/karakeep-light.png
             # Needs further setup ^ why does it lock me out after initial setup?  
                - title: Jotty
-                 url: https://jotty.${OC}
+                 url: https://jotty.${INT}
                  icon: sh:jotty
                  description: Quick Notes. A simple spot for your checklists and random thoughts. ✍️✅
 
                - title: ConvertX
-                 url: ${CONVERTX_IP}
+                 url: http://${HOMESTACK_TN}:3000
                  icon: ../assets/icons/convertx.png
                  description: The File Swapper. Change any file--like a photo or doc--into a different format. 📂✨
 
                - title: LinkStack
-                 url: https://linkstack.${OC}
+                 url: https://linkstack.${INT}
                  icon: ../assets/icons/linkstack.png
                  description: Your Profile Link. One page that holds all your important social links. 🌳📱
 
                - title: Linkding
-                 url: https://links.${OC}
+                 url: https://links.${INT}
                  icon: sh:linkding
                  description: The Bookmark Bin. Save cool websites and links so you never lose them. 🌐📌
                - title: changedetection.io
-                 url: ${CHANGEDETECTIONIO_IP}
+                 url: http://${CHANGEDETECTIONIO_TN}:8032
                  icon: sh:changedetectionio
                  description: Track change of specific or whole webpages. See price changes. New blog post.
 
                - title: Rx Resumé
-                 url: https://rxresume.${OC}
+                 url: https://rxresume.${INT}
                  icon: ../assets/icons/reactive-resume-light.png
                  description: The Job Winner. Quickly build a professional resume that looks amazing. 👔💼
                - title: Nametag
-                 url: ${NAMETAG_IP}
+                 url: ${NAMETAG_LAN}
                  icon: sh:nametag
                  description: Relationship Manager. Journal personal relationships.
 
                - title: Gitea
-                 url: https://gitea.${OC}
+                 url: https://gitea.${INT}
                  icon: ../assets/icons/gitea.png
                  description: Code Home. A private place to store and manage all your coding projects. 🛠️📦
            
@@ -218,28 +214,15 @@
              hide-arrow: true
              links:          
                - title: Seerr
-                 url: http://${SERVARR_IP}:5055
+                 url: http://${SERVARR_TN}:5055
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png
                  description: The Request Line. Want a movie or show? Just ask for it here. 🪄            
-               - title: MusicSeerr
-                 url: http://${SERVARR_IP}:${MSEERR_PORT}
+               - title: DroppedNeedle
+                 url: http://${SERVARR_TN}:8688
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/musicseerr.png
                  description: Seerr for music. 
 
                - title: Yamtrack
-                 url: ${YAMTRACK_IP}
+                 url: http://${HOMESTACK_TN}:8030
                  icon: sh:yamtrack
-                 description: The Fun Tracker. Log your movies, shows, games, and books in one spot. 📈                  
-           - title: Beta
-             color: 10 70 50
-             hide-arrow: true
-             links:
-               - title: Kima Hub
-                 url: https://kimahub.${ARR}
-                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kima-hub.png
-                 description: Under Construction. Future Spotify Replacement. 🚧🛠️
-                 
-               - title: Koel
-                 url: https://koel.${INT}
-                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/koel.png  
-                 description: Alternative music and podcast player. Includes Internet radio.             
+                 description: The Fun Tracker. Log your movies, shows, games, and books in one spot. 📈                           

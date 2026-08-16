@@ -25,9 +25,6 @@
                 hide-arrow: true
                 color: 69 69 69
                 links:
-                  - title: ChatGPT
-                    url: https://chat.com
-                    icon: ../assets/icons/chatgpt.png
                   - title: Venice AI (Privacy)
                     url: https://venice.ai/
                     icon: ../assets/icons/localai.png
@@ -80,13 +77,13 @@
               hide-arrow: true
               links:
                 - title: My LinkStack
-                  url: https://linkstack.${OC}/@devboer#
+                  url: https://linkstack.${INT}/@devboer#
                   icon: ../assets/icons/linkstack.png
                 - title: A to Z
                   url: https://atoz-login.amazon.work/?source=ac
                   icon: ../assets/icons/amazon.png
                 - title: Reactive Resume
-                  url: https://rxresume.${OC}
+                  url: https://rxresume.${INT}
                   icon: ../assets/icons/reactive-resume-light.png
                 # - title: ListMonk
                 #   url: https://listmonk.${INT}
@@ -159,15 +156,15 @@
                   icon: ../assets/icons/grocy.png
                   description: Track household inventory. Track chores. Vault of manuals.
                 - title: Barcode Buddy
-                  url: https://upc.${OC}
+                  url: https://upc.${INT}
                   icon: ../assets/icons/barcode-buddy.png
                   description: Barcode database to assist Grocy. Implements hardware scanners.
                 - title: Home Assistant
-                  url: https://hass.${IOT}
+                  url: https://hass.${INT}
                   icon: ../assets/icons/home-assistant.png
                   description: Ultimate smart home controller.
                 - title: Tracktor
-                  url: ${TRACKTOR_IP}
+                  url: http://${HOMESTACK_TN}:8019
                   icon: sh:tracktor
                   description: Log transactions for vehicles.
 
