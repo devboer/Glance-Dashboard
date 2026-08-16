@@ -49,7 +49,7 @@
                 - title: ProtonDB
                   url: https://www.protondb.com
                 - title: 3k Mud Files
-                  url: ${MUD3K_FILES_IP}
+                  url: ${MUD3K_FILES_LAN}
                 - title: David Pakman Member
                   url: https://davidpakman.com
           - type: group

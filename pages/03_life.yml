@@ -196,7 +196,7 @@
                   icon: ../assets/icons/robinhood.png
                   description: Stock portfolio and brokerage.
                 - title: Wallos
-                  url: https://wallos.${OC}
+                  url: https://wallos.${INT}
                   icon: ../assets/icons/wallos.png
                   description: Track recurring subscriptions.
                 - title: Brightside Financial
@@ -205,11 +205,11 @@
                   description: Chat with a financial expert to hopefully relieve me of stress.
                   
                 - title: Warranty Tracker
-                  url: https://warracker.${OC}
+                  url: https://warracker.${INT}
                   icon: sh:warracker
                   description: Warranty Vault. Tracks when your stuff's warranty expires so you don't lose money. 💸⏳
                 - title: Wishlist
-                  url: ${WISHLIST_IP}
+                  url: https://wishlist.${INT}
                   icon: sh:wishlist
                   description: Make wishlists and share. Wish makers can claim items on lists shared.  
 

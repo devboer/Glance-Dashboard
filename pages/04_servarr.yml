@@ -206,6 +206,7 @@
           # Removes unwanted audio and subtitle tracks without re encoding  
             - title: Muxarr
               url: http://${SERVARR_TN}:8183
+              
               icon: https://github.com/KirovAir/muxarr/blob/master/docs/logo.png
               
             - title: Prowlarr

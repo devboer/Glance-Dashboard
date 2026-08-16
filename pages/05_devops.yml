@@ -187,11 +187,11 @@
               icon: ../assets/icons/opnsense-v1.png
               allow-insecure: true
             - title: WiFi
-              url: https://wifi.${NSA} # ${OMADA_IP}
+              url: https://wifi.${NSA} 
               icon: ../assets/icons/omada.png
               allow-insecure: true
             - title: Network Switch
-              url: https://switch.${NSA} # ${SWITCH_IP}
+              url: https://switch.${NSA} 
               icon: ../assets/icons/tp-link-light.png 
             - title: Printer
               url: https://${PRINTER_LAN}:80

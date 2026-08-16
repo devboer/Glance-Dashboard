@@ -179,7 +179,7 @@
                  icon: sh:linkding
                  description: The Bookmark Bin. Save cool websites and links so you never lose them. 🌐📌
                - title: changedetection.io
-                 url: http://${CHANGEDETECTIONIO_TN}:8032
+                 url: http://${HOMESTACK_TN}:8032
                  icon: sh:changedetectionio
                  description: Track change of specific or whole webpages. See price changes. New blog post.
 
@@ -188,7 +188,7 @@
                  icon: ../assets/icons/reactive-resume-light.png
                  description: The Job Winner. Quickly build a professional resume that looks amazing. 👔💼
                - title: Nametag
-                 url: ${NAMETAG_LAN}
+                 url: http://${HOMESTACK_TN}:8028
                  icon: sh:nametag
                  description: Relationship Manager. Journal personal relationships.
 
