@@ -223,6 +223,7 @@
               icon: sh:arcane
             - title: Arcane - Servarr
               url: http://${SERVARR_TN}:3552
+              icon: sh:arcane
             - title: Radicale
               url: http://{HOMESTACK_TN}:8042
               icon: sh:radicale
