@@ -53,12 +53,7 @@
               hide-arrow: true
               color: 100 25 75
               links:
-                - title: Google Drive
-                  url: https://drive.google.com
-                  icon: ../assets/icons/google-drive.png
-                - title: ChatGPT
-                  url: https://chat.openai.com
-                  icon: ../assets/icons/chatgpt.png
+
                 - title: Claude
                   url: https://claude.ai
                   icon: ../assets/icons/claude.png
@@ -117,7 +112,7 @@
                  description: Magic Photo Vault. Saves and organizes every memory automatically. 🖼️
                         
                - title: FreshRSS
-                 url: https://rss.${INT}
+                 url: https://freshrss.${INT}
                  icon: ../assets/icons/freshrss.png
                  description: All-In-One Feed. Your favorite sites and news in one single scroll. 📱
 
