@@ -4,30 +4,33 @@
         hide-header: true
         placeholder: " web search or ! + yt imdb ... "
         autofocus: true
-        new-tab: true
-        search-engine: ${DEGOOG_LAN}/search?q={QUERY}
+        new-tab: false
+        search-engine: http://${DEGOOG_LAN}:4444/search?q={QUERY}
         bangs:
+        - title: GitHub
+          shortcut: "gh"
+          url: https://github.com/search?q=stars%3A%3E100+archived%3Afalse+{QUERY}&type=repositories
         - title: YouTube
-          shortcut: "!yt"
+          shortcut: "yt"
           url: https://www.youtube.com/results?search_query={QUERY}
         - title: IMDb
-          shortcut: "!imdb"
+          shortcut: "imdb"
           url: https://www.imdb.com/find/?q={QUERY}
         - title: PornHub
-          shortcut: "!ph"
+          shortcut: "ph"
           url: https://www.pornhub.com/video/search?search={QUERY}
-        - title: IMDb
-          shortcut: "!im"
-          url: https://www.imdb.com/find/?q={QUERY}
         - title: The Pirate Bay
-          shortcut: "!tpb"
+          shortcut: "tpb"
           url: https://thepiratebay.org/search.php?q={QUERY}
         - title: Dashboard Icons
-          shortcut: "!di"
+          shortcut: "di"
           url: https://dashboardicons.com/icons?q={QUERY}
         - title: Simple Icons
-          shortcut: "!si"
+          shortcut: "si"
           url: https://simpleicons.org/?q={QUERY}
+        - title: Community Scripts
+          shortcut: "cs"
+          url: https://community-scripts.org/scripts?q={QUERY}
     # width: slim
     center-vertically: false
     columns:
