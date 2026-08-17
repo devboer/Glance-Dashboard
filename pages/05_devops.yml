@@ -170,6 +170,7 @@
                   icon: ../assets/icons/openrouter-light.png
                 - title: OpenWeatherMap
                   url: https://openweathermap.org
+                  icon: https://cdn.simpleicons.org/accuweather/FF6600
                    
 
     - size: full
@@ -180,7 +181,7 @@
           title: Network
           sites:
             - title: Homelable
-              url: ${HOMELABLE_LAN}
+              url: http://${HOMELABLE_LAN}:3000
               icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/homelable.png
             - title: Router
               url: https://opn.${NSA}
@@ -191,7 +192,7 @@
               icon: ../assets/icons/omada.png
               allow-insecure: true
             - title: Network Switch
-              url: https://switch.${NSA} 
+              url: http://${SWITCH_LAN} 
               icon: ../assets/icons/tp-link-light.png 
             - title: Printer
               url: https://${PRINTER_LAN}:80

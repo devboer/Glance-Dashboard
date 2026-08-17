@@ -51,12 +51,17 @@
               {{- end -}}
             {{- end -}}
             
-      - type: bookmarks
-        hide-header: true
-        groups:
-          - title: End-User Portals
-            hide-arrow: true
-            links:
+
+    center-vertically: false
+    columns:
+    - size: small
+      widgets:
+        - type: bookmarks
+          hide-header: true
+          groups:
+            - title: End-User Services
+              hide-arrow: true
+              links:
               - title: Jellyfin
                 url: http://${JELLYFIN_TN}:8096
                 icon: sh:jellyfin
@@ -70,10 +75,6 @@
               - title: DroppedNeedle
                 url: http://${SERVARR_TN}:8688
                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/droppedneedle.png
-    center-vertically: true
-    columns:
-    - size: small
-      widgets:
         - type: bookmarks
           hide-header: true
           groups:
@@ -149,7 +150,7 @@
           # Books/Audiobooks
             - title: Bindery
               url: http://${SERVARR_TN}:8787
-              icon: https://github.com/vavallee/bindery/blob/main/web/src/assets/logo.png              
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/readarr.png              
           # YouTube video manager    
             - title: Youtarr
               url: http://${SERVARR_TN}:3087
@@ -206,8 +207,7 @@
           # Removes unwanted audio and subtitle tracks without re encoding  
             - title: Muxarr
               url: http://${SERVARR_TN}:8183
-              
-              icon: https://github.com/KirovAir/muxarr/blob/master/docs/logo.png
+              icon: https://github.com/KirovAir/muxarr/blob/master/docs/logo.png?raw=true
               
             - title: Prowlarr
               url: http://${SERVARR_TN}:9696

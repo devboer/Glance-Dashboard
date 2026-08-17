@@ -210,7 +210,7 @@
                   description: Warranty Vault. Tracks when your stuff's warranty expires so you don't lose money. 💸⏳
                 - title: Wishlist
                   url: https://wishlist.${INT}
-                  icon: sh:wishlist
+                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/cmintey-wishlist.png
                   description: Make wishlists and share. Wish makers can claim items on lists shared.  
 
             - title: Utilities
