@@ -224,9 +224,9 @@
               icon: sh:arcane
             - title: Arcane - Servarr
               url: http://${SERVARR_TN}:3552
-              icon: sh:arcane
+              icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/servarr.png
             - title: Radicale
-              url: http://{HOMESTACK_TN}:8042
+              url: http://${HOMESTACK_TN}:8042
               icon: sh:radicale
               
         - type: monitor 
@@ -253,7 +253,10 @@
               icon: sh:ntfy    
             - title: acng report
               url: http://${ACNG_LAN}:3142/acng-report.html
-              icon: sh:debian              
+              icon: sh:debian
+            - title: Baserow
+              url: http://${BASEROW_LAN}:3000
+              icon: sh:baserow              
               
         - type: monitor
           cache: 1m
@@ -279,3 +282,13 @@
             - title: Docs for Services
               url: https://linkding.${INT}/bookmarks?bundle=1
               icon: sh:linkding
+        - type: monitor
+          cache: 1m
+          title: Beta
+          sites:     
+            - title: Lingarr
+              url: http://${LINGARR_LAN}:9876/auth/onboarding
+              icon: sh:lingarr
+            - title: Journiv
+              url: http://${JOURNIV_TN}:8000
+              icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/journiv.png
