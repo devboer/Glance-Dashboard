@@ -304,91 +304,80 @@
                        
     - size: small
       widgets:
-        - type: bookmarks
-          hide-header: true
-          groups:
-            - title: Core Media
-              hide-arrow: true
-              links:
-              # Music
-                - title: Lidarr
-                  url: http://${SERVARR_TN}:8686
-                  icon: ../assets/icons/lidarr-radarr.png 
-                  description: Lidarr
-              # Movies 
-                - title: Radarr
-                  url: http://${SERVARR_TN}:7878
-                  icon: ../assets/icons/radarr.png
-              # Series  
-                - title: Sonarr
-                  url: http://${SERVARR_TN}:8989
-                  icon: ../assets/icons/sonarr-radarr.png
-              # Comics    
-                - title: Kapowarr
-                  url: http://${SERVARR_TN}:5656
-                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kapowarr.png
-              # Books/Audiobooks
-                - title: Bindery
-                  url: http://${SERVARR_TN}:8787
-                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/readarr.png              
-              # YouTube video manager    
-                - title: Youtarr
-                  url: http://${SERVARR_TN}:3087
-                  icon: ../assets/icons/youtarr.png
-                
-          - title: Media Cleaners
-            hide-arrow: true
-            links:
-            # Monitor Jellyfin usage     
-              - title: JellyStat
-                url: http://${SERVARR_TN}:3000
-                icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jellystat.png
+        - type: monitor
+          cache: 1m
+          title: Media Stack
+          sites:  
+          # Music
+            - title: Lidarr (Music)
+              url: http://${SERVARR_TN}:8686
+              icon: ../assets/icons/lidarr-radarr.png
+          # Movies 
+            - title: Radarr (Movies)
+              url: http://${SERVARR_TN}:7878
+              icon: ../assets/icons/radarr.png
+          # Series  
+            - title: Sonarr (Series)
+              url: http://${SERVARR_TN}:8989
+              icon: ../assets/icons/sonarr-radarr.png
+          # Comics    
+            - title: Kapowarr (Comics)
+              url: http://${SERVARR_TN}:5656
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kapowarr.png
+          # Books/Audiobooks
+            - title: Bindery (Books)
+              url: http://${SERVARR_TN}:8787
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/readarr.png              
+          # YouTube video manager    
+            - title: Youtarr (YouTube)
+              url: http://${SERVARR_TN}:3087
+              icon: ../assets/icons/youtarr.png             
+          # Monitor Jellyfin usage     
+            - title: JellyStat
+              url: http://${SERVARR_TN}:3000
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jellystat.png
             # Config to delete content    
-              - title: Maintainerr
-                url: http://${SERVARR_TN}:8164
-                icon: sh:maintainerr
+            - title: Maintainerr
+              url: http://${SERVARR_TN}:8164
+              icon: sh:maintainerr
             # Download queue cleanup
-              - title: Cleanuparr
-                url: http://${SERVARR_TN}:11011
-                icon: ${ICONS}/cleanuparr.png   
-
-                
-          - title: Media Doctors
-            hide-arrow: true
-            links:
+            - title: Cleanuparr (Qbit)
+              url: http://${SERVARR_TN}:11011
+              icon: ${ICONS}/cleanuparr.png   
             # Take care of subtitles
-              - title: Bazarr
-                url: http://${SERVARR_TN}:6767
-                icon: ${ICONS}/bazarr.png
+            - title: Bazarr (Subtitles)
+              url: http://${SERVARR_TN}:6767
+              icon: ${ICONS}/bazarr.png
             # Pre-transcode library to optimize    
-              - title: FileFlows
-                url: https://fileflows.${INT}
-                icon: ../assets/icons/fileflows.png
-            # Download client    
-              - title: SABnzbd
-                url: http://${SERVARR_TN}:8081
-                icon: sh:sabnzbd
-                basic-auth:
-                   username: ${SABNZBD_USER}
-                   password: ${SABNZBD_PASS}              
-            # Torrents
-              - title: qBittorrent
-                url: http://${SERVARR_TN}:8282
-                icon: sh:qbittorrent
-            # Replacing with Tubifarry  
-              - title: Yubal
-                url: http://${SERVARR_TN}:8051
-                icon: sh:yubal
-            # Config for downloading content     
-              - title: Profilarr
-                url: http://${SERVARR_TN}:6868
-                icon: sh:profilarr
-          # Removes unwanted audio and subtitle tracks without re encoding  
-              - title: Muxarr
-                url: http://${SERVARR_TN}:8183
-                icon: https://github.com/KirovAir/muxarr/blob/master/docs/logo.png?raw=true
-              
-              - title: Prowlarr
-                url: http://${SERVARR_TN}:9696
-                icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/prowlarr-radarr.png 
-              
+            - title: FileFlows (Trxcoder)
+              url: https://fileflows.${INT}
+              icon: ../assets/icons/fileflows.png
+            # Usenet Download Client    
+            - title: SABnzbd (Usenet)
+              url: http://${SERVARR_TN}:8081
+              icon: sh:sabnzbd
+              basic-auth:
+                 username: ${SABNZBD_USER}
+                 password: ${SABNZBD_PASS}              
+            # Torrents Download Client
+            - title: qBittorrent
+              url: http://${SERVARR_TN}:8282
+              icon: sh:qbittorrent
+            # Turns out Yubal is best for on-demand downloading of UAC/Record Label YouTube Music or tracking playlists.
+            # While I thought Tubifarry could be setup like this. In the end, I enhanced Lidarr's capabilites.
+            - title: Yubal (YT Music)
+              url: http://${SERVARR_TN}:8051
+              icon: sh:yubal
+            # Single source of truth in regards to my media quality preferences set for Son/Lid/Radarr    
+            - title: Profilarr (Quality)
+              url: http://${SERVARR_TN}:6868
+              icon: sh:profilarr
+            # Removes unwanted audio and subtitle tracks without re encoding  
+            - title: Muxarr (rm -r A/T-T)
+              url: http://${SERVARR_TN}:8183
+              icon: https://github.com/KirovAir/muxarr/blob/master/docs/logo.png?raw=true
+            # Manages and centralizes trackers for usenet or peer-to-peer torrenting
+            - title: Prowlarr (Trackers)
+              url: http://${SERVARR_TN}:9696
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/prowlarr-radarr.png 
+           
