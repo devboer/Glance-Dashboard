@@ -152,6 +152,10 @@
              color: 10 70 50
              hide-arrow: true
              links:
+               - title: Actual
+                 url: https://actual.${INT}
+                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/actual-budget.png
+                 description: Personal budget application with bank sync. Self-hosted. Synced with SimpleFIN.
                - title: BentoPDF
                  url: http://${HOMESTACK_TN}:3001
                  icon: sh:bentopdf

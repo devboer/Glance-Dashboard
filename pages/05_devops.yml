@@ -206,6 +206,9 @@
             - title: Travel Router
               url: https://${TRAVEL_ROUTER_TN}
               icon: ../assets/icons/glinet.png
+            - title: ntfy.sh
+              url: https://ntfy.${INT}
+              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/ntfy.png
 
         - type: monitor
           cache: 1m
