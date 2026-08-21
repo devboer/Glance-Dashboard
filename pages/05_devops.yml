@@ -1,4 +1,4 @@
-  - name: DevOps
+  - name: Admin
     head-widgets:
       - type: custom-api
         title: Proxmox-VE Stats
@@ -37,168 +37,9 @@
               </div>
             </div>
           </div>
-
-      - type: monitor
-        show-failing-only: true
-        cache: 1m
-        title: Services - Failed Only
-        sites:
-        # ============================================
-        # == [ Displays the disconnected services ] ==
-        # == [ ID: 109 ] =============================
-          - title: Homelable
-            url: http://${HOMELABLE_LAN}:3000
-        # == [ ID: model# ] ==========================
-          - title: Router
-            url: https://${OPNSENSE_LAN}:8443
-            allow-insecure: true
-          - title: Caddy
-            url: https://${OPNSENSE_LAN}:443
-        # == [ ID: 415-lxc ] =========================
-          - title: WiFi
-            url: https://${OMADA_LAN}:8043
-            allow-insecure: true
-        # == [ ID: model# ] ==========================
-          - title: Network Switch
-            url: http://${SWITCH_LAN}
-        # == [ ID: model# ] ========================== 
-          - title: Printer
-            url: https://${PRINTER_LAN}
-            check-url: http://${PRINTER_LAN}:80
-        # == [ ID: 300-lxc Project: Productivity ] ===
-        # == [ Notification Gateway ] ================
-          - title: ntfy.sh
-            url: http://${HOMESTACK_LAN}:8029
-        # == [ Manage most systems ] =================
-          - title: Patchmon
-            url: http://${HOMESTACK_LAN}:8034
-        # == [ Maybe a duplicate of Patchmon ] =======
-          - title: Termix
-            url: http://${HOMESTACK_LAN}:7070
-        # == [ ID: Main Node ] =======================
-          - title: PVE01 Hypervisor
-            url: https://${PVE01_LAN}:8006
-            allow-insecure: true
-          - title: PVE01 Files
-            url: http://${PVE01_LAN}:8080
-          - title: PVE01 ProxMenuX
-            url: http://${PVE01_LAN}:8008
-            allow-insecure: true
-        # == [ ID: 111-lxc Note: Offline, no setup ] =
-          - title: Proxmox Backup Server
-            url: https://${PBS_LAN}:8007
-            allow-insecure: true
-        # == [ ID: 300-lxc Docker Compose deployer ] =
-          - title: Arcane - HomeStack
-            url: http://${HOMESTACK_LAN}:3552
-        # == [ ID: 702-lxc Docker Compose deployer ] =
-          - title: Arcane - Servarr
-            url: http://${SERVARR_LAN}:3552
-        # == [ ID: 300 Project: Productivity ] =======
-          - title: Radicale
-            url: http://${HOMESTACK_LAN}:8042
-        # == [ ID: 414-lxc Automation Orchestrator ] =
-          - title: n8n
-            url: http://${N8N_LAN}:5678
-        # == [ ID: 414-lxc-cloudflare-tunnel ] =======
-          - title: n8n (external)
-            url: https://n8n.devboer.com
-        # == [ ID: 300 Project: Core-Data ] ==========
-          - title: Prometheus
-            url: http://${HOMESTACK_LAN}:9090
-        # == [ ID: 300 Project: Core-Data ] ==========
-          - title: InfluxDBv2
-            url: http://${HOMESTACK_LAN}:8086
-        # == [ ID: 300 Project: Core-Data ] ==========
-          - title: Grafana
-            url: http://${HOMESTACK_LAN}:3002
-        # == [ ID: 300 Project: Productivity ] =======
-          - title: ntfy.sh
-            url: http://${HOMESTACK_LAN}:8029
-        # == [ ID: 116 central Debian pkg cache ] ====
-          - title: acng report
-            url: http://${ACNG_LAN}:3142/acng-report.html
-        # == [ ID: 416-lxc Database Entry for n8n ] ==
-          - title: Baserow
-            url: http://${BASEROW_LAN}:3000  
-        # == [ ID: 300 Project: Productivity ] ======== * #TODO         
-          - title: BookStack
-            url: http://${HOMESTACK_LAN}:8036
-        # == [ ID: 300 Project: Productivity ] ======== * #TODO
-          - title: Code Editor
-            url: http://${HOMESTACK_LAN}
-        # == [ ID: GitHub Pages ] =====================
-          - title: devBoer Labs
-            url: https://docs.devboer.com
-        # == [ ID: 300 Project: Productivity ] ========
-          - title: Gitea
-            url: http://${HOMESTACK_LAN}
-        # == [ ID: 300 Project: Productivity ] ========
-          - title: Linkding
-            url: http://${HOMESTACK_LAN} 
-        # == [ ID: 705-lxc #devbranch Subtitles? ] ====
-          - title: Lingarr
-            url: http://${LINGARR_LAN}:9876
-        # == [ ID: 102-lxc #devbranch Journaling ] ====
-          - title: Journiv
-            url: http://${JOURNIV_LAN}:8000
-        # == [ ID: 702 Project: Media Engine #Music ] = 
-          - title: Lidarr
-            url: http://${SERVARR_LAN}:8686
-        # == [ ID: 702 Project: Media Engine #Films ] =
-          - title: Radarr
-            url: http://${SERVARR_LAN}:7878
-        # == [ ID: 702 Project: Media Engine #Telly ] = 
-          - title: Sonarr
-            url: http://${SERVARR_LAN}:8989
-        # == [ ID: 702 Project: Media Engine #Comic ] =  
-          - title: Kapowarr
-            url: http://${SERVARR_LAN}:5656
-        # == [ ID: 702 Project: Media Engine #Books ] =
-          - title: Bindery
-            url: http://${SERVARR_LAN}:8787           
-        # == [ ID: 702 Project: Media Engine #YT-Sub ]
-          - title: Youtarr
-            url: http://${SERVARR_LAN}:3087         
-        # == [ ID: 702 Project: Media Support ] ======     
-          - title: JellyStat
-            url: http://${SERVARR_LAN}:3000
-        # == [ ID: 702 Project: Media Support ] ======
-          - title: Maintainerr
-            url: http://${SERVARR_LAN}:8164
-        # == [ ID: 702 Project: Media Support ] ======
-          - title: Cleanuparr
-            url: http://${SERVARR_LAN}:11011 
-        # == [ ID: 702 Project: Media Engine ] ======= 
-          - title: Bazarr
-            url: http://${SERVARR_LAN}:6767
-        # == [ID: 718 Optimize media for players ] ===
-          - title: FileFlows
-            url: http://${FILEFLOWS_LAN}:19200
-        # == [ ID: 702 Project: Media Support ] ======
-          - title: SABnzbd (Usenet)
-            url: http://${SERVARR_LAN}:8081
-            basic-auth:
-               username: ${SABNZBD_USER}
-               password: ${SABNZBD_PASS}              
-        # == [ ID: 702 Project: Media Support ] ======
-          - title: qBittorrent
-            url: http://${SERVARR_LAN}:8282
-        # == [ ID: 702 Project: Media Support ] ======
-          - title: Yubal
-            url: http://${SERVARR_LAN}:8051
-        # == [ ID: 702 Project: Media Support ] ======
-          - title: Profilarr
-            url: http://${SERVARR_LAN}:6868
-        # == [ ID: 702 Project: Media Support ] ======
-          - title: Muxarr (rm -r A/T-T)
-            url: http://${SERVARR_LAN}:8183
-        # == [ ID: 702 Project: Media Support ] ======
-          - title: Prowlarr (Trackers)
-            url: http://${SERVARR_LAN}:9696
            
       - type: search
-        placeholder: "yt di si gh cs"
+        placeholder: "degoog web search or yt di si gh cs"
         autofocus: true
         new-tab: false
         search-engine: http://${DEGOOG_LAN}:4444/search?q={QUERY}
@@ -339,116 +180,92 @@
 
     - size: full
       widgets:
-        - type: monitor
-          show-failing-only: false
-          cache: 1m
-          title: Network
-          sites:
-            - title: Homelable
-              url: http://${HOMELABLE_LAN}:3000
-              icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/homelable.png
-            - title: Router
-              url: https://opn.${NSA}
-              icon: ../assets/icons/opnsense-v1.png
-              allow-insecure: true
-            - title: WiFi
-              url: https://wifi.${NSA} 
-              icon: ../assets/icons/omada.png
-              allow-insecure: true
-            - title: Network Switch
-              url: http://${SWITCH_LAN} 
-              icon: ../assets/icons/tp-link-light.png 
-            - title: Printer
-              url: https://${PRINTER_LAN}:80
-              icon: ../assets/icons/printer.png
-              check-url: http://${PRINTER_LAN}:80
-            - title: Travel Router
-              url: https://${TRAVEL_ROUTER_TN}
-              icon: ../assets/icons/glinet.png
-            - title: ntfy.sh
-              url: https://ntfy.${INT}
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/ntfy.png
+        - type: bookmarks
+          hide-header: false
+          title: Infrastructure
+          groups:
+           - title: Core Lab
+             color: 10 70 50
+             hide-arrow: true
+             links:
+             - title: Arcane - HomeStack
+               url: http://${HOMESTACK_TN}:3552
+               icon: sh:arcane
 
-        - type: monitor
-          cache: 1m
-          title: Servers
-          sites:
-            - title: Patchmon
-              url: http://${HOMESTACK_TN}:8034
-              icon: sh:patchmon
-            - title: Termix
-              url: http://${HOMESTACK_TN}:7070
-              icon: sh:termix  
-            - title: PVE-Prod
-              url: https://pve01.${INT}
-              icon: ../assets/icons/proxmox.png
-              allow-insecure: true
-            - title: Proxmox Backup Server
-              url: https://${PBS_LAN}:8007
-              icon: sh:proxmox  
-            - title: Arcane - HomeStack
-              url: http://${HOMESTACK_TN}:3552
-              icon: sh:arcane
-            - title: Arcane - Servarr
-              url: http://${SERVARR_TN}:3552
-              icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/servarr.png
-            - title: Radicale
-              url: http://${HOMESTACK_TN}:8042
-              icon: sh:radicale
-              
-        - type: monitor 
-          cache: 1m
-          title: Data
-          sites:
-            - title: n8n
-              url: http://${N8N_TN}:5678
-              icon: sh:n8n
-            - title: n8n (external)
-              url: https://n8n.devboer.com
-              icon: sh:n8n
-            - title: Prometheus
-              url: http://${HOMESTACK_TN}:9090
-              icon: sh:prometheus
-            - title: InfluxDBv2
-              url: http://${HOMESTACK_TN}:8086
-              icon: sh:influxdb
-            - title: Grafana
-              url: http://${HOMESTACK_TN}:3002
-              icon: sh:grafana
-            - title: ntfy.sh
-              url: http://${HOMESTACK_TN}:8029
-              icon: sh:ntfy    
-            - title: acng report
-              url: http://${ACNG_LAN}:3142/acng-report.html
-              icon: sh:debian
-            - title: Baserow
-              url: http://${BASEROW_LAN}:3000
-              icon: sh:baserow              
-              
-        - type: monitor
-          cache: 1m
-          title: Resources
-          sites:  
+             - title: Arcane - Servarr
+               url: http://${SERVARR_TN}:3552
+               icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/servarr.png
 
-            - title: Documentation
-              url: https://bookstack.${INT}
-              icon: ../assets/icons/bookstack-light.png
-            - title: Code Editor
-              url: https://vscode.${INT}
-              icon: ../assets/icons/visual-studio-code-light.png 
-            - title: devBoer Labs
-              url: https://docs.devboer.com
-              icon: ../assets/icons/hugo.png
-            - title: Adblock Lists
-              url: https://github.com/blocklistproject/Lists
-              icon: ../assets/icons/adguard-home.png
-            - title: Gitea
-              url: https://gitea.${INT}
-              icon: ../assets/icons/gitea-light.png
+             - title: PVE01
+               url: https://pve01.${INT}
+               icon: ../assets/icons/proxmox.png
+               allow-insecure: true
+           - title: Network
+             color: 10 70 50
+             hide-arrow: true
+             links:
+             - title: Opnsense
+               url: https://opn.${NSA}
+               icon: ../assets/icons/opnsense-v1.png
+               allow-insecure: true
+               description: Router, Firewall, CrowdSec, Tailscale Subnet, Caddy
 
-            - title: Docs for Services
-              url: https://linkding.${INT}/bookmarks?bundle=1
-              icon: sh:linkding
+             - title: Omada Controller
+               url: https://wifi.${NSA} 
+               icon: ../assets/icons/omada.png
+               allow-insecure: true
+               description: SDN Controller for Omada Access Points (WiFi)
+
+             - title: TpLink Smart Managed
+               url: http://${SWITCH_LAN} 
+               icon: ../assets/icons/tp-link-light.png 
+               description: Switch for the network and has 8/16 ports are POE+
+
+             - title: HP AIO Printer
+               url: https://${PRINTER_LAN}:80
+               icon: ../assets/icons/printer.png
+               check-url: http://${PRINTER_LAN}:80
+
+             - title: GLiNet Travel Router
+               url: https://${TRAVEL_ROUTER_TN}
+               icon: ../assets/icons/glinet.png
+           
+           - title: Sysadmin Support
+             color: 10 70 50
+             hide-arrow: true
+             links:
+             - title: Homelable
+               url: http://${HOMELABLE_LAN}:3000
+               icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/homelable.png
+             - title: Patchmon
+               url: http://${HOMESTACK_TN}:8034
+               icon: sh:patchmon
+             - title: Termix
+               url: http://${HOMESTACK_TN}:7070
+               icon: sh:termix  
+             - title: Proxmox Backup Server
+               url: https://${PBS_LAN}:8007
+               icon: sh:proxmox  
+             - title: acng report
+               url: http://${ACNG_LAN}:3142/acng-report.html
+               icon: sh:debian
+             - title: ntfy.sh
+               url: https://ntfy.${INT}
+               icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/ntfy.png
+           - title: Data Support
+             color: 10 70 50
+             hide-arrow: true
+             links:
+             - title: Prometheus
+               url: http://${HOMESTACK_TN}:9090
+               icon: sh:prometheus
+             - title: InfluxDBv2
+               url: http://${HOMESTACK_TN}:8086
+               icon: sh:influxdb
+             - title: Grafana
+               url: http://${HOMESTACK_TN}:3002
+               icon: sh:grafana
+    
         - type: monitor
           cache: 1m
           title: Beta
@@ -460,83 +277,250 @@
               url: http://${JOURNIV_TN}:8000
               icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/journiv.png
 
-                       
-    - size: small
-      widgets:
         - type: monitor
+          show-failing-only: true
           cache: 1m
-          title: Media Stack
-          sites:  
-          # Music
-            - title: Lidarr (Music)
-              url: http://${SERVARR_TN}:8686
-              icon: ../assets/icons/lidarr-radarr.png
-          # Movies 
-            - title: Radarr (Movies)
-              url: http://${SERVARR_TN}:7878
-              icon: ../assets/icons/radarr.png
-          # Series  
-            - title: Sonarr (Series)
-              url: http://${SERVARR_TN}:8989
-              icon: ../assets/icons/sonarr-radarr.png
-          # Comics    
-            - title: Kapowarr (Comics)
-              url: http://${SERVARR_TN}:5656
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kapowarr.png
-          # Books/Audiobooks
-            - title: Bindery (Books)
-              url: http://${SERVARR_TN}:8787
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/readarr.png              
-          # YouTube video manager    
-            - title: Youtarr (YouTube)
-              url: http://${SERVARR_TN}:3087
-              icon: ../assets/icons/youtarr.png             
-          # Monitor Jellyfin usage     
+          title: Services - Failed Only
+          sites:
+          # ============================================
+          # == [ Displays the disconnected services ] ==
+          # == [ ID: 109 ] =============================
+            - title: Homelable
+              url: http://${HOMELABLE_LAN}:3000
+          # == [ ID: model# ] ==========================
+            - title: Router
+              url: https://${OPNSENSE_LAN}:8443
+              allow-insecure: true
+            - title: Caddy
+              url: https://${OPNSENSE_LAN}:443
+          # == [ ID: 415-lxc ] =========================
+            - title: WiFi
+              url: https://${OMADA_LAN}:8043
+              allow-insecure: true
+          # == [ ID: model# ] ==========================
+            - title: Network Switch
+              url: http://${SWITCH_LAN}
+          # == [ ID: model# ] ========================== 
+            - title: Printer
+              url: https://${PRINTER_LAN}
+              check-url: http://${PRINTER_LAN}:80
+          # == [ ID: 300-lxc Project: Productivity ] ===
+          # == [ Notification Gateway ] ================
+            - title: ntfy.sh
+              url: http://${HOMESTACK_LAN}:8029
+          # == [ Manage most systems ] =================
+            - title: Patchmon
+              url: http://${HOMESTACK_LAN}:8034
+          # == [ Maybe a duplicate of Patchmon ] =======
+            - title: Termix
+              url: http://${HOMESTACK_LAN}:7070
+          # == [ ID: Main Node ] =======================
+            - title: PVE01 Hypervisor
+              url: https://${PVE01_LAN}:8006
+              allow-insecure: true
+            - title: PVE01 Files
+              url: http://${PVE01_LAN}:8080
+            - title: PVE01 ProxMenuX
+              url: http://${PVE01_LAN}:8008
+              allow-insecure: true
+          # == [ ID: 111-lxc Note: Offline, no setup ] =
+            - title: Proxmox Backup Server
+              url: https://${PBS_LAN}:8007
+              allow-insecure: true
+          # == [ ID: 300-lxc Docker Compose deployer ] =
+            - title: Arcane - HomeStack
+              url: http://${HOMESTACK_LAN}:3552
+          # == [ ID: 702-lxc Docker Compose deployer ] =
+            - title: Arcane - Servarr
+              url: http://${SERVARR_LAN}:3552
+          # == [ ID: 300 Project: Productivity ] =======
+            - title: Radicale
+              url: http://${HOMESTACK_LAN}:8042
+          # == [ ID: 414-lxc Automation Orchestrator ] =
+            - title: n8n
+              url: http://${N8N_LAN}:5678
+          # == [ ID: 414-lxc-cloudflare-tunnel ] =======
+            - title: n8n (external)
+              url: https://n8n.devboer.com
+          # == [ ID: 300 Project: Core-Data ] ==========
+            - title: Prometheus
+              url: http://${HOMESTACK_LAN}:9090
+          # == [ ID: 300 Project: Core-Data ] ==========
+            - title: InfluxDBv2
+              url: http://${HOMESTACK_LAN}:8086
+          # == [ ID: 300 Project: Core-Data ] ==========
+            - title: Grafana
+              url: http://${HOMESTACK_LAN}:3002
+          # == [ ID: 300 Project: Productivity ] =======
+            - title: ntfy.sh
+              url: http://${HOMESTACK_LAN}:8029
+          # == [ ID: 116 central Debian pkg cache ] ====
+            - title: acng report
+              url: http://${ACNG_LAN}:3142/acng-report.html
+          # == [ ID: 416-lxc Database Entry for n8n ] ==
+            - title: Baserow
+              url: http://${BASEROW_LAN}:3000  
+          # == [ ID: 300 Project: Productivity ] ======== * #TODO         
+            - title: BookStack
+              url: http://${HOMESTACK_LAN}:8036
+          # == [ ID: 300 Project: Productivity ] ======== * #TODO
+            - title: Code Editor
+              url: http://${HOMESTACK_LAN}
+          # == [ ID: GitHub Pages ] =====================
+            - title: devBoer Labs
+              url: https://docs.devboer.com
+          # == [ ID: 300 Project: Productivity ] ========
+            - title: Gitea
+              url: http://${HOMESTACK_LAN}
+          # == [ ID: 300 Project: Productivity ] ========
+            - title: Linkding
+              url: http://${HOMESTACK_LAN} 
+          # == [ ID: 705-lxc #devbranch Subtitles? ] ====
+            - title: Lingarr
+              url: http://${LINGARR_LAN}:9876
+          # == [ ID: 102-lxc #devbranch Journaling ] ====
+            - title: Journiv
+              url: http://${JOURNIV_LAN}:8000
+          # == [ ID: 702 Project: Media Engine #Music ] = 
+            - title: Lidarr
+              url: http://${SERVARR_LAN}:8686
+          # == [ ID: 702 Project: Media Engine #Films ] =
+            - title: Radarr
+              url: http://${SERVARR_LAN}:7878
+          # == [ ID: 702 Project: Media Engine #Telly ] = 
+            - title: Sonarr
+              url: http://${SERVARR_LAN}:8989
+          # == [ ID: 702 Project: Media Engine #Comic ] =  
+            - title: Kapowarr
+              url: http://${SERVARR_LAN}:5656
+          # == [ ID: 702 Project: Media Engine #Books ] =
+            - title: Bindery
+              url: http://${SERVARR_LAN}:8787           
+          # == [ ID: 702 Project: Media Engine #YT-Sub ]
+            - title: Youtarr
+              url: http://${SERVARR_LAN}:3087         
+          # == [ ID: 702 Project: Media Support ] ======     
             - title: JellyStat
-              url: http://${SERVARR_TN}:3000
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jellystat.png
-            # Config to delete content    
+              url: http://${SERVARR_LAN}:3000
+          # == [ ID: 702 Project: Media Support ] ======
             - title: Maintainerr
-              url: http://${SERVARR_TN}:8164
-              icon: sh:maintainerr
-            # Download queue cleanup
-            - title: Cleanuparr (Qbit)
-              url: http://${SERVARR_TN}:11011
-              icon: ${ICONS}/cleanuparr.png   
-            # Take care of subtitles
-            - title: Bazarr (Subtitles)
-              url: http://${SERVARR_TN}:6767
-              icon: ${ICONS}/bazarr.png
-            # Pre-transcode library to optimize    
-            - title: FileFlows (Trxcoder)
-              url: https://fileflows.${INT}
-              icon: ../assets/icons/fileflows.png
-            # Usenet Download Client    
+              url: http://${SERVARR_LAN}:8164
+          # == [ ID: 702 Project: Media Support ] ======
+            - title: Cleanuparr
+              url: http://${SERVARR_LAN}:11011 
+          # == [ ID: 702 Project: Media Engine ] ======= 
+            - title: Bazarr
+              url: http://${SERVARR_LAN}:6767
+          # == [ID: 718 Optimize media for players ] ===
+            - title: FileFlows
+              url: http://${FILEFLOWS_LAN}:19200
+          # == [ ID: 702 Project: Media Support ] ======
             - title: SABnzbd (Usenet)
-              url: http://${SERVARR_TN}:8081
-              icon: sh:sabnzbd
+              url: http://${SERVARR_LAN}:8081
               basic-auth:
                  username: ${SABNZBD_USER}
                  password: ${SABNZBD_PASS}              
-            # Torrents Download Client
+          # == [ ID: 702 Project: Media Support ] ======
             - title: qBittorrent
-              url: http://${SERVARR_TN}:8282
-              icon: sh:qbittorrent
-            # Turns out Yubal is best for on-demand downloading of UAC/Record Label YouTube Music or tracking playlists.
-            # While I thought Tubifarry could be setup like this. In the end, I enhanced Lidarr's capabilites.
-            - title: Yubal (YT Music)
-              url: http://${SERVARR_TN}:8051
-              icon: sh:yubal
-            # Single source of truth in regards to my media quality preferences set for Son/Lid/Radarr    
-            - title: Profilarr (Quality)
-              url: http://${SERVARR_TN}:6868
-              icon: sh:profilarr
-            # Removes unwanted audio and subtitle tracks without re encoding  
+              url: http://${SERVARR_LAN}:8282
+          # == [ ID: 702 Project: Media Support ] ======
+            - title: Yubal
+              url: http://${SERVARR_LAN}:8051
+          # == [ ID: 702 Project: Media Support ] ======
+            - title: Profilarr
+              url: http://${SERVARR_LAN}:6868
+          # == [ ID: 702 Project: Media Support ] ======
             - title: Muxarr (rm -r A/T-T)
-              url: http://${SERVARR_TN}:8183
-              icon: https://github.com/KirovAir/muxarr/blob/master/docs/logo.png?raw=true
-            # Manages and centralizes trackers for usenet or peer-to-peer torrenting
+              url: http://${SERVARR_LAN}:8183
+          # == [ ID: 702 Project: Media Support ] ======
             - title: Prowlarr (Trackers)
-              url: http://${SERVARR_TN}:9696
-              icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/prowlarr-radarr.png 
+              url: http://${SERVARR_LAN}:9696
+
+                       
+    - size: small
+      widgets:
+        - type: bookmarks
+          title: Resources
+          groups:
+            - title: Media Engine
+              hide-arrow: true
+              links:  
+            # Music
+              - title: Lidarr (Music)
+                url: http://${SERVARR_TN}:8686
+                icon: ../assets/icons/lidarr-radarr.png
+            # Movies 
+              - title: Radarr (Movies)
+                url: http://${SERVARR_TN}:7878
+                icon: ../assets/icons/radarr.png
+            # Series  
+              - title: Sonarr (Series)
+                url: http://${SERVARR_TN}:8989
+                icon: ../assets/icons/sonarr-radarr.png
+            # Take care of subtitles
+              - title: Bazarr (Subtitles)
+                url: http://${SERVARR_TN}:6767
+                icon: ${ICONS}/bazarr.png
+            # Comics    
+              - title: Kapowarr (Comics)
+                url: http://${SERVARR_TN}:5656
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kapowarr.png
+            # Books/Audiobooks
+              - title: Bindery (Books)
+                url: http://${SERVARR_TN}:8787
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/readarr.png              
+            # YouTube video manager    
+              - title: Youtarr (YouTube)
+                url: http://${SERVARR_TN}:3087
+                icon: ../assets/icons/youtarr.png     
+            - title: Analytical Support
+              hide-arrow: true
+              links:          
+            # Monitor Jellyfin usage     
+              - title: JellyStat
+                url: http://${SERVARR_TN}:3000
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jellystat.png
+              # Config to delete content    
+              - title: Maintainerr
+                url: http://${SERVARR_TN}:8164
+                icon: sh:maintainerr
+              # Download queue cleanup
+              - title: Cleanuparr (Qbit)
+                url: http://${SERVARR_TN}:11011
+                icon: ${ICONS}/cleanuparr.png   
+            - title: Files Support
+              hide-arrow: true
+              links:   
+              # Pre-transcode library to optimize    
+              - title: FileFlows (Trxcoder)
+                url: https://fileflows.${INT}
+                icon: ../assets/icons/fileflows.png
+              # Usenet Download Client    
+              - title: SABnzbd (Usenet)
+                url: http://${SERVARR_TN}:8081
+                icon: sh:sabnzbd
+                basic-auth:
+                   username: ${SABNZBD_USER}
+                   password: ${SABNZBD_PASS}              
+              # Torrents Download Client
+              - title: qBittorrent
+                url: http://${SERVARR_TN}:8282
+                icon: sh:qbittorrent
+              # Turns out Yubal is best for on-demand downloading of UAC/Record Label YouTube Music or tracking playlists.
+              # While I thought Tubifarry could be setup like this. In the end, I enhanced Lidarr's capabilites.
+              - title: Yubal (YT Music)
+                url: http://${SERVARR_TN}:8051
+                icon: sh:yubal
+              # Single source of truth in regards to my media quality preferences set for Son/Lid/Radarr    
+              - title: Profilarr (Quality)
+                url: http://${SERVARR_TN}:6868
+                icon: sh:profilarr
+              # Removes unwanted audio and subtitle tracks without re encoding  
+              - title: Muxarr (rm -r A/T-T)
+                url: http://${SERVARR_TN}:8183
+                icon: https://github.com/KirovAir/muxarr/blob/master/docs/logo.png?raw=true
+              # Manages and centralizes trackers for usenet or peer-to-peer torrenting
+              - title: Prowlarr (Trackers)
+                url: http://${SERVARR_TN}:9696
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/prowlarr-radarr.png 
            
