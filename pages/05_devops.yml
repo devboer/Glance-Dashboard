@@ -41,7 +41,7 @@
       - type: monitor
         show-failing-only: true
         cache: 1m
-        title: Network
+        title: Services - Failed Only
         sites:
         # ============================================
         # == [ Displays the disconnected services ] ==

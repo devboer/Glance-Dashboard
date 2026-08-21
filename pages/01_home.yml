@@ -37,7 +37,8 @@
     - size: small
       widgets:
         - type: bookmarks
-          hide-header: true
+          title: External Services
+          hide-header: false
           groups:
             - title: Mail
               color: 200 50 50
@@ -56,13 +57,7 @@
 
                 - title: Claude
                   url: https://claude.ai
-                  icon: ../assets/icons/claude.png
-            - title: Cameras
-              hide-arrow: true
-              links:
-               - title: Reolink Doorbell
-                 url: https://${DOORBELL_LAN}
-                 icon: ../assets/icons/reolink.png       
+                  icon: ../assets/icons/claude.png    
 
             - title: Entertainment
               color: 10 70 50
@@ -78,7 +73,7 @@
                   url: https://pocketcasts.com/
                   icon: ../assets/icons/pocket-casts.png
                   
-            - title: Karvec's Services
+            - title: Karvec
               color: 10 69 50
               hide-arrow: true
               links:  
@@ -95,9 +90,10 @@
     - size: full
       widgets:          
         - type: bookmarks
-          hide-header: true
+          hide-header: false
+          title: Internal Services
           groups:
-           - title: Media
+           - title: Play
              color: 10 70 50
              hide-arrow: true
              links:
@@ -105,11 +101,11 @@
                  url: https://jellyfin.${INT}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/jellyfin-light.png
                  description: Your Media Hub. Stream your movies, shows, and music ad-free. 🍿🎵
+               - title: Navidrome
+                 url: https://navi.${INT}
+                 icon: sh:navidrome
+                 description: Enjoy music and Internet radio streams. 📻
 
-               - title: Immich
-                 url: https://immich.${INT}
-                 icon: ../assets/icons/immich.png
-                 description: Magic Photo Vault. Saves and organizes every memory automatically. 🖼️
                         
                - title: FreshRSS
                  url: https://freshrss.${INT}
@@ -117,12 +113,12 @@
                  description: All-In-One Feed. Your favorite sites and news in one single scroll. 📱
 
                - title: Audiobookshelf
-                 url: http://${AUDIOBOOKSHELF_TN}:13378 # https://abs.${INT}
+                 url: https://abs.${INT}
                  icon: sh:audiobookshelf
                  description: The Digital Library. Stream your audiobooks, read your books, and catch up on podcasts. 🎧📖🎙️
            
                - title: Romm
-                 url: http://${SERVARR_TN}:8050
+                 url: https://romm.${INT}
                  icon: sh:romm
                  description: Retro Game Room. Play all your classic games right in the browser. 👾🎮
 
@@ -133,15 +129,19 @@
              links:
 
                - title: Home Assistant
-                 url: http://${HASS_TN}:8123 
+                 url: ${HASS_TN} 
                  icon: ../assets/icons/home-assistant.png
                  description: The House Brain. Control your lights, locks, and smart gadgets from one app. 💡🤖
 
                - title: Mealie
-                 url: http://${HOMESTACK_TN}:8012
+                 url: https://mealie.${INT}
                  icon: sh:mealie
                  description: The Recipe Book. Save your favorite meals and plan what’s for dinner. 🍲📝
                  
+               - title: Immich
+                 url: https://immich.${INT}
+                 icon: ../assets/icons/immich.png
+                 description: Magic Photo Vault. Saves and organizes every memory automatically. 🖼️      
  
            - title: Web Office
              color: 10 70 50
@@ -152,7 +152,7 @@
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/actual-budget.png
                  description: Personal budget application with bank sync. Self-hosted. Synced with SimpleFIN.
                - title: BentoPDF
-                 url: http://${HOMESTACK_TN}:3001
+                 url: https://bentopdf.${INT}
                  icon: sh:bentopdf
                  description: PDF Toolkit. Merge, split, or edit your PDF files right in the browser. 📂✂️
 
@@ -166,7 +166,7 @@
                  description: Quick Notes. A simple spot for your checklists and random thoughts. ✍️✅
 
                - title: ConvertX
-                 url: http://${HOMESTACK_TN}:3000
+                 url: ${HOMESTACK_TN}:3000
                  icon: ../assets/icons/convertx.png
                  description: The File Swapper. Change any file--like a photo or doc--into a different format. 📂✨
 
@@ -181,7 +181,7 @@
                  description: The Bookmark Bin. Save cool websites and links so you never lose them. 🌐📌
 
                - title: changedetection.io
-                 url: http://${HOMESTACK_TN}:8032
+                 url: ${HOMESTACK_TN}:8032
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/changedetection.png
                  description: Track change of specific or whole webpages. See price changes. New blog post.
 
@@ -191,7 +191,7 @@
                  description: The Job Winner. Quickly build a professional resume that looks amazing. 👔💼
 
                - title: Nametag
-                 url: http://${HOMESTACK_TN}:8028
+                 url: https://nametag.${INT}
                  icon: sh:nametag
                  description: Relationship Manager. Journal personal relationships.
 
@@ -217,7 +217,7 @@
              hide-arrow: true
              links:          
                - title: Seerr
-                 url: http://${SERVARR_TN}:5055
+                 url: https://seerr.${INT}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/seerr.png
                  description: The Request Line. Want a movie or show? Just ask for it here. 🪄            
                - title: DroppedNeedle
@@ -226,6 +226,6 @@
                  description: Seerr for music. 
 
                - title: Yamtrack
-                 url: http://${HOMESTACK_TN}:8030
+                 url: ${HOMESTACK_TN}:8030
                  icon: sh:yamtrack
                  description: The Fun Tracker. Log your movies, shows, games, and books in one spot. 📈                           
