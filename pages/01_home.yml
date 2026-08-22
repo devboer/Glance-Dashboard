@@ -217,24 +217,24 @@
              links:
 
                - title: Home Assistant
-                 url: ${HASS_TN} 
+                 url: http://${HASS_TN} 
                  icon: ../assets/icons/home-assistant.png
-                 description: The House Brain. Control your lights, locks, and smart gadgets from one app. 💡🤖
+                 description: The House Brain. View the cameras here and more.
 
                - title: Mealie
                  url: https://mealie.${INT}
                  icon: sh:mealie
-                 description: The Recipe Book. Save your favorite meals and plan what’s for dinner. 🍲📝
+                 description: Save your favorite recipes. Make cookbooks and meal plans.
                  
                - title: Immich
                  url: https://immich.${INT}
                  icon: ../assets/icons/immich.png
-                 description: Magic Photo Vault. Saves and organizes every memory automatically. 🖼️      
+                 description: View your memories in a new way and back up your photos.      
 
                - title: Actual
                  url: https://actual.${INT}
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/actual-budget.png
-                 description: Personal budget application with bank sync. Self-hosted. Synced with SimpleFIN. 
+                 description: Personal budget application with bank sync. 
 
                - title: Nametag
                  url: https://nametag.${INT}
@@ -244,7 +244,7 @@
                - title: Jotty
                  url: https://jotty.${INT}
                  icon: sh:jotty
-                 description: Quick Notes. A simple spot for your checklists and random thoughts. ✍️✅
+                 description: A simple spot for your checklists and random thoughts.
 
                - title: Grocy
                  url: https://grocy.${INT}
@@ -264,11 +264,12 @@
                - title: Radicale
                  url: http://${HOMESTACK_TN}:8042
                  icon: sh:radicale
+                 description: Calendar and contacts sync server.
 
                - title: BentoPDF
                  url: https://bentopdf.${INT}
                  icon: sh:bentopdf
-                 description: PDF Toolkit. Merge, split, or edit your PDF files right in the browser. 📂✂️
+                 description: PDF Toolkit.
 
           # Needs database fixing after failed migration
           #  - title: Hoard Websites
@@ -277,22 +278,36 @@
                - title: ConvertX
                  url: ${HOMESTACK_TN}:3000
                  icon: ../assets/icons/convertx.png
-                 description: The File Swapper. Change any file--like a photo or doc--into a different format. 📂✨
+                 description: File converter.
 
                - title: Linkding
                  url: https://links.${INT}
                  icon: sh:linkding
-                 description: The Bookmark Bin. Save cool websites and links so you never lose them. 🌐📌
+                 description: The Bookmark Bin. Save any websites for review later.
 
                - title: changedetection.io
                  url: ${HOMESTACK_TN}:8032
                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/changedetection.png
-                 description: Track change of specific or whole webpages. See price changes. New blog post.
+                 description: Watches webpages for you, specific like prices or general changes.
+
+               - title: Warracker
+                 url: https://warracker.${INT}
+                 icon: sh:warracker
+                 description: Keep tabs on your product warranties.
+               - title: Wishlist
+                 url: https://wishlist.${INT}
+                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/cmintey-wishlist.png
+                 description: Make wishlists and share.  
+
+               - title: Wallos
+                 url: https://wallos.${INT}
+                 icon: ../assets/icons/wallos.png
+                 description: Track recurring subscriptions.
 
                - title: Rx Resumé
                  url: https://rxresume.${INT}
                  icon: ../assets/icons/reactive-resume-light.png
-                 description: The Job Winner. Quickly build a professional resume that looks amazing. 👔💼
+                 description: Build your next CV or Resumé here.
 
                - title: Barcode Buddy
                  url: https://upc.${INT}

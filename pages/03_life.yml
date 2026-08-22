@@ -154,15 +154,6 @@
                   url: https://amazon.gobrightside.com/home
                   icon: https://play-lh.googleusercontent.com/0QRjyoKDYnTqPGLiQTIT-5N863h-ZwFybHxL478qOLHCN_SQgCpd0t88SDwPx8NOZww
                   description: Chat with a financial expert to hopefully relieve me of stress.
-                  
-                - title: Warranty Tracker
-                  url: https://warracker.${INT}
-                  icon: sh:warracker
-                  description: Warranty Vault. Tracks when your stuff's warranty expires so you don't lose money. 💸⏳
-                - title: Wishlist
-                  url: https://wishlist.${INT}
-                  icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/cmintey-wishlist.png
-                  description: Make wishlists and share. Wish makers can claim items on lists shared.  
 
             - title: Utilities
               color: 2 58 36

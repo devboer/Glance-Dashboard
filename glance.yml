@@ -12,18 +12,18 @@ branding:
   custom-footer: |
     <h3 style="margin: 12px;">Managed by <a href="https://docs.devboer.com" target="_blank" style="color: #781ce2">devBoer Labs</a></h3><br/>
     <p style="display: flex; align-items: center; gap: 15px;">
-      <a href="https://${OPNSENSE_LAN}:8443" target="_blank" style="margin-right: 12px;">
+      <a href="https://${OPNSENSE_LAN}:8443" style="margin-right: 12px;">
         <img src="https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/opnsense.png" width="36px" />
       </a>
-      <a href="${GLANCE_TN}:8680" target="_blank" style="margin-right: 12px;">
+      <a href="${GLANCE_TN}:8680" style="margin-right: 12px;">
         <img src="https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/vscodium.png" width="36px" />
       </a> 
 
-      <a href="${PVE01_TN}:8080" target="_blank" style="margin-right: 12px;">
+      <a href="${PVE01_TN}:8080 style="margin-right: 12px;">
         <img src="https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/filebrowser-quantum.png" width="36px" />
       </a> 
 
-      <a href="https://community-scripts.org/" target="_blank">
+      <a href="https://community-scripts.org/">
         <img src="https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/proxmox-helper-scripts.png" width="36px" />
       </a>
     </p>
