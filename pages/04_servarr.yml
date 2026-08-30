@@ -58,6 +58,7 @@
       widgets:
         - type: bookmarks
           hide-header: true
+          same-tab: true
           groups:
             - title: End-User Services
               hide-arrow: true
@@ -77,6 +78,7 @@
                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/droppedneedle.png
         - type: bookmarks
           hide-header: true
+          same-tab: false
           groups:
             - title: Resources
               hide-arrow: true

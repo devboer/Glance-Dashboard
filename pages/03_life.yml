@@ -7,6 +7,7 @@
 
           - type: bookmarks
             hide-header: true
+            same-tab: false
             groups:
               - title: Work
                 hide-arrow: true
@@ -150,6 +151,7 @@
                   url: https://wallos.${INT}
                   icon: ../assets/icons/wallos.png
                   description: Track recurring subscriptions.
+                  same-tab: true
                 - title: Brightside Financial
                   url: https://amazon.gobrightside.com/home
                   icon: https://play-lh.googleusercontent.com/0QRjyoKDYnTqPGLiQTIT-5N863h-ZwFybHxL478qOLHCN_SQgCpd0t88SDwPx8NOZww

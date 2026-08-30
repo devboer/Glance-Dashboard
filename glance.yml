@@ -15,11 +15,11 @@ branding:
       <a href="https://${OPNSENSE_LAN}:8443" style="margin-right: 12px;">
         <img src="https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/opnsense.png" width="36px" />
       </a>
-      <a href="${GLANCE_TN}:8680" style="margin-right: 12px;">
+      <a href="http://${GLANCE_LAN}:8680" style="margin-right: 12px;">
         <img src="https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/vscodium.png" width="36px" />
       </a> 
 
-      <a href="${PVE01_TN}:8080 style="margin-right: 12px;">
+      <a href="http://${PVE01_LAN}:8080" style="margin-right: 12px;">
         <img src="https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/filebrowser-quantum.png" width="36px" />
       </a> 
 

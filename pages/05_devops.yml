@@ -182,6 +182,7 @@
       widgets:
         - type: bookmarks
           hide-header: false
+          same-tab: true
           title: Infrastructure
           groups:
            - title: Core Lab
@@ -193,7 +194,7 @@
                icon: sh:arcane
 
              - title: Arcane - Servarr
-               url: http://${SERVARR_TN}:3552
+               url: http://${SERVARR_LAN}:3552
                icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/servarr.png
 
              - title: PVE01
@@ -203,6 +204,7 @@
            - title: Network
              color: 10 70 50
              hide-arrow: true
+             same-tab: true
              links:
              - title: Opnsense
                url: https://opn.${NSA}
@@ -233,15 +235,16 @@
            - title: Sysadmin Support
              color: 10 70 50
              hide-arrow: true
+             same-tab: true
              links:
              - title: Homelable
                url: http://${HOMELABLE_LAN}:3000
                icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/homelable.png
              - title: Patchmon
-               url: http://${HOMESTACK_TN}:8034
+               url: http://${HOMESTACK_LAN}:8034
                icon: sh:patchmon
              - title: Termix
-               url: http://${HOMESTACK_TN}:7070
+               url: http://${HOMESTACK_LAN}:7070
                icon: sh:termix  
              - title: Proxmox Backup Server
                url: https://${PBS_LAN}:8007
@@ -255,15 +258,16 @@
            - title: Data Support
              color: 10 70 50
              hide-arrow: true
+             same-tab: true
              links:
              - title: Prometheus
-               url: http://${HOMESTACK_TN}:9090
+               url: http://${HOMESTACK_LAN}:9090
                icon: sh:prometheus
              - title: InfluxDBv2
-               url: http://${HOMESTACK_TN}:8086
+               url: http://${HOMESTACK_LAN}:8086
                icon: sh:influxdb
              - title: Grafana
-               url: http://${HOMESTACK_TN}:3002
+               url: http://${HOMESTACK_LAN}:3002
                icon: sh:grafana
     
         - type: monitor
@@ -276,6 +280,10 @@
             - title: Journiv
               url: http://${JOURNIV_TN}:8000
               icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/journiv.png
+            - title: RustDesk
+              url: http://${RUSTDESK_TN}:21114
+              icon: sh:rustdesk
+              description: TeamViewer alternative. 
 
         - type: monitor
           show-failing-only: true
@@ -440,87 +448,104 @@
     - size: small
       widgets:
         - type: bookmarks
-          title: Resources
+          title: Media Pipeline
           groups:
-            - title: Media Engine
+            - title: Core Stack
               hide-arrow: true
               links:  
             # Music
-              - title: Lidarr (Music)
-                url: http://${SERVARR_TN}:8686
+              - title: Lidarr
+                url: http://${SERVARR_LAN}:8686
                 icon: ../assets/icons/lidarr-radarr.png
+                description: "Music: Sync metadata, delegate downloads, organize files, watch lists."
             # Movies 
-              - title: Radarr (Movies)
-                url: http://${SERVARR_TN}:7878
+              - title: Radarr
+                url: http://${SERVARR_LAN}:7878
                 icon: ../assets/icons/radarr.png
+                description: "Movies: Same as Lidarr."
             # Series  
-              - title: Sonarr (Series)
-                url: http://${SERVARR_TN}:8989
+              - title: Sonarr
+                url: http://${SERVARR_LAN}:8989
                 icon: ../assets/icons/sonarr-radarr.png
+                description: "TV series: Same as Lidarr."
             # Take care of subtitles
-              - title: Bazarr (Subtitles)
-                url: http://${SERVARR_TN}:6767
+              - title: Bazarr
+                url: http://${SERVARR_LAN}:6767
                 icon: ${ICONS}/bazarr.png
+                description: "Subtitles: Covers movies and TV."
             # Comics    
-              - title: Kapowarr (Comics)
-                url: http://${SERVARR_TN}:5656
+              - title: Kapowarr
+                url: http://${SERVARR_LAN}:5656
                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/kapowarr.png
+                description: "Comicbooks."
             # Books/Audiobooks
-              - title: Bindery (Books)
-                url: http://${SERVARR_TN}:8787
-                icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/readarr.png              
+              - title: Bindery
+                url: http://${SERVARR_LAN}:8787
+                icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/readarr.png
+                description: "Books: Links to Audiobookshelf."              
             # YouTube video manager    
-              - title: Youtarr (YouTube)
-                url: http://${SERVARR_TN}:3087
-                icon: ../assets/icons/youtarr.png     
-            - title: Analytical Support
+              - title: Youtarr
+                url: http://${SERVARR_LAN}:3087
+                icon: ../assets/icons/youtarr.png
+                description: "On demand or follow your favorite channels or playlists and served via Jellyfin."     
+            - title: Analytical
               hide-arrow: true
               links:          
             # Monitor Jellyfin usage     
               - title: JellyStat
-                url: http://${SERVARR_TN}:3000
+                url: http://${SERVARR_LAN}:3000
                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jellystat.png
+                description: What is popular in your userbase?
               # Config to delete content    
               - title: Maintainerr
-                url: http://${SERVARR_TN}:8164
+                url: http://${SERVARR_LAN}:8164
                 icon: sh:maintainerr
+                description: Cleans up Jellyfin content set by your rules.
               # Download queue cleanup
-              - title: Cleanuparr (Qbit)
-                url: http://${SERVARR_TN}:11011
+              - title: Cleanuparr
+                url: http://${SERVARR_LAN}:11011
                 icon: ${ICONS}/cleanuparr.png   
-            - title: Files Support
+                description: Cleans up your Qbit queue by your rules.
+            - title: Workflows and Sourcing
               hide-arrow: true
               links:   
               # Pre-transcode library to optimize    
-              - title: FileFlows (Trxcoder)
+              - title: FileFlows
                 url: https://fileflows.${INT}
                 icon: ../assets/icons/fileflows.png
+                description: Used to minimize content's storage footprint.
               # Usenet Download Client    
               - title: SABnzbd (Usenet)
-                url: http://${SERVARR_TN}:8081
+                url: http://${SERVARR_LAN}:8081
                 icon: sh:sabnzbd
+                description: Ingests requests from Rad/Lid/Sonarr/Bindery.
                 basic-auth:
                    username: ${SABNZBD_USER}
                    password: ${SABNZBD_PASS}              
               # Torrents Download Client
               - title: qBittorrent
-                url: http://${SERVARR_TN}:8282
+                url: http://${SERVARR_LAN}:8282
                 icon: sh:qbittorrent
+                description: To cover any usenet blindspots.
               # Turns out Yubal is best for on-demand downloading of UAC/Record Label YouTube Music or tracking playlists.
               # While I thought Tubifarry could be setup like this. In the end, I enhanced Lidarr's capabilites.
-              - title: Yubal (YT Music)
-                url: http://${SERVARR_TN}:8051
+              - title: Yubal
+                url: http://${SERVARR_LAN}:8051
                 icon: sh:yubal
+                description: Source individual or playlists of UGC or regular songs.
               # Single source of truth in regards to my media quality preferences set for Son/Lid/Radarr    
-              - title: Profilarr (Quality)
-                url: http://${SERVARR_TN}:6868
+              - title: Profilarr
+                url: http://${SERVARR_LAN}:6868
                 icon: sh:profilarr
+                description: Set and forget your movie/series quality to find in Arr.
               # Removes unwanted audio and subtitle tracks without re encoding  
               - title: Muxarr (rm -r A/T-T)
-                url: http://${SERVARR_TN}:8183
+                url: http://${SERVARR_LAN}:8183
                 icon: https://github.com/KirovAir/muxarr/blob/master/docs/logo.png?raw=true
+                description: Remove unwanted audio or subtitle tracks without doing "the most".
               # Manages and centralizes trackers for usenet or peer-to-peer torrenting
               - title: Prowlarr (Trackers)
-                url: http://${SERVARR_TN}:9696
+                url: http://${SERVARR_LAN}:9696
                 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/prowlarr-radarr.png 
+                description: Central place for download trackers.
            
