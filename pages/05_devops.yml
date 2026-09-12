@@ -530,7 +530,7 @@
               # Turns out Yubal is best for on-demand downloading of UAC/Record Label YouTube Music or tracking playlists.
               # While I thought Tubifarry could be setup like this. In the end, I enhanced Lidarr's capabilites.
               - title: Yubal
-                url: http://${SERVARR_LAN}:8051
+                url: http://${SERVARR_LAN}:8050
                 icon: sh:yubal
                 description: Source individual or playlists of UGC or regular songs.
               # Single source of truth in regards to my media quality preferences set for Son/Lid/Radarr    
