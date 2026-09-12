@@ -425,7 +425,7 @@
               url: http://${SERVARR_LAN}:8282
           # == [ ID: 702 Project: Media Support ] ======
             - title: Yubal
-              url: http://${SERVARR_LAN}:8051
+              url: http://${SERVARR_LAN}:8050
           # == [ ID: 702 Project: Media Support ] ======
             - title: Profilarr
               url: http://${SERVARR_LAN}:6868
