@@ -59,7 +59,25 @@
           - title: Community Scripts
             shortcut: "cs"
             url: https://community-scripts.org/scripts?q={QUERY}
-    # width: wide
+      - type: bookmarks
+        hide-header: true
+        same-tab: true
+        title: Infrastructure
+        groups:
+         - title: Root Managers
+           color: 10 70 50
+           hide-arrow: true
+           links:
+           - title: Arcane - HomeStack
+             url: http://${HOMESTACK_TN}:3552
+             icon: sh:arcane
+           - title: Arcane - Servarr
+             url: http://${SERVARR_LAN}:3552
+             icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/servarr.png
+           - title: PVE01
+             url: https://pve01.${INT}
+             icon: ../assets/icons/proxmox.png
+             allow-insecure: true
     center-vertically: true
     columns:
     - size: small
@@ -185,22 +203,6 @@
           same-tab: true
           title: Infrastructure
           groups:
-           - title: Core Lab
-             color: 10 70 50
-             hide-arrow: true
-             links:
-             - title: Arcane - HomeStack
-               url: http://${HOMESTACK_TN}:3552
-               icon: sh:arcane
-
-             - title: Arcane - Servarr
-               url: http://${SERVARR_LAN}:3552
-               icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/servarr.png
-
-             - title: PVE01
-               url: https://pve01.${INT}
-               icon: ../assets/icons/proxmox.png
-               allow-insecure: true
            - title: Network
              color: 10 70 50
              hide-arrow: true
