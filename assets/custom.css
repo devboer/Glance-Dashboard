@@ -1,0 +1,18 @@
+/* Target the unordered list inside the head-widgets bookmarks */
+.head-widgets .widget-type-bookmarks .bookmarks-group ul.list {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 16px; /* Matches the typical gap of the search bar */
+    flex-wrap: wrap;
+}
+
+/* Restrict the width of the individual link containers */
+.head-widgets .widget-type-bookmarks .bookmarks-group ul.list > li {
+    width: auto !important;
+    flex: 0 1 auto;
+}
+
+/* Optional: Keep the spacing tight between the icon and text */
+.head-widgets .widget-type-bookmarks .bookmarks-group ul.list .bookmarks-link {
+    padding-right: 12px; 
+}
