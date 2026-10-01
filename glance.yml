@@ -3,7 +3,7 @@ theme:
   primary-color: 24 97 58
   negative-color: 209 88 54
   # disable-picker: true
-  custom-css-file: /opt/glance/assets/custom.css
+  custom-css-file: /assets/custom.css
 server:
   # base-url: /glance
   port: 8080
