@@ -63,9 +63,7 @@
                     url: https://docs.devboer.com
                     icon: ../assets/icons/coder-light.png
                     description: GitHub Pages + Hugo Extended
-                  - title: Infinite Campus
-                    url: https://shakopeemn.infinitecampus.org/campus/portal/parents/shakopee.jsp
-                    description: Shakopee Schools access to the kids' progress and more.
+
       - size: full
         widgets:
       
@@ -119,6 +117,26 @@
                   url: https://discovershakopee.org/
                   icon: mdi:city-variant-outline
                   description: Find date ideas, family outings/events, etc.
+                - title: Platinum Dance
+                  url: https://app.gostudiopro.com/online/platinumdancecenter
+                  icon: mdi:human-female-dance
+                  description: Zorah practices ballet here.
+            - title: Shakopee Edu
+              color: 126 100 40
+              hide-arrow: true
+              links:
+                - title: Seesaw
+                  url: https://app.seesaw.me/#/family/feed
+                  icon: mdi:seesaw
+                  description: Communication portal with the school faculties.
+                - title: Infinite Campus
+                  url: https://shakopeemn.infinitecampus.org/campus/portal/parents/shakopee.jsp
+                  icon: mdi:chair-school
+                  description: Progress, schedules, food service, etc school dashboard.
+                - title: myBooster.com
+                  url: https://mybooster.com/v3/home/dashboard
+                  icon: mdi:cash
+                  description: Fundraising platform for public schools.
                   
         - type: bookmarks
           title: Finances
